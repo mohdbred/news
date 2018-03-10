@@ -14,7 +14,7 @@
 $argc = $_SERVER['argc'];
 $argv = $_SERVER['argv'];
 
-
+ 
  
 // INTERPRETTING INPUT
 if ($argc > 1 && isset($argv[1])) {

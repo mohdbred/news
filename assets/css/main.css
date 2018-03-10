@@ -12333,3 +12333,11 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
 .has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error .form-control-feedback {
     color: #e74c3c;
 }
+
+
+.css-side-post{
+     width: 120px;
+    float: left;
+    margin: 3px;
+    padding: 3px;
+}
