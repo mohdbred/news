@@ -27,11 +27,25 @@
 
 $config['mongo_db']['active'] = 'default';
 
+// $config['mongo_db']['default']['no_auth'] = TRUE;
+// $config['mongo_db']['default']['hostname'] = 'ds245218.mlab.com';
+// $config['mongo_db']['default']['port'] = '51208';
+// $config['mongo_db']['default']['username'] = 'bred';
+// $config['mongo_db']['default']['password'] = 'bred123';
+// $config['mongo_db']['default']['database'] = 'bred-mongodb';
+// $config['mongo_db']['default']['db_debug'] = TRUE;
+// $config['mongo_db']['default']['return_as'] = 'array';
+// $config['mongo_db']['default']['write_concerns'] = (int)1;
+// $config['mongo_db']['default']['journal'] = TRUE;
+// $config['mongo_db']['default']['read_preference'] = NULL;
+// $config['mongo_db']['default']['read_preference_tags'] = NULL;
+
+
 $config['mongo_db']['default']['no_auth'] = TRUE;
-$config['mongo_db']['default']['hostname'] = 'mongodb://bred:bred@007@ds245218.mlab.com:45218/news';
-$config['mongo_db']['default']['port'] = '45218';
-$config['mongo_db']['default']['username'] = 'bred';
-$config['mongo_db']['default']['password'] = 'bred@007';
+$config['mongo_db']['default']['hostname'] = 'localhost';
+$config['mongo_db']['default']['port'] = '27017';
+$config['mongo_db']['default']['username'] = '';
+$config['mongo_db']['default']['password'] = '';
 $config['mongo_db']['default']['database'] = 'news';
 $config['mongo_db']['default']['db_debug'] = TRUE;
 $config['mongo_db']['default']['return_as'] = 'array';
@@ -39,20 +53,6 @@ $config['mongo_db']['default']['write_concerns'] = (int)1;
 $config['mongo_db']['default']['journal'] = TRUE;
 $config['mongo_db']['default']['read_preference'] = NULL;
 $config['mongo_db']['default']['read_preference_tags'] = NULL;
-
-
-// $config['mongo_db']['default']['no_auth'] = TRUE;
-// $config['mongo_db']['default']['hostname'] = 'localhost';
-// $config['mongo_db']['default']['port'] = '27017';
-// $config['mongo_db']['default']['username'] = '';
-// $config['mongo_db']['default']['password'] = '';
-// $config['mongo_db']['default']['database'] = 'news';
-// $config['mongo_db']['default']['db_debug'] = TRUE;
-// $config['mongo_db']['default']['return_as'] = 'array';
-// $config['mongo_db']['default']['write_concerns'] = (int)1;
-// $config['mongo_db']['default']['journal'] = TRUE;
-// $config['mongo_db']['default']['read_preference'] = NULL;
-// $config['mongo_db']['default']['read_preference_tags'] = NULL;
 
 
 /* End of file database.php */
