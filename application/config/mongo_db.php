@@ -27,6 +27,20 @@
 
 $config['mongo_db']['active'] = 'default';
 
+// $config['mongo_db']['default']['no_auth'] = TRUE;
+// $config['mongo_db']['default']['hostname'] = 'ds245218.mlab.com';
+// $config['mongo_db']['default']['port'] = '51208';
+// $config['mongo_db']['default']['username'] = 'bred';
+// $config['mongo_db']['default']['password'] = 'bred123';
+// $config['mongo_db']['default']['database'] = 'bred-mongodb';
+// $config['mongo_db']['default']['db_debug'] = TRUE;
+// $config['mongo_db']['default']['return_as'] = 'array';
+// $config['mongo_db']['default']['write_concerns'] = (int)1;
+// $config['mongo_db']['default']['journal'] = TRUE;
+// $config['mongo_db']['default']['read_preference'] = NULL;
+// $config['mongo_db']['default']['read_preference_tags'] = NULL;
+
+
 $config['mongo_db']['default']['no_auth'] = TRUE;
 $config['mongo_db']['default']['hostname'] = 'localhost';
 $config['mongo_db']['default']['port'] = '27017';
@@ -40,18 +54,6 @@ $config['mongo_db']['default']['journal'] = TRUE;
 $config['mongo_db']['default']['read_preference'] = NULL;
 $config['mongo_db']['default']['read_preference_tags'] = NULL;
 
-$config['mongo_db']['test']['no_auth'] = TRUE;
-$config['mongo_db']['test']['hostname'] = 'localhost';
-$config['mongo_db']['test']['port'] = '27017';
-$config['mongo_db']['test']['username'] = '';
-$config['mongo_db']['test']['password'] = '';
-$config['mongo_db']['test']['database'] = 'mean';
-$config['mongo_db']['test']['db_debug'] = TRUE;
-$config['mongo_db']['test']['return_as'] = 'array';
-$config['mongo_db']['test']['write_concerns'] = (int)1;
-$config['mongo_db']['test']['journal'] = TRUE;
-$config['mongo_db']['test']['read_preference'] = NULL;
-$config['mongo_db']['test']['read_preference_tags'] = NULL;
 
 /* End of file database.php */
 /* Location: ./application/config/database.php */
