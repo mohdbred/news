@@ -3042,11 +3042,11 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
   appearance: none; }
 
 /* line 17, D:/aartyomenko/Git/spectr/html/app/scss/_theme_base.scss */
-.inner-wrapper {
+/*.inner-wrapper {
   background: #16171a;
   position: relative;
   padding: 0 0 0 58px;
-  z-index: 1; }
+  z-index: 1; }*/
   @media screen and (max-width: 767px) {
     /* line 17, D:/aartyomenko/Git/spectr/html/app/scss/_theme_base.scss */
     .inner-wrapper {
@@ -3084,7 +3084,7 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
 
 /* line 56, D:/aartyomenko/Git/spectr/html/app/scss/_theme_base.scss */
 .main-footer {
-  background: #1f2124; }
+  background: #0d0202; }
   /* line 59, D:/aartyomenko/Git/spectr/html/app/scss/_theme_base.scss */
   .main-footer .bottom-part .ft-logo {
     float: left;
@@ -9931,7 +9931,7 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
 
 /* line 2, D:/aartyomenko/Git/spectr/html/app/scss/_footer.scss */
 .main-footer p {
-  color: #bec1c3; }
+  color: #10111; }
 
 /* line 7, D:/aartyomenko/Git/spectr/html/app/scss/_footer.scss */
 .ft-widget {
@@ -10070,7 +10070,7 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
 
 /* line 133, D:/aartyomenko/Git/spectr/html/app/scss/_footer.scss */
 .ft-title-1 {
-  color: #fff;
+  /*color: #fff;*/
   font-size: 17px;
   font-weight: 400;
   margin: 0 0 20px;
@@ -12340,4 +12340,12 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
     float: left;
     margin: 3px;
     padding: 3px;
+}
+
+#js-category-news{
+    width: 100%;
+}
+
+.js-category-news{
+    width: 30%;
 }
