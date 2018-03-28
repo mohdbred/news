@@ -208,6 +208,7 @@
                 var _category = '';
                 var _content = '';
                 $.each(data, function (key, news) {
+                    news = JSON.parse(news);
                         if ((key < 3)) {
                             _category += '<div class="one-third sm-half"><article class="post post-tp-2"><figure>';
                             _category += '<a href="index._slideTemplatel"><img src="' + news.multimedia[2].url + '" height="258" width="380" alt="Spectr News Theme" class="adaptive" /></a>';

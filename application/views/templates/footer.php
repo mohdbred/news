@@ -41,7 +41,7 @@
                                     <div class="three-quarters">
                                         <div class="ft-menu">
                                             <ul class="ft-menu-list">
-                                        <li><a href="<?php base_url(); ?>about_us">About the site</a></li>
+                                        <li><a href="<?php echo site_url(); ?>news/about_us">About the site</a></li>
                                                 <li><a href="<?php base_url(); ?>contact">Contacts</a></li>
                                                 <li><a href="<?php base_url(); ?>privacy">privacy policy</a></li>
                                             </ul>

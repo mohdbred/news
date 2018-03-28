@@ -1,20 +1,17 @@
+                      <!-- Theme CSS -->
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/materialize/styleae52.css" />
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/materialize/css/materialize.css" />
+         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/materialize/font/material-design-icons.css" />
+        <!-- endbuild -->
+       
+        <!-- Vendor -->
+        <script src="<?php echo base_url(); ?>assets/bootstrap/js/bootstrap.min.js.js"></script>
                     <!-- Content -->
                     <div class="main-content">
                       
         <!--page title start-->
-        <section class="page-title ptb-50">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2>About Us Three</h2>
-                        <ol class="breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li class="active">About Us 3</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </section>
+ 
         <!--page title end-->
 
 
@@ -81,7 +78,7 @@
                 <div class="col-md-3 col-sm-6">
                   <div class="team-wrapper text-center">
                       <div class="team-img">
-                          <a href="#"><img src="assets/img/team/team-12.jpg" class="img-responsive" alt="Image"></a>
+                          <a href="#"><img src="./../assets/img/team/team-12.jpg" class="img-responsive" alt="Image"></a>
                       </div><!-- /.team-img -->
 
                       <div class="team-title">
@@ -102,7 +99,7 @@
                 <div class="col-md-3 col-sm-6">
                   <div class="team-wrapper text-center">
                       <div class="team-img">
-                          <a href="#"><img src="assets/img/team/team-13.jpg" class="img-responsive" alt="Image"></a>
+                          <a href="#"><img src="./../assets/img/team/team-13.jpg" class="img-responsive" alt="Image"></a>
                       </div><!-- /.team-img -->
 
                       <div class="team-title">
@@ -122,7 +119,7 @@
                 <div class="col-md-3 col-sm-6">
                   <div class="team-wrapper text-center">
                       <div class="team-img">
-                          <a href="#"><img src="assets/img/team/team-14.jpg" class="img-responsive" alt="Image"></a>
+                          <a href="#"><img src="./../assets/img/team/team-14.jpg" class="img-responsive" alt="Image"></a>
                       </div><!-- /.team-img -->
 
                       <div class="team-title">
@@ -142,7 +139,7 @@
                 <div class="col-md-3 col-sm-6">
                   <div class="team-wrapper text-center">
                       <div class="team-img">
-                          <a href="#"><img src="assets/img/team/team-15.jpg" class="img-responsive" alt="Image"></a>
+                          <a href="#"><img src="./../assets/img/team/team-15.jpg" class="img-responsive" alt="Image"></a>
                       </div><!-- /.team-img -->
 
                       <div class="team-title">
@@ -180,7 +177,7 @@
                         <div class="carousel-inner" role="listbox">
                           <div class="item active">
                             <div class="avatar">
-                                <img src="assets/img/quote-dark.png" alt="Customer Thumb">
+                                <img src="./../assets/img/quote-dark.png" alt="Customer Thumb">
                             </div>
                             <div class="content">
                                 <p>Quam adipiscing vestibulum feugiat lacus leo a eget leo convallis sagittis nisi varius eros a imperdiet.Dui elementum ut a vestibulum eu fames hendrerit class conubia consequat curae fames hendrerit class conubia consequat.</p>
@@ -194,7 +191,7 @@
 
                           <div class="item">
                             <div class="avatar">
-                                <img src="assets/img/quote-dark.png" alt="Customer Thumb">
+                                <img src="./../assets/img/quote-dark.png" alt="Customer Thumb">
                             </div>
                             <div class="content">
                                 <p>Quam adipiscing vestibulum feugiat lacus leo a eget leo convallis sagittis nisi varius eros a imperdiet.Dui elementum ut a vestibulum eu fames hendrerit class conubia consequat curae fames hendrerit class conubia consequat.</p>
@@ -208,7 +205,7 @@
 
                           <div class="item">
                             <div class="avatar">
-                                <img src="assets/img/quote-dark.png" alt="Customer Thumb">
+                                <img src="./../assets/img/quote-dark.png" alt="Customer Thumb">
                             </div>
                             <div class="content">
                                 <p>Quam adipiscing vestibulum feugiat lacus leo a eget leo convallis sagittis nisi varius eros a imperdiet.Dui elementum ut a vestibulum eu fames hendrerit class conubia consequat curae fames hendrerit class conubia consequat.</p>
@@ -248,7 +245,7 @@
                   <div class="col-md-3 col-sm-6">
                       <div class="border-box">
                           <a href="#">
-                            <img src="assets/img/client-logo/dell.png" alt="clients">
+                            <img src="./../assets/img/client-logo/dell.png" alt="clients">
                           </a>
                       </div><!-- /.border-box -->
                   </div><!-- /.col-md-3 -->
@@ -256,7 +253,7 @@
                   <div class="col-md-3 col-sm-6">
                       <div class="border-box">
                           <a href="#">
-                            <img src="assets/img/client-logo/envato.png" alt="clients">
+                            <img src="./../assets/img/client-logo/envato.png" alt="clients">
                           </a>
                       </div><!-- /.border-box -->
                   </div><!-- /.col-md-3 -->
@@ -264,7 +261,7 @@
                   <div class="col-md-3 col-sm-6">
                       <div class="border-box">
                           <a href="#">
-                            <img src="assets/img/client-logo/studio.png" alt="clients">
+                            <img src="./../assets/img/client-logo/studio.png" alt="clients">
                           </a>
                       </div><!-- /.border-box -->
                   </div><!-- /.col-md-3 -->
@@ -272,7 +269,7 @@
                   <div class="col-md-3 col-sm-6">
                       <div class="border-box">
                           <a href="#">
-                            <img src="assets/img/client-logo/google.png" alt="clients">
+                            <img src="./../assets/img/client-logo/google.png" alt="clients">
                           </a>
                       </div><!-- /.border-box -->
                   </div><!-- /.col-md-3 -->
@@ -280,7 +277,7 @@
                   <div class="col-md-3 col-sm-6">
                       <div class="border-box">
                           <a href="#">
-                            <img src="assets/img/client-logo/fb.png" alt="clients">
+                            <img src="./../assets/img/client-logo/fb.png" alt="clients">
                           </a>
                       </div><!-- /.border-box -->
                   </div><!-- /.col-md-3 -->
@@ -288,7 +285,7 @@
                   <div class="col-md-3 col-sm-6">
                       <div class="border-box">
                           <a href="#">
-                            <img src="assets/img/client-logo/hp.png" alt="clients">
+                            <img src="./../assets/img/client-logo/hp.png" alt="clients">
                           </a>
                       </div><!-- /.border-box -->
                   </div><!-- /.col-md-3 -->
@@ -296,7 +293,7 @@
                   <div class="col-md-3 col-sm-6">
                       <div class="border-box">
                           <a href="#">
-                            <img src="assets/img/client-logo/sw.png" alt="clients">
+                            <img src="./../assets/img/client-logo/sw.png" alt="clients">
                           </a>
                       </div><!-- /.border-box -->
                   </div><!-- /.col-md-3 -->
@@ -304,7 +301,7 @@
                   <div class="col-md-3 col-sm-6">
                       <div class="border-box">
                           <a href="#">
-                            <img src="assets/img/client-logo/intel.png" alt="clients">
+                            <img src="./../assets/img/client-logo/intel.png" alt="clients">
                           </a>
                       </div><!-- /.border-box -->
                   </div><!-- /.col-md-3 -->

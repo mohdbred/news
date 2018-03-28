@@ -1,4 +1,17 @@
 <?php 
+$servername = "localhost";
+$username = "u551018196_bred";
+$password = "bred@007";
+$dbname = "u551018196_news";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+//echo '<pre>';
+//print_r($conn);exit;
 
  $curl = curl_init();
 
@@ -25,22 +38,23 @@ if ($err) {
 } else {
 	$res = json_decode($response, true)['articles'];
 
-	$con = new Mongo("localhost:27017");
-
-   	$db = $con->selectCollection('news',"top-headlines");
-
-   	$insertOptions = array(
-    'safe'    => true,
-    'fsync'   => true,
-    'timeout' => 10000
-	);
-
-	$db->remove();
-
+	$i = 1;
     foreach ($res as $key => $value) {
       
       if(!empty($value['title']) && !empty($value['description']) && !empty($value['url']) && !empty($value['urlToImage'])){
-      	$db->insert($value,$insertOptions);
+		  //echo '<pre>';
+		  //print_r(stripslashes(serialize($value)));
+		  $t = stripslashes(serialize($value));
+		  $test = str_replace("'","\'",$t);
+		  //print_r($test);
+		  //exit;
+		  $sql = "INSERT INTO arts (data) VALUES ('".$test."')";
+			if ($conn->query($sql) === TRUE) {
+				echo $i++;
+				echo "New record created successfully  ----   <br>";
+			} else {
+				echo "Error: " . $sql . "<br>" . $conn->error."<br>";
+			}
       }
     }
   
