@@ -167,7 +167,7 @@ $this->load->helper('url');
                 </div>
             </div>
             <header class="header-tp-4">
-                <div class="top-bar">
+              <!--   <div class="top-bar">
                     <div class="container">
                         <div class="top-bar-inner">
                             <div class="row">
@@ -185,13 +185,13 @@ $this->load->helper('url');
                                     <i class="li_cloud"></i> Cloudy
                                 </div>
                    
-                           <!--      <div class="tb-sing-login">
+                                <div class="tb-sing-login">
                                     <a href="index._slideTemplatel#signin" class="js-popups">Sign in</a> / <a href="index._slideTemplatel#login" class="js-popups">Join</a>
-                                </div> -->
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="main-header">
 
                     <div class="mh-bottom">
@@ -201,7 +201,7 @@ $this->load->helper('url');
                                     <nav class="main-nav">
 
                                        <ul class="main-nav-list sf-menu">
-                                            <li class="active"><a href="index._slideTemplatel">Top news</a></li>
+                                            <li class="active"><a href="<?php echo site_url(); ?>/news">Top news</a></li>
                                             <li>
                                                 <a href="<?php echo site_url(); ?>/news/politics">Politics</a>
 

@@ -12,11 +12,10 @@
             $.ajax({
                 type: 'GET',
                 url: baseUrl + 'news/news_api',
-                dataType: 'json',
                 cache: false
 
             }).done(function (data) {
-
+                data = JSON.parse(data);
                 var i = 3;
                 var j = 10;
                 var _topHeadline = '<div class="trending-now"><strong>HeadLines</strong></div><div class="tl-slider">';
@@ -100,7 +99,7 @@
         },
 
         _getCategory: function (searchQuery,url) {
-            $('#js-category-news').html('');
+           
             var ajaxurl =  baseUrl + url;
            return $.ajax({
                 type: 'POST',

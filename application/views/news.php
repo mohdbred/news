@@ -1,229 +1,5 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-$this->load->helper('url');
-?>
-<!DOCTYPE _slideTemplatel>
-<html lang="en">
-
-    <head>
-        <!-- Basic -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-        <title>World News</title>
-
-        <meta name="keywords" content="html5 Template" />
-        <meta name="description" content="Responsive html5 Template" />
 
 
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png" />
-        <meta name="theme-color" content="#ffffff" />
-
-        <!-- Mobile Metas -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <!-- Web Fonts  -->
-        <!--   <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic%7CInconsolata:400,700%7CMontserrat:400,700' rel='stylesheet' type='text/css' /> -->
-
-        <!-- build:css css/icons.css -->
-
-        <!-- Icon Fonts  -->
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/font-awesome.css" />
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/linecons.css" />
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/fontello.css" />
-
-        <!-- endbuild -->
-        <!-- build:css css/vendor.css -->
-
-        <!-- Vendor CSS -->
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/jquery-ui.css" />
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/jquery-ui.structure.css" />
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/animate.css/animate.css" />
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/owl-carousel/owl-carousel/owl.carousel.css" />
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/owl-carousel/owl-carousel/owl.transitions.css" />
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/slick-carousel/slick/slick.css" />
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/Swiper/dist/css/swiper.css" />
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/magnific-popup/dist/magnific-popup.css" />
-
-        <!-- endbuild -->
-        <!-- build:css css/main.css -->
-
-        <!-- Theme CSS -->
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/main.css" />
-
-        <!-- endbuild -->
-    </head>
-
-    <body id="js-home-scope">
-        <!-- Loader -->
-        <div class="page-loader">
-            <div class="loader">
-                <div class="flipper">
-                    <div class="front"></div>
-                    <div class="back"></div>
-                </div>
-            </div>
-        </div>
-        <!-- Loader END-->
-        <div class="main-wrapper">
-            <!-- Header -->
-            <header class="header-mb">
-                <div class="container">
-
-                    <!--   <div class="hdm-logo">
-                          <h1><a href="spectr-_slideTemplatel_weblionmedia_default._slideTemplatel"><img src="https://s3.amazonaws.com/weblionmedia-spectr/img/logo-mb.svg" height="40" width="140" alt="Spectr" class="adaptive" /></a></h1>
-                      </div> -->
-                    <div class="hdm-search-user">
-                        <div class="hd-search">
-                            <a href="index._slideTemplatel#search-block" class="st-btn-1 fa-flip-horizontal js-hd-search">
-                                <i class="li_search"></i>
-                            </a>
-                            <div class="hd-search-block js-hd-search-block">
-                                <div class="search">
-                                    <div class="search-input">
-                                        <input type="search" placeholder="Type keywords">
-                                    </div>
-                                    <div class="search-btn">
-                                        <button>Search</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="user">
-                            <a href="index._slideTemplatel#login" class="js-popups"><i class="li_user"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            <div class="sticky-header js-sticky-header">
-                <div class="container">
-                    <div class="main-nav-wrap">
-                        <div class="row">
-                            <nav class="main-nav">
-
-                                <ul class="main-nav-list sf-menu">
-                                    <li class="active"><a href="#">Top news</a></li>
-                                    <li>
-                                        <a href="<?php echo site_url(); ?>/news/politics">Politics</i></a>
-
-                                    </li>
-                                    <li><a href="category_style_six._slideTemplatel">Educations</a></li>
-                                    <li class="mf">
-                                        <a href="index._slideTemplatel">Business</a>
-
-                                    </li>
-                                    <li><a href="<?php echo site_url(); ?>/news/technology">Technology</a></li>
-                                    <li>
-                                        <a href="index._slideTemplatel">Entertainment</i></a>
-
-                                    </li>
-                                    <li>
-                                        <a href="index._slideTemplatel">NewsPaper</a>
-
-                                    </li>
-                                    <li><a href="contact_page_style_1._slideTemplatel">contacts</a></li>
-                                </ul>
-                            </nav>
-                            <div class="hd-search">
-                                <a href="index._slideTemplatel#search-block" class="st-btn-1 fa-flip-horizontal js-hd-search">
-                                    <i class="li_search"></i>
-                                </a>
-                                <div class="hd-search-block js-hd-search-block">
-                                    <div class="search">
-                                        <div class="search-input">
-                                            <input type="search" placeholder="Type keywords">
-                                        </div>
-                                        <div class="search-btn">
-                                            <button>Search</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <header class="header-tp-4">
-                <div class="top-bar">
-                    <div class="container">
-                        <div class="top-bar-inner">
-                            <div class="row">
-                                <nav class="tb-nav">
-                                    <ul class="tb-nav-list">
-                                        <li><a href="index._slideTemplatel">ABOUT</a></li>
-                                        <li><a href="products._slideTemplatel">Blogs</a></li>
-                                        <li><a href="contact_page_style_1._slideTemplatel">CONTACTS</a></li>
-                                    </ul>
-                                </nav>
-                                <div class="tb-date" id="demo">
-
-                                </div>
-                                <div class="tb-saved-art">
-                                    <i class="li_cloud"></i> Cloudy
-                                </div>
-                              
-                            <!--     <div class="tb-sing-login">
-                                    <a href="index._slideTemplatel#signin" class="js-popups">Sign in</a> / <a href="index._slideTemplatel#login" class="js-popups">Join</a>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="main-header">
-
-                    <div class="mh-bottom">
-                        <div class="container">
-                            <div class="main-nav-wrap">
-                                <div class="row">
-                                    <nav class="main-nav">
-
-                                        <ul class="main-nav-list sf-menu">
-                                            <li class="active"><a href="index._slideTemplatel">Top news</a></li>
-                                            <li>
-                                                <a href="<?php echo site_url(); ?>/news/politics">Politics</a>
-
-                                            </li>
-                                            <li><a href="category_style_six._slideTemplatel">Educations</a></li>
-                                            <li class="mf">
-                                                <a href="index._slideTemplatel">Business</a>
-
-                                            </li>
-                                            <li><a href="<?php echo site_url(); ?>/news/technology">Technology</a></li>
-                                            <li>
-                                                <a href="index._slideTemplatel">Entertainment</a>
-
-                                            </li>
-                                            <li>
-                                                <a href="index._slideTemplatel">NewsPaper</a>
-
-                                            </li>
-                                            <li><a href="contact_page_style_1._slideTemplatel">contacts</a></li>
-                                        </ul>
-                                    </nav>
-                                    <div class="hd-search">
-                                        <a href="index._slideTemplatel#search-block" class="st-btn-1 fa-flip-horizontal js-hd-search">
-                                            <i class="li_search"></i>
-                                        </a>
-                                        <div class="hd-search-block js-hd-search-block">
-                                            <div class="search">
-                                                <div class="search-input">
-                                                    <input type="search" placeholder="Type keywords">
-                                                </div>
-                                                <div class="search-btn">
-                                                    <button>Search</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            <!-- Header END -->
-            <div class="inner-wrapper">
 
                 <div class="main">
                     <!-- Content -->
@@ -393,9 +169,7 @@ $this->load->helper('url');
 
                                                 </div>
                                             </div>
-                                            <div class="pst-block-foot">
-                                                <a href="index._slideTemplatel">More design posts</a>
-                                            </div>
+                                          
                                         </div>
                                     </div>
                                 </div>
@@ -1076,247 +850,7 @@ $this->load->helper('url');
                         </div>
                     </div>
                     <!-- Content END -->
-                    <!-- Footer -->
-                    <footer class="main-footer">
-                        <div class="container">
-
-                            <div class="bottom-part">
-                                <div class="row">
-                                    <div class="ft-logo">
-                                        <a href="index._slideTemplatel"><img src="https://s3.amazonaws.com/weblionmedia-spectr/img/footer-logo.svg" height="30" width="105" alt="Spectr News Theme"></a>
-                                    </div>
-                                    <div class="ft-about">
-                                        <article>
-                                            <h4 class="ft-title-1"><strong>About</strong>Us</h4>
-                                            <p class="p">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totamrem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo spiciatis unde omnis iste natus sit voluptatem</p>
-                                        </article>
-                                    </div>
-                                    <div class="ft-social">
-                                        <ul class="ft-social-list pull-right">
-                                            <li class="tw">
-                                                <a href="index._slideTemplatel"><i class="fa fa-twitter"></i></a>
-                                            </li>
-                                            <li class="fb">
-                                                <a href="index._slideTemplatel"><i class="fa fa-facebook"></i></a>
-                                            </li>
-                                            <li class="gp">
-                                                <a href="index._slideTemplatel"><i class="fa fa-google-plus"></i></a>
-                                            </li>
-                                            <li class="in">
-                                                <a href="index._slideTemplatel"><i class="fa fa-instagram"></i></a>
-                                            </li>
-                                            <li class="dr">
-                                                <a href="index._slideTemplatel"><i class="fa fa-dribbble"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bottom-bar">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="three-quarters">
-                                        <div class="ft-menu">
-                                            <ul class="ft-menu-list">
-                                                <li><a href="index._slideTemplatel">About the site</a></li>
-                                                <li><a href="index._slideTemplatel">Contacts</a></li>
-                                                <li><a href="index._slideTemplatel">Copyright holders</a></li>
-                                                <li><a href="index._slideTemplatel">The Agreement</a></li>
-                                                <li><a href="index._slideTemplatel">Help</a></li>
-                                                <li><a href="index._slideTemplatel">privacy policy</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="one-quarter sm-full">
-                                        <div class="copyright">© Copyright 2015 by WebLionMedia</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
-                    <!-- Footer END -->
-                </div>
-            </div>
-        </div>
-
-        <a href="index._slideTemplatel" class="go-top animated js-go-top"><i class="fa fa-angle-up"></i></a>
-
-        <!-- Search block popup -->
-        <div id="search-block" class="pp-search-block mfp-hide">
-            <div class="search">
-                <div class="search-btn">
-                    <button><i class="li_search"></i></button>
-                </div>
-                <div class="search-input">
-                    <input type="search" placeholder="Search">
-                </div>
-            </div>
-        </div>
-
-        <!-- Login popup -->
-        <div id="login" class="sp-popup login mfp-hide">
-            <div class="btns">
-                <a href="index._slideTemplatel#signin" class="js-popups">Registration</a>
-                <a href="index._slideTemplatel#login" class="active js-popups">Login</a>
-            </div>
-            <div class="social">
-                <div>Sign in with social account</div>
-                <ul class="pp-social-list">
-                    <li class="tw">
-                        <a href="index._slideTemplatel"><i class="fa fa-twitter"></i></a></li>
-                    <li class="fb">
-                        <a href="index._slideTemplatel"><i class="fa fa-facebook"></i></a></li>
-                    <li class="gp">
-                        <a href="index._slideTemplatel"><i class="fa fa-google-plus"></i></a></li>
-                    <li class="vk">
-                        <a href="index._slideTemplatel"><i class="fa fa-vk"></i></a></li>
-                </ul>
-            </div>
-            <div class="pp-title"><span>or</span></div>
-            <div class="form">
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-                <button class="btn-8">login</button>
-                <a href="index._slideTemplatel#recentpass" class="js-popups">Lost your Password?</a>
-            </div>
-        </div>
-
-        <!-- Sign in popup -->
-        <div id="signin" class="sp-popup signin mfp-hide">
-            <div class="btns">
-                <a href="index._slideTemplatel#signin" class="active js-popups">Registration</a>
-                <a href="index._slideTemplatel#login" class="js-popups">Login</a>
-            </div>
-            <div class="social">
-                <div>Sign in with social account</div>
-                <ul class="pp-social-list">
-                    <li class="tw">
-                        <a href="index._slideTemplatel"><i class="fa fa-twitter"></i></a></li>
-                    <li class="fb">
-                        <a href="index._slideTemplatel"><i class="fa fa-facebook"></i></a></li>
-                    <li class="gp">
-                        <a href="index._slideTemplatel"><i class="fa fa-google-plus"></i></a></li>
-                    <li class="vk">
-                        <a href="index._slideTemplatel"><i class="fa fa-vk"></i></a></li>
-                </ul>
-            </div>
-            <div class="pp-title"><span>or</span></div>
-            <div class="form not-valid">
-                <input type="text" placeholder="Username">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <button class="btn-8">Registration</button>
-                <span>A password will be send on your post</span>
-            </div>
-        </div>
-
-        <!-- Recent pass popup -->
-        <div id="recentpass" class="sp-popup recentpass mfp-hide">
-            <div class="btns">
-                <a href="index._slideTemplatel#signin" class="js-popups">Registration</a>
-                <a href="index._slideTemplatel#login" class="active js-popups">Login</a>
-            </div>
-            <div class="form">
-                <input type="email" placeholder="Enter Your Email Adress">
-                <button class="btn-8">Get new password</button>
-                <a href="index._slideTemplatel#signin" class="js-popups"><i class="popup-arr-left-ic"></i> Registration</a>
-            </div>
-        </div>
-
-        <!-- Mobile menu -->
-        <div id="mb-menu" class="mb-menu mfp-hide">
-            <div class="container">
-                <nav class="mobile-nav">
-                    <ul class="mobile-nav-list">
-                        <li class="mn-item"><a href="index._slideTemplatel">news</a></li>
-                        <li class="mn-item"><a href="javascript:void(0)">features</a></li>
-                        <li class="mn-item"><a href="category_style_three._slideTemplatel">design</a></li>
-                        <li class="mn-item"><a href="category_style_four._slideTemplatel">life style</a></li>
-                        <li class="mn-item"><a href="video._slideTemplatel">video</a></li>
-                        <li class="mn-item"><a href="reviews_stars_style._slideTemplatel">reviews</a></li>
-                        <li class="mn-item"><a href="products._slideTemplatel">shop</a></li>
-                        <li class="mn-item"><a href="contact_page_style_1._slideTemplatel">contacts</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-
-        <!-- Aside menu -->
-        <div id="aside-menu" class="aside-menu mfp-hide">
-            <div class="am-container">
-                <nav class="am-menu">
-                    <ul class="am-list">
-                        <li class="am-item">
-                            <a href="index._slideTemplatel">news</a>
-                        </li>
-                        <li class="am-item">
-                            <a href="javascript:void(0)">FEATURES</a>
-                        </li>
-                        <li class="am-item">
-                            <a href="category_style_three._slideTemplatel">design</a>
-                        </li>
-                        <li class="am-item">
-                            <a href="category_style_four._slideTemplatel">life style</a>
-                        </li>
-                        <li class="am-item">
-                            <a href="video._slideTemplatel">video</a>
-                        </li>
-                        <li class="am-item">
-                            <a href="reviews_stars_style._slideTemplatel">reviews</a>
-                        </li>
-                        <li class="am-item">
-                            <a href="products._slideTemplatel">shop</a>
-                        </li>
-                        <li class="am-item">
-                            <a href="contact_page_style_1._slideTemplatel">Contacts</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="am-container">
-                <div class="twitter-posts">
-                    <ul class="tp-list">
-                        <li class="tp-list-item">
-                            <div class="icon"><i class="fa fa-twitter"></i></div>
-                            Show your web design in a web browser! Check out new awesome tool <a href="index._slideTemplatel">http://www.symu.co  https://www.symu.co</a> 
-                        </li>
-                        <li class="tp-list-item">
-                            <div class="icon"><i class="fa fa-twitter"></i></div>
-                            Show your web design in a web browser! Check out new awesome tool <a href="index._slideTemplatel">http://www.symu.co  https://www.symu.co</a> 
-                        </li>
-                    </ul>
-                    <a href="index._slideTemplatel" class="tp-all">View All Tweets</a>
-                </div>
-            </div>
-        </div>
-        <!-- Google maps API -->
-        <script src="https://maps.googleapis.com/maps/api/js?sensor=true&amp;v=3"></script>
-        <!-- build:js scripts/vendor.js -->
-
-        <!-- Vendor -->
-        <script src="<?php echo base_url(); ?>assets/vendor/jquery/dist/jquery.js"></script>
-        <script src="<?php echo base_url(); ?>assets/js/jquery-ui.js"></script>
-        <script src="<?php echo base_url(); ?>assets/vendor/waypoints/lib/jquery.waypoints.js"></script>
-        <script src="<?php echo base_url(); ?>assets/vendor/superfish/dist/js/superfish.js"></script>
-        <script src="<?php echo base_url(); ?>assets/vendor/magnific-popup/dist/jquery.magnific-popup.js"></script>
-        <script src="<?php echo base_url(); ?>assets/vendor/imagesloaded/imagesloaded.pkgd.js"></script>
-        <script src="<?php echo base_url(); ?>assets/vendor/owl-carousel/owl-carousel/owl.carousel.js"></script>
-        <script src="<?php echo base_url(); ?>assets/vendor/slick-carousel/slick/slick.js"></script>
-        <script src="<?php echo base_url(); ?>assets/vendor/Swiper/dist/js/swiper.jquery.js"></script>
-        <script src="<?php echo base_url(); ?>assets/vendor/sticky-kit/jquery.sticky-kit.js"></script>
-        <script src="<?php echo base_url(); ?>assets/js/app.js"></script>
-        <!-- endbuild -->
-        <!-- build:js scripts/main.js -->
-
-        <!-- Theme Base, Components and Settings -->
-        <script src="<?php echo base_url(); ?>assets/js/main.js"></script>
-
-        <!-- endbuild -->
-    </body>
-
-</html>
-
+             
 
 <script type="text/javascript">
 
@@ -1329,11 +863,12 @@ $this->load->helper('url');
         app._getTopHeadLines();
         var searchQuery = {key: 'world'};
        app._getCategory(searchQuery,url).done(function (data) {
+             
                 var i = 3;
                 var j = 10;
                 var _category = '';
                 $.each(data, function (key, news) {
-
+                    news = JSON.parse(news);
                     if (searchQuery.key === 'politics' || searchQuery.key === 'world') {
                         if ((key < 4)) {
                             _category += '<article class="post post-tp-6">';
@@ -1374,9 +909,13 @@ $this->load->helper('url');
                 var i = 3;
                 var j = 10;
                 var _category = '';
+                 $('#js-category-news').html('');
                 $.each(data, function (key, news) {
+                    console.log(key);
+                   news.replace(",\\")
+                    news = JSON.parse(news);
 
-                    if (searchQuery.key === 'politics' || searchQuery.key === 'world') {
+                  //  if (searchQuery.key === 'politics' || searchQuery.key === 'world' ||searchQuery.key === 'sports') {
                         if ((key < 4)) {
                             _category += '<article class="post post-tp-6">';
                             _category += '<figure class="js-category-news">';
@@ -1386,18 +925,18 @@ $this->load->helper('url');
                             _category += '<div class="date-tp-2">october 2, 2015</div></article>';
 
                         }
-                    } else {
-                        if ((key < 4)) {
+                    // } else {
+                    //     if ((key < 4)) {
 
-                            _category += '<article class="post post-tp-6">';
-                            _category += '<figure class="js-category-news">';
-                            _category += ' <a href="index._slideTemplatel"><img src="' + news.urlToImage + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
-                            _category += '</figure>';
-                            _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' + news.description + '</h3>';
-                            _category += '<div class="date-tp-2">october 2, 2015</div></article>';
+                    //         _category += '<article class="post post-tp-6">';
+                    //         _category += '<figure class="js-category-news">';
+                    //         _category += ' <a href="index._slideTemplatel"><img src="' + news.urlToImage + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
+                    //         _category += '</figure>';
+                    //         _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' + news.description + '</h3>';
+                    //         _category += '<div class="date-tp-2">october 2, 2015</div></article>';
 
-                        }
-                    }
+                    //     }
+                    // }
 
                 });
                 $('#js-category-news').html(_category);
