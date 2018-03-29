@@ -173,7 +173,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <aside class="side-bar">
+                             <!--    <aside class="side-bar">
                                     <div class="ltst-reviews">
                                         <div class="pst-block">
                                             <div class="pst-block-head">
@@ -405,7 +405,7 @@
                                     </div>
 
 
-                                </aside>
+                                </aside> -->
                             </div>
                         </div>
                         <!-- Video data was here-->
@@ -675,7 +675,7 @@
                                     </div>
 
                                 </div>
-                                <aside class="side-bar">
+                              <!--   <aside class="side-bar">
                                     <div class="tags-widget">
                                         <div class="pst-block">
                                             <div class="pst-block-head">
@@ -845,7 +845,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </aside>
+                                </aside> -->
                             </div>
                         </div>
                     </div>
@@ -873,10 +873,10 @@
                         if ((key < 4)) {
                             _category += '<article class="post post-tp-6">';
                             _category += '<figure class="js-category-news">';
-                            _category += ' <a href="index._slideTemplatel"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
+                            _category += ' <a href="#"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
                             _category += '</figure>';
                             _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +news.abstract+ '</h3>';
-                            _category += '<div class="date-tp-2">october 2, 2015</div></article>';
+                            _category += '<div class="date-tp-2">'+Date(news.publishedAt).split('GMT')[0]+'</div></article>';
 
                         }
                     } else {
@@ -884,10 +884,10 @@
 
                             _category += '<article class="post post-tp-6">';
                             _category += '<figure class="js-category-news">';
-                            _category += ' <a href="index._slideTemplatel"><img src="' + news.urlToImage + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
+                            _category += ' <a href="#"><img src="' + news.urlToImage + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
                             _category += '</figure>';
                             _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' + news.description + '</h3>';
-                            _category += '<div class="date-tp-2">october 2, 2015</div></article>';
+                            _category += '<div class="date-tp-2">'+Date(news.publishedAt).split('GMT')[0]+'</div></article>';
 
                         }
                     }
@@ -919,10 +919,10 @@
                         if ((key < 4)) {
                             _category += '<article class="post post-tp-6">';
                             _category += '<figure class="js-category-news">';
-                            _category += ' <a href="index._slideTemplatel"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
+                            _category += ' <a href="#"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
                             _category += '</figure>';
                             _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +news.abstract+ '</h3>';
-                            _category += '<div class="date-tp-2">october 2, 2015</div></article>';
+                            _category += '<div class="date-tp-2">'+Date(news.publishedAt).split('GMT')[0]+'</div></article>';
 
                         }
                     // } else {

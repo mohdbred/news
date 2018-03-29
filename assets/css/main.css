@@ -787,7 +787,7 @@ The `sprites` mixin generates identical output to the CSS template
     float: left;
     display: block;
     margin-right: 0%;
-    width: 66.66667%;
+   /* width: 66.66667%;*/
     padding: 0 15px; }
     /* line 89, D:/aartyomenko/Git/spectr/html/app/vendor/neat/app/assets/stylesheets/grid/_span-columns.scss */
     .section .content:last-child {
