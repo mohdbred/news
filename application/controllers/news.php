@@ -13,7 +13,7 @@ class News extends CI_Controller {
     public function index() {
         //load the database  
         $this->load->database();
-       // echo "Running...";
+       //echo "Running...";
       //  $this->load->view('news');
 
 

@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 $this->load->helper('url');
 ?>
-<!DOCTYPE _slideTemplatel>
+<!DOCTYPE >
 <html lang="en">
 
     <head>
@@ -10,7 +10,7 @@ $this->load->helper('url');
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <title>World News</title>
+        <title>NewsPulses</title>
 
         <meta name="keywords" content="html5 Template" />
         <meta name="description" content="Responsive html5 Template" />
