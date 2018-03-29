@@ -29,29 +29,153 @@ class site_offline_hook {
     {
 		$html = '
 <!DOCTYPE html>
-<html>
+<html lang="en"> 
 <head>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-<title>Performing Maintenance</title>
-<style type="text/css">
-      body { text-align: center; padding: 150px; }
-      h1 { font-size: 40px; }
-      body { font: 20px Helvetica, sans-serif; color: #333; }
-      #article { display: block; text-align: left; width: 650px; margin: 0 auto; }
-      a { color: #dc8100; text-decoration: none; }
-      a:hover { color: #333; text-decoration: none; }
-    </style>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+  <title>NewsPulses</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="./assets/maintenance/default.css">
+  <link rel="stylesheet" href="./assets/maintenance/layout.css">
+ <!--   <link rel="stylesheet" href="css/media-queries.css">   -->  
+
+ 
+
 </head>
+
 <body>
-<div id="article">
-<h1>Our site is getting a little tune up and some love.</h1>
-<div>
-<p>We apologize for the inconvenience, but we are performing some maintenance. You can still contact us at <a href="mailto:info@newspulses.com"><span class="__cf_email__" data-cfemail="5a3f373b33361a3e35373b333474393537">[email&#160;protected]</span></a>. We will be back up soon!</p>
-<p> - Newspulses</p>
-</div>
-</div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/d07b1474/cloudflare-static/email-decode.min.js"></script></body>
-</html>';
+
+
+   <!-- Intro Section
+   ================================================== -->
+   <section id="intro">
+
+    <header class="row">   
+
+      <div id="logo" >
+        <a href="#" >
+                 <img src="./assets/maintenance/img/logo.png" alt="Zoon">                  
+              </a>          
+      </div>        
+
+    </header> <!-- Header End -->     
+
+    <div  id="main" class="row">
+
+      <div class="twelve columns">
+          
+        <h1>We are currently working on something awesome. Stay tuned!</h1>
+
+        <h5>Time Left Until Launching</h5>
+
+        <div id="counter" class="cf">
+          <span>4 <em>days</em></span> 
+          <span>12 <em>hours</em></span>
+          <span>50 <em>minutes</em></span>
+          <span>33 <em>seconds</em></span> 
+        </div>          
+
+      
+
+           <ul class="social">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a href="#"><i class="fa fa-skype"></i></a></li>
+            </ul>
+
+         </div> 
+          <!-- Begin MailChimp Signup Form -->
+           <div id="mc_embed_signup">
+         
+          Coming Soon       
+          
+          
+           </div>
+
+      </div> <!-- main end -->      
+
+   </section> <!-- end intro section -->
+  
+
+
+  <!-- Location Section
+   ================================================== -->
+  <section id="location">
+
+    <div class="contacts">    
+      
+      <div class="row contact-details">                          
+
+         <div class="columns">
+
+           <h3><i class="fa fa-home"></i>Address.</h3>
+           <p>T3 Supreme Tower<br>
+            14th Floor,sector 99<br>
+             Noida,India
+          </p>
+
+         </div> 
+
+         <div class="columns">
+
+           <h3><i class="fa fa-phone"></i>Phone Numbers.</h3>
+           <p>Phone: (000) 777 1515<br>
+            Mobile: (000) 777 0100<br>
+            Fax: (000) 777 0101
+           </p>
+
+         </div>  
+
+         <div class="columns end">
+
+           <h3><i class="fa fa-envelope"></i>Emails.</h3>
+           <p>mohammad@newspulses.com <br>
+            belal@newspulses.com<br>
+            info@newspulses.com
+           </p>
+
+         </div>           
+
+      </div> <!-- end contact-details -->     
+
+    </div> <!-- end contacts -->
+
+  </section> <!-- end location section -->
+
+  
+
+   <!-- Java Script
+   ================================================== -->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+
+
+  <!--  <script src="js/gmaps.js"></script>
+   <script src="js/waypoints.js"></script> -->
+   <script src="./assets/maintenance/jquery.countdown.js"></script>
+<!--    <script src="js/jquery.placeholder.js"></script> -->
+   <script src="./assets/maintenance/backstretch.js"></script> 
+    <script src="./assets/maintenance/counter.js"></script>   
+ <!--   <script src="js/init.js"></script> -->
+
+</body>
+
+</html>
+';
 		
     echo $html;
     }
