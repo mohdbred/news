@@ -1,6 +1,6 @@
 <?php
 
-require_once "/public_html/vendor/autoload.php";
+require_once " /home/u551018196/public_html/vendor/autoload.php";
 
 //PHPMailer Object
 $mail = new PHPMailer;
