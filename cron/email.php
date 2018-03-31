@@ -3,7 +3,7 @@
 require('../vendor/autoload.php');
 
 //PHPMailer Object
-$mail = new PHPMailer;
+$mail = new PHPMailer\PHPMailer\PHPMailer();
 
 //From email address and name
 $mail->From = "info@newspulses.com";
