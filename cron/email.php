@@ -1,6 +1,6 @@
 <?php
 
-require('/public_html/vendor/autoload.php');
+require('../vendor/autoload.php');
 
 //PHPMailer Object
 $mail = new PHPMailer;
