@@ -1,6 +1,12 @@
 <?php
 
 require('database.php');
+require('email.php');
+
+sendmail("Test Subject", "belal@newspulses.com", "raheem@newspulses.com", "", "Mail Body Test");
+
+
+exit;
 
 $curl = curl_init();
 

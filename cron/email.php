@@ -2,32 +2,36 @@
 
 require('../vendor/autoload.php');
 
-//PHPMailer Object
-$mail = new PHPMailer\PHPMailer\PHPMailer();
+function sendmail($subject = null, $to = null, $cc = null, $bcc = null, $body = null) {
+    //PHPMailer Object
+    $mail = new PHPMailer\PHPMailer\PHPMailer();
 
 //From email address and name
-$mail->From = "info@newspulses.com";
-$mail->FromName = "Email Check";
+    $mail->From = "info@newspulses.com";
+    $mail->FromName = "Newspulses";
 
 //To address and name
-$mail->addAddress("link.belal@gmail.com", "Mohd Belal");
-$mail->addAddress("belal@newspulses.com");
-//Address to which recipient will reply
-$mail->addReplyTo("info@newspulses.com", "Reply");
-
+    $mail->addAddress($to);
+//    $mail->addAddress("belal@newspulses.com");
 //CC and BCC
-//$mail->addCC("cc@example.com");
-//$mail->addBCC("bcc@example.com");
+    if (!empty($cc)) {
+        $mail->addCC($cc);
+    }
+
+    if (!empty($bcc)) {
+        $mail->addBCC($bcc);
+    }
+
 
 //Send HTML or Plain Text email
-$mail->isHTML(true);
+    $mail->isHTML(true);
 
-$mail->Subject = "Subject Text";
-$mail->Body = "<i>Mail body in HTML</i>";
-$mail->AltBody = "This is the plain text version of the email content";
+    $mail->Subject = $subject;
+    $mail->Body = $body;
 
-if (!$mail->send()) {
-    echo "Mailer Error: " . $mail->ErrorInfo;
-} else {
-    echo "Message has been sent successfully";
+    if (!$mail->send()) {
+        echo "Mailer Error: " . $mail->ErrorInfo;
+    } else {
+        echo "Message has been sent successfully";
+    }
 }
