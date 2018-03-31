@@ -34,6 +34,7 @@ if ($err) {
     $res = json_decode($response, true)['articles'];
 
     $i = 1;
+    echo '<pre>';print_r($res);exit;
     foreach ($res as $key => $value) {
 
         if (!empty($value['title']) && !empty($value['description']) && !empty($value['url']) && !empty($value['urlToImage'])) {
@@ -43,6 +44,7 @@ if ($err) {
             $test = str_replace("'", "\'", $t);
             //print_r($test);
             //exit;
+            
             $sql = "INSERT INTO arts (data) VALUES ('" . $test . "')";
             if ($conn->query($sql) === TRUE) {
                 echo $i++;
