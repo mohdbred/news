@@ -67,8 +67,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="mp-section">
-                                <div class="one-third sm-half xs-full">
+                            <div class="mp-section" id="js-category2-data">
+                              <!--   <div class="one-third sm-half xs-full">
                                     <article class="post post-tp-2">
                                         <figure>
                                             <a href="index._slideTemplatel"><img src="https://s3.amazonaws.com/weblionmedia-spectr/img/380x258/1.jpg" height="258" width="380" alt="Spectr News Theme" class="adaptive" /></a>
@@ -121,7 +121,7 @@
                                             </div>
                                         </div>
                                     </article>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <!-- Main posts END -->
@@ -164,254 +164,23 @@
                                             <div class="pst-block-main">
                                             <div class="col-row">
                                                 <div class="col-half" id="js-category-news">
-                                                 
+                                                 <!--Ajax Call-->
+   
                                                  </div>
 
-                                                </div>
+                                            </div>
                                             </div>
                                           
                                         </div>
                                     </div>
                                 </div>
-                                <aside class="side-bar">
-                                    <div class="ltst-reviews">
-                                        <div class="pst-block">
-                                            <div class="pst-block-head">
-                                                <h2 class="title-4"><strong>Latest</strong> Reviews</h2>
-                                                <div class="all-sb">
-                                                    <a href="index._slideTemplatel">all tags</a>
-                                                </div>
-                                            </div>
-                                            <div class="pst-block-main">
-                                                <div class="js-csp-block">
-                                                    <div>
-                                                        <figure class="full-img">
-                                                            <a href="index._slideTemplatel">
-                                                                <img src="https://s3.amazonaws.com/weblionmedia-spectr/img/360x245/1.jpg" alt="Spectr News Theme" class="adaptive" height="245" width="360">
-                                                            </a>
-                                                            <a href="index._slideTemplatel" class="category-tp-3">reviews</a>
-                                                        </figure>
-                                                        <div class="post-wrap">
-                                                            <article class="post post-tp-11">
-                                                                <h3 class="title-10"><a href="index._slideTemplatel">Fusce ac orci sagittis mattis magna ultrices libero</a></h3>
-                                                                <div class="meta-tp-2">
-                                                                    <div class="date"><span>october 2, 2015</span></div>
-                                                                    <div class="rate-tp-1">
-                                                                        <ul>
-                                                                            <li>
-                                                                                <a href="index._slideTemplatel">
-                                                                                </a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="index._slideTemplatel">
-                                                                                </a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="index._slideTemplatel">
-                                                                                </a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="index._slideTemplatel">
-                                                                                </a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="index._slideTemplatel">
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                                <p class="p">Sed ut perspiciatis unde omnis iste natus sit volupt atem accusantium doloremque laudantium</p>
-                                                            </article>
-                                                            <article class="post post-tp-6">
-                                                                <figure>
-                                                                    <a href="index._slideTemplatel">
-                                                                        <img src="https://s3.amazonaws.com/weblionmedia-spectr/img/115x85/12.jpg" alt="Spectr News Theme" class="adaptive" height="85" width="115">
-                                                                    </a>
-                                                                </figure>
-                                                                <h3 class="title-6"><a href="index._slideTemplatel">Duis eu arcu sit amet ante tristique</a></h3>
-                                                                <div class="rate-tp-1">
-                                                                    <ul>
-                                                                        <li>
-                                                                            <a href="index._slideTemplatel">
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="index._slideTemplatel">
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="index._slideTemplatel">
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="index._slideTemplatel">
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="index._slideTemplatel">
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </article>
-                                                            <article class="post post-tp-6">
-                                                                <figure>
-                                                                    <a href="index._slideTemplatel">
-                                                                        <img src="https://s3.amazonaws.com/weblionmedia-spectr/img/115x85/13.jpg" alt="Spectr News Theme" class="adaptive" height="85" width="115">
-                                                                    </a>
-                                                                </figure>
-                                                                <h3 class="title-6"><a href="index._slideTemplatel">Nam ut metus element pharetra diam sed</a></h3>
-                                                                <div class="rate-tp-1">
-                                                                    <ul>
-                                                                        <li>
-                                                                            <a href="index._slideTemplatel">
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="index._slideTemplatel">
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="index._slideTemplatel">
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="index._slideTemplatel">
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="index._slideTemplatel">
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </article>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <figure class="full-img">
-                                                            <a href="index._slideTemplatel">
-                                                                <img src="https://s3.amazonaws.com/weblionmedia-spectr/img/360x245/1.jpg" alt="Spectr News Theme" class="adaptive" height="245" width="360">
-                                                            </a>
-                                                            <a href="index._slideTemplatel" class="category-tp-3">reviews</a>
-                                                        </figure>
-                                                        <div class="post-wrap">
-                                                            <article class="post post-tp-11">
-                                                                <h3 class="title-10"><a href="index._slideTemplatel">Fusce ac orci sagittis mattis magna ultrices libero</a></h3>
-                                                                <div class="meta-tp-2">
-                                                                    <div class="date"><span>october 2, 2015</span></div>
-                                                                    <div class="rate-tp-1">
-                                                                        <ul>
-                                                                            <li>
-                                                                                <a href="index._slideTemplatel">
-                                                                                </a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="index._slideTemplatel">
-                                                                                </a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="index._slideTemplatel">
-                                                                                </a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="index._slideTemplatel">
-                                                                                </a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href="index._slideTemplatel">
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                                <p class="p">Sed ut perspiciatis unde omnis iste natus sit volupt atem accusantium doloremque laudantium</p>
-                                                            </article>
-                                                            <article class="post post-tp-6">
-                                                                <figure>
-                                                                    <a href="index._slideTemplatel">
-                                                                        <img src="https://s3.amazonaws.com/weblionmedia-spectr/img/115x85/12.jpg" alt="Spectr News Theme" class="adaptive" height="85" width="115">
-                                                                    </a>
-                                                                </figure>
-                                                                <h3 class="title-6"><a href="index._slideTemplatel">Duis eu arcu sit amet ante tristique</a></h3>
-                                                                <div class="rate-tp-1">
-                                                                    <ul>
-                                                                        <li>
-                                                                            <a href="index._slideTemplatel">
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="index._slideTemplatel">
-                                                                                <i class="li_star"></i>
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="index._slideTemplatel">
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="index._slideTemplatel">
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="index._slideTemplatel">
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </article>
-                                                            <article class="post post-tp-6">
-                                                                <figure>
-                                                                    <a href="index._slideTemplatel">
-                                                                        <img src="https://s3.amazonaws.com/weblionmedia-spectr/img/115x85/13.jpg" alt="Spectr News Theme" class="adaptive" height="85" width="115">
-                                                                    </a>
-                                                                </figure>
-                                                                <h3 class="title-6"><a href="index._slideTemplatel">Nam ut metus element pharetra diam sed</a></h3>
-                                                                <div class="rate-tp-1">
-                                                                    <ul>
-                                                                        <li>
-                                                                            <a href="index._slideTemplatel">
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="index._slideTemplatel">
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="index._slideTemplatel">
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="index._slideTemplatel">
-
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="index._slideTemplatel">
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </article>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="pst-block-foot">
-                                                <div class="js-sbr-pagination"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                </aside>
+                        
                             </div>
                         </div>
                         <!-- Video data was here-->
                         <div class="section">
                             <div class="row">
-                                <div class="content">
+                               <!--  <div class="content">
 
                                     <div class="latest-nws">
                                         <div class="pst-block">
@@ -654,7 +423,7 @@
                                                         </article>
                                                     </div>
                                                 </div>
-                                                <!-- Page nav -->
+                                              
                                                 <div class="page-nav">
                                                     <a href="index._slideTemplatel" class="pn-item">
                                                         <i class="page-nav-prev-ic"></i>
@@ -669,13 +438,13 @@
                                                     </a>
                                                     <span class="page-count">Page 1 of 7</span>
                                                 </div>
-                                                <!-- Page nav END -->
+                                         
                                             </div>
                                         </div>
                                     </div>
 
-                                </div>
-                                <aside class="side-bar">
+                                </div> -->
+                              <!--   <aside class="side-bar">
                                     <div class="tags-widget">
                                         <div class="pst-block">
                                             <div class="pst-block-head">
@@ -845,7 +614,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </aside>
+                                </aside> -->
                             </div>
                         </div>
                     </div>
@@ -867,33 +636,63 @@
                 var i = 3;
                 var j = 10;
                 var _category = '';
+                var _category2 = '';
                 $.each(data, function (key, news) {
                     news = JSON.parse(news);
                     if (searchQuery.key === 'politics' || searchQuery.key === 'world') {
-                        if ((key < 4)) {
+                        if ((key < 6)) {
+                         
+                        if(key%2==0)
+                         {
+                            _category += '<div class="one-third">';
                             _category += '<article class="post post-tp-6">';
-                            _category += '<figure class="js-category-news">';
-                            _category += ' <a href="index._slideTemplatel"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
+                            _category += '<figure >';
+                            _category += ' <a href="#"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
                             _category += '</figure>';
                             _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +news.abstract+ '</h3>';
-                            _category += '<div class="date-tp-2">october 2, 2015</div></article>';
+                            _category += '<div class="date-tp-2">'+Date(news.publishedAt).split('GMT')[0]+'</div></article>';
+                        }
+                          else
+                         {
+                            _category += '<article class="post post-tp-6">';
+                            _category += '<figure >';
+                            _category += ' <a href="#"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
+                            _category += '</figure>';
+                            _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +news.abstract+ '</h3>';
+                            _category += '<div class="date-tp-2">'+Date(news.publishedAt).split('GMT')[0]+'</div></article> </div>';
+                         }
+
+                        }
+                       if( key > 6  && key < 14){
+                             _category2 += '<div class="one-third sm-half"><article class="post post-tp-2"><figure>';
+                            _category2 += '<a href="' + news.url + '" target="_blank"><img src="' + news.multimedia[2].url + '" height="254" width="380" alt="Spectr News Theme" class="adaptive" /></a>';
+                            _category2 += '</figure><div class="ptp-1-overlay"><div class="ptp-1-data">';
+                            _category2 += '  <h2 class="title-29"><a  href="#">' +news.abstract+ '</a></h2>';
+                            _category2 += '<div class="meta-tp-1"><div class="ptp-1-date"><a href="#">october 2, 2015</a></div>';
+                             _category2 += ' <div class="ptp-1-views"><a href="#"><i class="li_eye"></i><span>187</span></a></div>';
+                             _category2 += ' <div class="ptp-1-comments"><a href="#"><i class="li_bubble"></i><span>5</span></a></div>';
+                             _category2 +='</div></div></div></article></div>';
 
                         }
                     } else {
-                        if ((key < 4)) {
+                        if ((key < 6)) {
 
                             _category += '<article class="post post-tp-6">';
                             _category += '<figure class="js-category-news">';
-                            _category += ' <a href="index._slideTemplatel"><img src="' + news.urlToImage + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
+                            _category += ' <a href="#"><img src="' + news.urlToImage + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
                             _category += '</figure>';
                             _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' + news.description + '</h3>';
-                            _category += '<div class="date-tp-2">october 2, 2015</div></article>';
+                            _category += '<div class="date-tp-2">'+Date(news.publishedAt).split('GMT')[0]+'</div></article>';
 
                         }
+
+          
                     }
 
                 });
+                
                 $('#js-category-news').html(_category);
+                $('#js-category2-data').html(_category2);
 
                 //Top headlines
 
@@ -919,10 +718,10 @@
                         if ((key < 4)) {
                             _category += '<article class="post post-tp-6">';
                             _category += '<figure class="js-category-news">';
-                            _category += ' <a href="index._slideTemplatel"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
+                            _category += ' <a href="#"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
                             _category += '</figure>';
                             _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +news.abstract+ '</h3>';
-                            _category += '<div class="date-tp-2">october 2, 2015</div></article>';
+                            _category += '<div class="date-tp-2">'+Date(news.publishedAt).split('GMT')[0]+'</div></article>';
 
                         }
                     // } else {

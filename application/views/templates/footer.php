@@ -5,12 +5,14 @@
                             <div class="bottom-part">
                                 <div class="row">
                                     <div class="ft-logo">
-                                        <a href="index._slideTemplatel"><img src="https://s3.amazonaws.com/weblionmedia-spectr/img/footer-logo.svg" height="30" width="105" alt="Spectr News Theme"></a>
+                                        <a href="#"><img src="<?php echo base_url(); ?>assets/img/newspulses.png" style="height: 100px;"></a>
                                     </div>
                                     <div class="ft-about">
                                         <article>
                                             <h4 class="ft-title-1"><strong>About</strong>Us</h4>
-                                            <p class="p">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totamrem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo spiciatis unde omnis iste natus sit voluptatem</p>
+                                            <p class="p">The selection and placement of stories on this page were determined automatically by a computer program.
+
+The time or date displayed reflects when an article was expanded or updated in NewsPulses.</p>
                                         </article>
                                     </div>
                                     <div class="ft-social">
@@ -41,14 +43,14 @@
                                     <div class="three-quarters">
                                         <div class="ft-menu">
                                             <ul class="ft-menu-list">
-                                        <li><a href="<?php echo site_url(); ?>news/about_us">About the site</a></li>
-                                                <li><a href="<?php base_url(); ?>contact">Contacts</a></li>
-                                                <li><a href="<?php base_url(); ?>privacy">privacy policy</a></li>
+                                        <li><a href="<?php echo site_url(); ?>/news/about_us">About the site</a></li>
+                                                <li><a href="<?php echo site_url(); ?>/news/contact">Contacts</a></li>
+                                                <li><a href="<?php echo site_url(); ?>privacy">privacy policy</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="one-quarter sm-full">
-                                        <div class="copyright">© Copyright 2015 by WebLionMedia</div>
+                                        <div class="copyright">© Copyright 2018 by newsPulses</div>
                                     </div>
                                 </div>
                             </div>
@@ -155,63 +157,11 @@
                         <li class="mn-item"><a href="video._slideTemplatel">video</a></li>
                         <li class="mn-item"><a href="reviews_stars_style._slideTemplatel">reviews</a></li>
                         <li class="mn-item"><a href="products._slideTemplatel">shop</a></li>
-                        <li class="mn-item"><a href="contact_page_style_1._slideTemplatel">contacts</a></li>
+                        <li class="mn-item"><a href="<?php echo site_url(); ?>/news/contact">contacts</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
-
-        <!-- Aside menu -->
-        <div id="aside-menu" class="aside-menu mfp-hide">
-            <div class="am-container">
-                <nav class="am-menu">
-                    <ul class="am-list">
-                        <li class="am-item">
-                            <a href="index._slideTemplatel">news</a>
-                        </li>
-                        <li class="am-item">
-                            <a href="javascript:void(0)">FEATURES</a>
-                        </li>
-                        <li class="am-item">
-                            <a href="category_style_three._slideTemplatel">design</a>
-                        </li>
-                        <li class="am-item">
-                            <a href="category_style_four._slideTemplatel">life style</a>
-                        </li>
-                        <li class="am-item">
-                            <a href="video._slideTemplatel">video</a>
-                        </li>
-                        <li class="am-item">
-                            <a href="reviews_stars_style._slideTemplatel">reviews</a>
-                        </li>
-                        <li class="am-item">
-                            <a href="products._slideTemplatel">shop</a>
-                        </li>
-                        <li class="am-item">
-                            <a href="contact_page_style_1._slideTemplatel">Contacts</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="am-container">
-                <div class="twitter-posts">
-                    <ul class="tp-list">
-                        <li class="tp-list-item">
-                            <div class="icon"><i class="fa fa-twitter"></i></div>
-                            Show your web design in a web browser! Check out new awesome tool <a href="index._slideTemplatel">http://www.symu.co  https://www.symu.co</a> 
-                        </li>
-                        <li class="tp-list-item">
-                            <div class="icon"><i class="fa fa-twitter"></i></div>
-                            Show your web design in a web browser! Check out new awesome tool <a href="index._slideTemplatel">http://www.symu.co  https://www.symu.co</a> 
-                        </li>
-                    </ul>
-                    <a href="index._slideTemplatel" class="tp-all">View All Tweets</a>
-                </div>
-            </div>
-        </div>
-        <!-- Google maps API -->
-        <script src="https://maps.googleapis.com/maps/api/js?sensor=true&amp;v=3"></script>
-        <!-- build:js scripts/vendor.js -->
 
     </body>
 
