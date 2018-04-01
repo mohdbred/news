@@ -39,6 +39,7 @@ if ($err) {
 
         if ($conn->query($sql_truncate) === TRUE) {
             // Done successfully
+            echo "  ---    truncated ----   ---    ";
         } else {
             $subject = "Technology Table truncation error " . date("Y-m-d H:i:s");
             $body = "Truncate SQL command got error while executing";
@@ -49,9 +50,10 @@ if ($err) {
         // Now inseting each row values in table
 
         foreach ($res as $key => $value) {
+            echo "inside news array… :           ";
 
             if (!empty($value['title']) && !empty($value['description']) && !empty($value['url']) && !empty($value['urlToImage'])) {
-
+                echo "inside test condition true          ";
                 $t = stripslashes(serialize($value));
                 $test = str_replace("'", "\'", $t);
 
@@ -59,7 +61,9 @@ if ($err) {
                 $sql = "INSERT INTO arts (data) VALUES ('" . $test . "')";
                 if ($conn->query($sql) === TRUE) {
                     // Done successfully
+                    echo "insert done --------------    ";
                 } else {
+                    echo "error in insert     ";
                     $subject_insert = "Technology Table Insertion error " . date("Y-m-d H:i:s");
                     $body_insert = "Following is the detail for sql query: <br>" . $sql;
                     sendmail($subject_insert, "belal@newspulses.com", "raheem@newspulses.com", "", $body_insert);
