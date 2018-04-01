@@ -29,6 +29,7 @@ if ($err) {
     $i = 1;
 
     // check if size of array is > 15 , then do the process else leave
+    echo sizeof($res);exit;
     if (sizeof($res) > 15) {
 
         // Deleting the contents of database first
@@ -53,7 +54,7 @@ if ($err) {
                 $test =  serialize($t);
 
                 $sql = "INSERT INTO arts (data) VALUES ('" . $test . "')";
-                echo $sql;exit;
+                
                 if ($conn->query($sql) === TRUE) {
                     // Done successfully
                 } else {
