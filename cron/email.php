@@ -1,6 +1,6 @@
 <?php
 
-require('../vendor/autoload.php');
+require(dirname(__FILE__) . '../vendor/autoload.php');
 
 function sendmail($subject = null, $to = null, $cc = null, $bcc = null, $body = null) {
     //PHPMailer Object
