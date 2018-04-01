@@ -1,0 +1,14 @@
+<?php
+
+$servername = "mysql.hostinger.in";
+$username = "u551018196_bred";
+$password = "f4b77oxGXMvM";
+$dbname = "u551018196_news";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+

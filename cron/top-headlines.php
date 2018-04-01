@@ -1,31 +1,22 @@
-<?php 
-$servername = "localhost";
-$username = "u551018196_bred";
-$password = "bred@007";
-$dbname = "u551018196_news";
+<?php
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-//echo '<pre>';
-//print_r($conn);exit;
+require('database.php');
+require('email.php');
 
- $curl = curl_init();
+
+$curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://newsapi.org/v2/top-headlines?country=us&pageSize=100&apiKey=20f81b719fad40058a5428ade7215931",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "GET",
-  CURLOPT_HTTPHEADER => array(
-    "cache-control: no-cache",
-  ),
+    CURLOPT_URL => "https://newsapi.org/v2/top-headlines?country=us&pageSize=100&apiKey=20f81b719fad40058a5428ade7215931",
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => "",
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 30,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => "GET",
+    CURLOPT_HTTPHEADER => array(
+        "cache-control: no-cache",
+    ),
 ));
 
 $response = curl_exec($curl);
@@ -34,30 +25,53 @@ $err = curl_error($curl);
 curl_close($curl);
 
 if ($err) {
-  echo "cURL Error #:" . $err;
+    echo "cURL Error #:" . $err;
 } else {
-	$res = json_decode($response, true)['articles'];
+    $res = json_decode($response, true)['articles'];
 
-	$i = 1;
-    foreach ($res as $key => $value) {
-      
-      if(!empty($value['title']) && !empty($value['description']) && !empty($value['url']) && !empty($value['urlToImage'])){
-		  //echo '<pre>';
-		  //print_r(stripslashes(serialize($value)));
-		  $t = stripslashes(serialize($value));
-		  $test = str_replace("'","\'",$t);
-		  //print_r($test);
-		  //exit;
-		  $sql = "INSERT INTO arts (data) VALUES ('".$test."')";
-			if ($conn->query($sql) === TRUE) {
-				echo $i++;
-				echo "New record created successfully  ----   <br>";
-			} else {
-				echo "Error: " . $sql . "<br>" . $conn->error."<br>";
-			}
-      }
+    $i = 1;
+
+    // check if size of array is > 15 , then do the process else leave
+    if (sizeof($res) > 15) {
+
+        // Deleting the contents of database first
+        $sql_truncate = "TRUNCATE `top-headlines`";
+
+        if ($conn->query($sql_truncate) === TRUE) {
+            // Done successfully
+        } else {
+            $subject = "top-headlines Table truncation error " . date("Y-m-d H:i:s");
+            $body = "Truncate SQL command got error while executing";
+            sendmail($subject, "belal@newspulses.com", "raheem@newspulses.com", "", $body);
+            exit();
+        }
+
+        // Now inseting each row values in table
+
+        foreach ($res as $key => $value) {
+
+            if (!empty($value['title']) && !empty($value['description']) && !empty($value['url']) && !empty($value['urlToImage'])) {
+
+                $t = stripslashes(serialize($value));
+                $test = str_replace("'", "\'", $t);
+
+                $sql = "INSERT INTO top-headlines (data) VALUES ('" . $test . "')";
+                if ($conn->query($sql) === TRUE) {
+                    // Done successfully
+                } else {
+                    $subject_insert = "top-headlines Table Insertion error " . date("Y-m-d H:i:s");
+                    $body_insert = "Following is the detail for sql query: <br>" . $sql;
+                    sendmail($subject_insert, "belal@newspulses.com", "raheem@newspulses.com", "", $body_insert);
+                    exit();
+                }
+            }
+        }
+    } else {
+        // Catching error 
+        $subject_count = "Data from top-headlines API is below 15 ->  " . date("Y-m-d H:i:s");
+        $body_count = "top-headlines API is not giving enough data: " . sizeof($res);
+        sendmail($subject_count, "belal@newspulses.com", "raheem@newspulses.com", "", $body_count);
+        exit();
     }
-  
 }
-
 ?>
