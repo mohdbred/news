@@ -41,11 +41,10 @@ if ($err) {
     } else {
         $subject_insert = "Top-headlines Table Fetching last ID error ->  " . date("Y-m-d H:i:s");
         $body_insert = "Issue in getting last inserted id from table: <br>" . $sql_last_inserted_id;
-        //sendmail($subject_insert, "belal@newspulses.com", "raheem@newspulses.com", "", $body_insert);
+        sendmail($subject_insert, "belal@newspulses.com", "raheem@newspulses.com", "", $body_insert);
         //exit();
     }
     
-    echo "Last id from database:  ".$last_inserted_id.'       ';
 
     // check if size of array is > 15 , then do the process else leave
     if (sizeof($res) > 5) {
@@ -58,27 +57,19 @@ if ($err) {
 
                 $t = stripslashes(serialize($value));
                 $test = str_replace("'", "\'", $t);
-//                  $test = stripslashes(serialize(str_replace("'", "\'", $value)));
-                  
-                  
-//                $t = json_encode($value);
-//                $test = serialize($t);
 
                 $sql = "INSERT INTO `top-headlines` (data) VALUES ('" . $test . "')";
                 if ($conn->query($sql) === TRUE) {
                     // Done successfully
                     $i++;
-                    echo "Insert done    ".$i.'     ';
                 } else {
-                    echo "Error in insert data     <br>".$sql.'      ';
                     $subject_insert = "top-headlines Table Insertion error " . date("Y-m-d H:i:s");
                     $body_insert = "Following is the detail for sql query: <br>" . $sql;
-                    //sendmail($subject_insert, "belal@newspulses.com", "raheem@newspulses.com", "", $body_insert);
+                    sendmail($subject_insert, "belal@newspulses.com", "raheem@newspulses.com", "", $body_insert);
                     //exit();
                 }
             }
         }
-        echo "    Final i value :".$i.'    ';
         // Now deleting the previous data if no of insertion in > 15
         if ($i >= 15) {
             $sql_truncate = "Delete from `top-headlines` where id <= " . $last_inserted_id;
@@ -88,7 +79,7 @@ if ($err) {
             } else {
                 $subject = "Top-headlines Table truncation error " . date("Y-m-d H:i:s");
                 $body = "Truncate SQL command got error while executing  : <br>" . $sql_truncate;
-                //sendmail($subject, "belal@newspulses.com", "raheem@newspulses.com", "", $body);
+                sendmail($subject, "belal@newspulses.com", "raheem@newspulses.com", "", $body);
                 //exit();
             }
         }
@@ -96,7 +87,7 @@ if ($err) {
         // Catching error 
         $subject_count = "Data from top-headlines API is below 15 ->  " . date("Y-m-d H:i:s");
         $body_count = "Top-headlines API is not giving enough data: " . sizeof($res);
-        //sendmail($subject_count, "belal@newspulses.com", "raheem@newspulses.com", "", $body_count);
+        sendmail($subject_count, "belal@newspulses.com", "raheem@newspulses.com", "", $body_count);
         //exit();
     }
 }
