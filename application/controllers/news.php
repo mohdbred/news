@@ -62,9 +62,11 @@ class News extends CI_Controller {
             show_404();
         }
         $data['title'] = ucfirst('technology');
-        $this->load->view('templates/header', $data);
-        $this->load->view('technology.php', $data);
-        $this->load->view('templates/footer', $data);
+        // $this->load->view('templates/header', $data);
+        // $this->load->view('technology.php', $data);
+        // $this->load->view('templates/footer', $data);
+
+        $this->load->view('comingsoon.php', $data);
     }
 
     public function politics() {
@@ -73,9 +75,11 @@ class News extends CI_Controller {
             show_404();
         }
         $data['title'] = ucfirst('politics');
-        $this->load->view('templates/header', $data);
-        $this->load->view('politics.php', $data);
-        $this->load->view('templates/footer', $data);
+        // $this->load->view('templates/header', $data);
+        // $this->load->view('politics.php', $data);
+        // $this->load->view('templates/footer', $data);
+
+        $this->load->view('comingsoon.php', $data);
     }
 
     public function education() {
@@ -84,9 +88,11 @@ class News extends CI_Controller {
             show_404();
         }
         $data['title'] = ucfirst('education');
-        $this->load->view('templates/header', $data);
-        $this->load->view('education.php', $data);
-        $this->load->view('templates/footer', $data);
+        // $this->load->view('templates/header', $data);
+        // $this->load->view('education.php', $data);
+        // $this->load->view('templates/footer', $data);
+
+        $this->load->view('comingsoon.php', $data);
     }
 
     public function bussiness() {
@@ -95,9 +101,11 @@ class News extends CI_Controller {
             show_404();
         }
         $data['title'] = ucfirst('bussiness');
-        $this->load->view('templates/header', $data);
-        $this->load->view('bussiness.php', $data);
-        $this->load->view('templates/footer', $data);
+        // $this->load->view('templates/header', $data);
+        // $this->load->view('bussiness.php', $data);
+        // $this->load->view('templates/footer', $data);
+
+        $this->load->view('comingsoon.php', $data);
     }
 
     public function entertainment() {
@@ -106,9 +114,11 @@ class News extends CI_Controller {
             show_404();
         }
         $data['title'] = ucfirst('entertainment');
-        $this->load->view('templates/header', $data);
-        $this->load->view('entertainment.php', $data);
-        $this->load->view('templates/footer', $data);
+        // $this->load->view('templates/header', $data);
+        // $this->load->view('entertainment.php', $data);
+        // $this->load->view('templates/footer', $data);
+
+        $this->load->view('comingsoon.php', $data);
     }
 
     public function sports() {
@@ -117,9 +127,11 @@ class News extends CI_Controller {
             show_404();
         }
         $data['title'] = ucfirst('sports');
-        $this->load->view('templates/header', $data);
-        $this->load->view('sports.php', $data);
-        $this->load->view('templates/footer', $data);
+        // $this->load->view('templates/header', $data);
+        // $this->load->view('sports.php', $data);
+        // $this->load->view('templates/footer', $data);
+
+        $this->load->view('comingsoon.php', $data);
     }
 
     public function about_us() {
@@ -141,6 +153,16 @@ class News extends CI_Controller {
         $data['title'] = ucfirst('contact');
         $this->load->view('templates/header', $data);
         $this->load->view('pages/contact.php', $data);
+        $this->load->view('templates/footer', $data);
+    }
+    public function privacy() {
+        if (!file_exists(APPPATH . '/views/pages/privacy.php')) {
+            //Whoops, we don't have a page for that!
+            show_404();
+        }
+        $data['title'] = ucfirst('privacy');
+        $this->load->view('templates/header', $data);
+        $this->load->view('pages/privacy.php', $data);
         $this->load->view('templates/footer', $data);
     }
 

@@ -3,7 +3,7 @@
                     <div class="page-head-tile">
                         <div class="container">
                             <div class="page-title">
-                                <h1 class="title-16"><strong>Contact</strong> Us Style One</h1>
+                                <h1 class="title-16"><strong>Drop us a </strong>line</h1>
                             </div>
                         </div>
                     </div>
@@ -23,13 +23,13 @@
                 <div class="magazine-details">
                     <div class="title-blc-2">
                         <div class="title-blc-inner">
-                            <h4>Spectr Magazine <span>Details</span></h4>
+                            <h4>NewsPulses <span>Details</span></h4>
                         </div>
                     </div>
                     <div class="details-info">
-                        <div class="address"><i class="li_location"></i> Fleischmarkt 22/Wolfengasse 3, Vienna A-1521, Austria</div>
+                        <div class="address"><i class="li_location"></i> Noida Delhi, India</div>
                         <div class="phone"><i class="li_phone"></i> Director 8 800 562 35 24</div>
-                        <div class="email"><i class="li_mail"></i> Email: <a href="mailto:contact@spectr.com">contact@spectr.com</a></div>
+                        <div class="email"><i class="li_mail"></i> Email: <a href="mailto:contact@spectr.com">info@newspulses.com</a></div>
                         <div class="social-tp-2">
                             <ul>
                                 <li class="tw"><a href="">
@@ -107,34 +107,8 @@
        
         </div>
     </div>
-    <div class="twitter-widget">
-        <div class="pst-block">
-            <div class="pst-block-head">
-                <h2 class="title-4"><strong>Twitter</strong></h2>
-                <div class="info-tp-1">
-                    <a href=""><span>@weblionmedia</span></a>
-                    <a href=""><span class="follow">Follow us</span></a>
-                </div>
-            </div>
-            <div class="pst-block-main">
-                <div class="twitter-posts">
-                    <ul class="post-list">
-                        <li>
-                            <i class="fa fa-twitter"></i>
-                            <p>Sed ut perspiciatis <a href="">@weblionmedia</a> unde omnis iste natus sit voluptatem accusantium doloremque laudantiu <a href="">#news</a> <a href="">#video</a> <a href="">#life</a></p>
-                            <div class="date">2 min ago</div>
-                        </li>
-                        <li>
-                            <i class="fa fa-twitter"></i>
-                            <p>Sed ut perspiciatis <a href="">@weblionmedia</a> unde omnis iste natus sit voluptatem accusantium doloremque laudantiu <a href="">#news</a> <a href="">#video</a> <a href="">#life</a></p>
-                            <div class="date">2 min ago</div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="sbsb-block-1">
+  
+<!--     <div class="sbsb-block-1">
         <h4 class="title-8"><strong>Subscribe</strong> to Spectr</h4>
         <div class="sbsb-form-1">
             <div class="sbsb-form">
@@ -147,7 +121,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </aside>
                         </div>
                     </div>
