@@ -53,6 +53,7 @@ if ($err) {
                 if ($conn->query($sql) === TRUE) {
                     // Done successfully
                     $i++;
+                    echo "    ".$i;
                 } else {
                     $subject_insert = "Arts Table Insertion error " . date("Y-m-d H:i:s");
                     $body_insert = "Following is the detail for sql query: <br>" . $sql;
@@ -61,18 +62,20 @@ if ($err) {
                 }
             }
         }
+        echo "   Last id:".$last_inserted_id;
 
         // Now deleting the previous data if no of insertion in > 15
+        if ($i >= 15) {
+            $sql_truncate = "Delete from arts where id <= " . $last_inserted_id;
 
-        $sql_truncate = "Delete from arts where id <= " . $last_inserted_id;
-
-        if ($conn->query($sql_truncate) === TRUE) {
-            // Done successfully
-        } else {
-            $subject = "Arts Table truncation error " . date("Y-m-d H:i:s");
-            $body = "Truncate SQL command got error while executing  : <br>" . $sql_truncate;
-            sendmail($subject, "belal@newspulses.com", "raheem@newspulses.com", "", $body);
-            exit();
+            if ($conn->query($sql_truncate) === TRUE) {
+                // Done successfully
+            } else {
+                $subject = "Arts Table truncation error " . date("Y-m-d H:i:s");
+                $body = "Truncate SQL command got error while executing  : <br>" . $sql_truncate;
+                sendmail($subject, "belal@newspulses.com", "raheem@newspulses.com", "", $body);
+                exit();
+            }
         }
     } else {
         // Catching error 
