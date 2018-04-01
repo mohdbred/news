@@ -151,14 +151,11 @@
 
             el.slick({
                 fade: true,
-                speed: 1000,
-                dots: true,
-                arrows: false,
-                appendDots: pagg,
-                dotsClass: 'sbr-dots',
-                customPaging : function(slider, i) {
-                    return '<span></span>';
-                }
+                speed: 2000,
+              autoplay: true,
+            appendArrows: $('.tl-slider-control'),
+            prevArrow: '<span class="arr-left-dark-ic tls-prev"><i></i></span>',
+            nextArrow: '<span class="arr-right-dark-ic tls-next"><i></i></span>'
             });
         });
     });
@@ -192,7 +189,7 @@
             // Optional parameters
             speed: 1000,
             loop: true,
-
+            autoplay: true,
             nextButton: '.nav-arrow.next',
             prevButton: '.nav-arrow.prev',
             pagination: '.slide-count',
@@ -223,6 +220,8 @@
 
         mainSlider.slick({
             speed: 600,
+            // autoplay: true,
+           // loop: true,
             appendArrows: $('.ms-navs'),
             prevArrow: '<div class="prev"><i class="ms-prev"></div>',
             nextArrow: '<div class="next"><i class="ms-next"></div>',
