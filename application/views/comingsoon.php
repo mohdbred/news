@@ -2,34 +2,13 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 ?>
-<!DOCTYPE html>
-<html lang="en"> 
-<head>
-
-   <!--- Basic Page Needs
-   ================================================== -->
-   <meta charset="utf-8">
-  <title>NewsPulses</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-   <!-- Mobile Specific Metas
-   ================================================== -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  <!-- CSS
-    ================================================== -->
-   <link rel="stylesheet" href="./../assets/maintenance/default.css">
-  <link rel="stylesheet" href="./../assets/maintenance/layout.css">
- <!--   <link rel="stylesheet" href="css/media-queries.css">   -->  
-
- 
-
-</head>
-
-<body>
 
 
+      <link rel="stylesheet" href="<?php echo base_url(); ?>assets/maintenance/default.css">
+         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/maintenance/layout.css">
+
+  <div class="main-content">
+      
    <!-- Intro Section
    ================================================== -->
    <section id="intro">
@@ -128,24 +107,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     </div> <!-- end contacts -->
 
-  </section> <!-- end location section -->
-
-  
-
-   <!-- Java Script
-   ================================================== -->
-   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  </section> <!-- end location section -->        
+  </div>
 
 
 
-  <!--  <script src="js/gmaps.js"></script>
-   <script src="js/waypoints.js"></script> -->
-   <script src="./../assets/maintenance/jquery.countdown.js"></script>
-<!--    <script src="js/jquery.placeholder.js"></script> -->
-   <script src="./../assets/maintenance/backstretch.js"></script> 
-    <script src="./../assets/maintenance/counter.js"></script>   
- <!--   <script src="js/init.js"></script> -->
 
-</body>
+  <script type="text/javascript">
 
-</html>
+    (function (window, $, undefined) {
+
+    $("#counter")
+  .countdown("2018/04/09", function(event) {
+  var $this = $(this).html(event.strftime(''
+    + '<span>%d <em>days</em></span> '
+    + '<span>%H <em>hours</em></span> '
+    + '<span>%M <em>minutes</em></span> '
+    + '<span>%S <em>seconds</em></span>'));
+ });
+    })(window, jQuery);
+</script>

@@ -62,7 +62,7 @@ class News extends CI_Controller {
             show_404();
         }
         $data['title'] = ucfirst('technology');
-        // $this->load->view('templates/header', $data);
+         $this->load->view('templates/header', $data);
         // $this->load->view('technology.php', $data);
         // $this->load->view('templates/footer', $data);
 
@@ -75,7 +75,7 @@ class News extends CI_Controller {
             show_404();
         }
         $data['title'] = ucfirst('politics');
-        // $this->load->view('templates/header', $data);
+         $this->load->view('templates/header', $data);
         // $this->load->view('politics.php', $data);
         // $this->load->view('templates/footer', $data);
 
@@ -88,7 +88,7 @@ class News extends CI_Controller {
             show_404();
         }
         $data['title'] = ucfirst('education');
-        // $this->load->view('templates/header', $data);
+         $this->load->view('templates/header', $data);
         // $this->load->view('education.php', $data);
         // $this->load->view('templates/footer', $data);
 
@@ -101,7 +101,7 @@ class News extends CI_Controller {
             show_404();
         }
         $data['title'] = ucfirst('bussiness');
-        // $this->load->view('templates/header', $data);
+         $this->load->view('templates/header', $data);
         // $this->load->view('bussiness.php', $data);
         // $this->load->view('templates/footer', $data);
 
@@ -114,7 +114,7 @@ class News extends CI_Controller {
             show_404();
         }
         $data['title'] = ucfirst('entertainment');
-        // $this->load->view('templates/header', $data);
+         $this->load->view('templates/header', $data);
         // $this->load->view('entertainment.php', $data);
         // $this->load->view('templates/footer', $data);
 
@@ -127,7 +127,7 @@ class News extends CI_Controller {
             show_404();
         }
         $data['title'] = ucfirst('sports');
-        // $this->load->view('templates/header', $data);
+         $this->load->view('templates/header', $data);
         // $this->load->view('sports.php', $data);
         // $this->load->view('templates/footer', $data);
 

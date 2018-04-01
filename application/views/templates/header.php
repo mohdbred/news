@@ -53,6 +53,7 @@ $this->load->helper('url');
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/main.css" />
 
         <!-- endbuild -->
+  
        
         <!-- Vendor -->
         <script src="<?php echo base_url(); ?>assets/vendor/jquery/dist/jquery.js"></script>
@@ -66,6 +67,10 @@ $this->load->helper('url');
         <script src="<?php echo base_url(); ?>assets/vendor/Swiper/dist/js/swiper.jquery.js"></script>
         <script src="<?php echo base_url(); ?>assets/vendor/sticky-kit/jquery.sticky-kit.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/app.js"></script>
+
+
+ <script src="<?php echo base_url(); ?>assets/maintenance/jquery.countdown.js"></script>
+ <script src="<?php echo base_url(); ?>assets/maintenance/backstretch.js"></script>  
         <!-- endbuild -->
         <!-- build:js scripts/main.js -->
 
