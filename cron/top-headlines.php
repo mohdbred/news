@@ -56,8 +56,13 @@ if ($err) {
 
             if (!empty($value['title']) && !empty($value['description']) && !empty($value['url']) && !empty($value['urlToImage'])) {
 
-                $t = stripslashes(serialize($value));
-                $test = str_replace("'", "\'", $t);
+//                $t = stripslashes(serialize($value));
+//                $test = str_replace("'", "\'", $t);
+                  $test = stripslashes(serialize(str_replace("'", "\'", $value)));
+                  
+                  
+//                $t = json_encode($value);
+//                $test = serialize($t);
 
                 $sql = "INSERT INTO top-headlines (data) VALUES ('" . $test . "')";
                 if ($conn->query($sql) === TRUE) {
