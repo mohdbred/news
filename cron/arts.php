@@ -46,7 +46,7 @@ if ($err) {
                 
 
                 $t = json_encode($value);
-                $test = serialize(str_replace("'", "\'", $t));
+                $test = (str_replace("'", "\'", $t));
 
                 $sql = "INSERT INTO arts (data) VALUES ('" . $test . "')";
                 if ($conn->query($sql) === TRUE) {
