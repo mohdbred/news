@@ -2,7 +2,7 @@
 
 $servername = "mysql.hostinger.in";
 $username = "u551018196_bred";
-$password = "bred@007";
+$password = "f4b77oxGXMvM";
 $dbname = "u551018196_news";
 
 // Create connection
