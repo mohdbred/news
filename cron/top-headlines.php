@@ -56,9 +56,9 @@ if ($err) {
 
             if (!empty($value['title']) && !empty($value['description']) && !empty($value['url']) && !empty($value['urlToImage'])) {
 
-//                $t = stripslashes(serialize($value));
-//                $test = str_replace("'", "\'", $t);
-                  $test = stripslashes(serialize(str_replace("'", "\'", $value)));
+                $t = stripslashes(serialize($value));
+                $test = str_replace("'", "\'", $t);
+//                  $test = stripslashes(serialize(str_replace("'", "\'", $value)));
                   
                   
 //                $t = json_encode($value);
