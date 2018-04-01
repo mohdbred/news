@@ -33,16 +33,16 @@ if ($err) {
             if (!empty($value['title']) && !empty($value['abstract']) && !empty($value['url']) && !empty($value['multimedia'])) {
 
                 // Deleting the contents of database first
-                $sql_truncate = "TRUNCATE `arts`";
-
-                if ($conn->query($sql_truncate) === TRUE) {
-                    // Done successfully
-                } else {
-                    $subject = "Arts Table truncation error " . date("Y-m-d H:i:s");
-                    $body = "Truncate SQL command got error while executing";
-                    sendmail($subject, "belal@newspulses.com", "raheem@newspulses.com", "", $body);
-                    exit();
-                }
+//                $sql_truncate = "TRUNCATE `arts`";
+//
+//                if ($conn->query($sql_truncate) === TRUE) {
+//                    // Done successfully
+//                } else {
+//                    $subject = "Arts Table truncation error " . date("Y-m-d H:i:s");
+//                    $body = "Truncate SQL command got error while executing";
+//                    sendmail($subject, "belal@newspulses.com", "raheem@newspulses.com", "", $body);
+//                    exit();
+//                }
                 
 
                 $t = json_encode($value);
