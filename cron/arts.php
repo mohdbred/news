@@ -49,8 +49,7 @@ if ($err) {
                 $result = $conn->query($sql_last_inserted_id);
                 if ($result->num_rows > 0) {
                     // Done successfully
-                    echo '<pre>';print_r($row = $result->fetch_assoc());
-                    echo $result->id;
+                    echo '<pre>';print_r($row = $result->fetch_assoc()['id']);
                     exit;
                 } else {
                     $subject_insert = "Arts Table Fetching last ID error ->  " . date("Y-m-d H:i:s");
