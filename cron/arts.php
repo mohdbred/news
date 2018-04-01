@@ -6,18 +6,15 @@ require('email.php');
 
 $curl = curl_init();
 
-curl_setopt_array($curl, array(
-    CURLOPT_URL => "https://api.nytimes.com/svc/topstories/v2/arts.json?country=us&pageSize=100&apiKey=20f81b719fad40058a5428ade7215931",
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_ENCODING => "",
-    CURLOPT_MAXREDIRS => 10,
-    CURLOPT_TIMEOUT => 30,
-    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-    CURLOPT_CUSTOMREQUEST => "GET",
-    CURLOPT_HTTPHEADER => array(
-        "cache-control: no-cache",
-    ),
-));
+$curl = curl_init();
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+$query = array(
+  "api-key" => "d112fdf251c34b9e89f0b717c5567078"
+);
+curl_setopt($curl, CURLOPT_URL,
+  "https://api.nytimes.com/svc/topstories/v2/arts.json" . "?" . http_build_query($query)
+);
+
 
 $response = curl_exec($curl);
 $err = curl_error($curl);
@@ -27,7 +24,7 @@ curl_close($curl);
 if ($err) {
     echo "cURL Error #:" . $err;
 } else {
-    $res = json_decode($response, true)['articles'];
+    $res = json_decode($response, true)['results'];
 
     $i = 1;
 
@@ -52,8 +49,8 @@ if ($err) {
 
             if (!empty($value['title']) && !empty($value['description']) && !empty($value['url']) && !empty($value['urlToImage'])) {
 
-                $t = stripslashes(serialize($value));
-                $test = str_replace("'", "\'", $t);
+                $t = stripslashes(json_encode($value));
+                $test =  serialize($t);
 
                 $sql = "INSERT INTO arts (data) VALUES ('" . $test . "')";
                 if ($conn->query($sql) === TRUE) {
