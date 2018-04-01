@@ -70,6 +70,8 @@ if ($err) {
 
             if ($conn->query($sql_truncate) === TRUE) {
                 // Done successfully
+                
+                echo "    Delete done successfully";
             } else {
                 $subject = "Arts Table truncation error " . date("Y-m-d H:i:s");
                 $body = "Truncate SQL command got error while executing  : <br>" . $sql_truncate;
