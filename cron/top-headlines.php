@@ -64,7 +64,7 @@ if ($err) {
 //                $t = json_encode($value);
 //                $test = serialize($t);
 
-                $sql = "INSERT INTO top-headlines (data) VALUES ('" . $test . "')";
+                $sql = "INSERT INTO `top-headlines` (data) VALUES ('" . $test . "')";
                 if ($conn->query($sql) === TRUE) {
                     // Done successfully
                     $i++;
@@ -81,7 +81,7 @@ if ($err) {
         echo "    Final i value :".$i.'    ';
         // Now deleting the previous data if no of insertion in > 15
         if ($i >= 15) {
-            $sql_truncate = "Delete from top-headlines where id <= " . $last_inserted_id;
+            $sql_truncate = "Delete from `top-headlines` where id <= " . $last_inserted_id;
 
             if ($conn->query($sql_truncate) === TRUE) {
                 // Done successfully
