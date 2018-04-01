@@ -44,6 +44,8 @@ if ($err) {
         sendmail($subject_insert, "belal@newspulses.com", "raheem@newspulses.com", "", $body_insert);
         //exit();
     }
+    
+    echo "Last id from database:  ".$last_inserted_id.'       ';
 
     // check if size of array is > 15 , then do the process else leave
     if (sizeof($res) > 5) {
@@ -61,7 +63,9 @@ if ($err) {
                 if ($conn->query($sql) === TRUE) {
                     // Done successfully
                     $i++;
+                    echo "Insert done    ".$i.'     ';
                 } else {
+                    echo "Error in insert data";
                     $subject_insert = "top-headlines Table Insertion error " . date("Y-m-d H:i:s");
                     $body_insert = "Following is the detail for sql query: <br>" . $sql;
                     sendmail($subject_insert, "belal@newspulses.com", "raheem@newspulses.com", "", $body_insert);
@@ -69,7 +73,7 @@ if ($err) {
                 }
             }
         }
-
+        echo "    Final i value :".$i.'    ';
         // Now deleting the previous data if no of insertion in > 15
         if ($i >= 15) {
             $sql_truncate = "Delete from top-headlines where id <= " . $last_inserted_id;
