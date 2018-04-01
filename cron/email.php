@@ -1,5 +1,5 @@
 <?php
-
+chdir(dirname(__FILE__));
 require('../vendor/autoload.php');
 
 function sendmail($subject = null, $to = null, $cc = null, $bcc = null, $body = null) {

@@ -4,6 +4,7 @@ require('database.php');
 require('email.php');
 
 $curl = curl_init();
+
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 $query = array(
     "api-key" => "d112fdf251c34b9e89f0b717c5567078"
@@ -20,30 +21,29 @@ if ($err) {
     echo "cURL Error #:" . $err;
 } else {
     $res = json_decode($response, true)['results'];
+    $last_inserted_id = 0;
+    $i = 0;
 
-    $i = 1;
+    //Getting last inserted ID of this table
+    $sql_last_inserted_id = "SELECT `id` FROM `entertainment` ORDER BY `id` desc LIMIT 1";
+    $result = $conn->query($sql_last_inserted_id);
+    if ($result->num_rows > 0) {
+        // Done successfully
+        $last_inserted_id = $result->fetch_assoc()['id'];
+    } else {
+        $subject_insert = "Entertainment Table Fetching last ID error ->  " . date("Y-m-d H:i:s");
+        $body_insert = "Issue in getting last inserted id from table: <br>" . $sql_last_inserted_id;
+        sendmail($subject_insert, "belal@newspulses.com", "raheem@newspulses.com", "", $body_insert);
+        //exit();
+    }
 
     // check if size of array is > 15 , then do the process else leave
-    if (sizeof($res) > 15) {
+    if (sizeof($res) > 5) {
 
-        // Now inseting each row values in table
-
+        // Now inseting each row values in table);
         foreach ($res as $key => $value) {
 
             if (!empty($value['title']) && !empty($value['abstract']) && !empty($value['url']) && !empty($value['multimedia'])) {
-
-                // Deleting the contents of database first
-                $sql_truncate = "TRUNCATE `entertainment`";
-
-                if ($conn->query($sql_truncate) === TRUE) {
-                    // Done successfully
-                } else {
-                    $subject = "Entertainment Table truncation error " . date("Y-m-d H:i:s");
-                    $body = "Truncate SQL command got error while executing";
-                    sendmail($subject, "belal@newspulses.com", "raheem@newspulses.com", "", $body);
-                    exit();
-                }
-
 
                 $t = json_encode($value);
                 $test = serialize($t);
@@ -51,20 +51,36 @@ if ($err) {
                 $sql = "INSERT INTO entertainment (data) VALUES ('" . $test . "')";
                 if ($conn->query($sql) === TRUE) {
                     // Done successfully
+                    $i++;
                 } else {
                     $subject_insert = "Entertainment Table Insertion error " . date("Y-m-d H:i:s");
                     $body_insert = "Following is the detail for sql query: <br>" . $sql;
                     sendmail($subject_insert, "belal@newspulses.com", "raheem@newspulses.com", "", $body_insert);
-                    exit();
+                    //exit();
                 }
+            }
+        }
+
+        // Now deleting the previous data if no of insertion in > 15
+        if ($i >= 15) {
+            $sql_truncate = "Delete from entertainment where id <= " . $last_inserted_id;
+
+            if ($conn->query($sql_truncate) === TRUE) {
+                // Done successfully
+            } else {
+                $subject = "Entertainment Table truncation error " . date("Y-m-d H:i:s");
+                $body = "Truncate SQL command got error while executing  : <br>" . $sql_truncate;
+                sendmail($subject, "belal@newspulses.com", "raheem@newspulses.com", "", $body);
+                //exit();
             }
         }
     } else {
         // Catching error 
-        $subject_count = "Data from Movies API is below 15 ->  " . date("Y-m-d H:i:s");
-        $body_count = "Movies - entertainment API is not giving enough data: " . sizeof($res);
+        $subject_count = "Data from entertainment - movies API is below 15 ->  " . date("Y-m-d H:i:s");
+        $body_count = "Entertainment - movies API is not giving enough data: " . sizeof($res);
         sendmail($subject_count, "belal@newspulses.com", "raheem@newspulses.com", "", $body_count);
-        exit();
+        //exit();
     }
 }
 ?>
+
