@@ -24,8 +24,6 @@ if ($err) {
 } else {
     $res = json_decode($response, true)['articles'];
 
-    $i = 1;
-
     // check if size of array is > 15 , then do the process else leave
     if (sizeof($res) > 15) {
 
