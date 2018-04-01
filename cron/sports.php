@@ -3,21 +3,14 @@
 require('database.php');
 require('email.php');
 
-
 $curl = curl_init();
-
-curl_setopt_array($curl, array(
-    CURLOPT_URL => "https://api.nytimes.com/svc/topstories/v2/sports.json?country=us&pageSize=100&apiKey=20f81b719fad40058a5428ade7215931",
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_ENCODING => "",
-    CURLOPT_MAXREDIRS => 10,
-    CURLOPT_TIMEOUT => 30,
-    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-    CURLOPT_CUSTOMREQUEST => "GET",
-    CURLOPT_HTTPHEADER => array(
-        "cache-control: no-cache",
-    ),
-));
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+$query = array(
+  "api-key" => "d112fdf251c34b9e89f0b717c5567078"
+);
+curl_setopt($curl, CURLOPT_URL,
+  "https://api.nytimes.com/svc/topstories/v2/sports.json" . "?" . http_build_query($query)
+);
 
 $response = curl_exec($curl);
 $err = curl_error($curl);
@@ -50,10 +43,10 @@ if ($err) {
 
         foreach ($res as $key => $value) {
 
-            if (!empty($value['title']) && !empty($value['description']) && !empty($value['url']) && !empty($value['urlToImage'])) {
+            if (!empty($value['title']) && !empty($value['abstract']) && !empty($value['url'])) {
 
-                $t = stripslashes(serialize($value));
-                $test = str_replace("'", "\'", $t);
+                $t = json_encode($value);
+                $test = serialize($t);
 
                 $sql = "INSERT INTO sports (data) VALUES ('" . $test . "')";
                 if ($conn->query($sql) === TRUE) {

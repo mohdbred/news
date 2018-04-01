@@ -6,13 +6,11 @@ require('email.php');
 
 $curl = curl_init();
 
-$curl = curl_init();
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 $query = array(
-  "api-key" => "d112fdf251c34b9e89f0b717c5567078"
+    "api-key" => "d112fdf251c34b9e89f0b717c5567078"
 );
-curl_setopt($curl, CURLOPT_URL,
-  "https://api.nytimes.com/svc/topstories/v2/arts.json" . "?" . http_build_query($query)
+curl_setopt($curl, CURLOPT_URL, "https://api.nytimes.com/svc/topstories/v2/arts.json" . "?" . http_build_query($query)
 );
 
 
@@ -47,7 +45,7 @@ if ($err) {
             if (!empty($value['title']) && !empty($value['abstract']) && !empty($value['url'])) {
 
                 $t = json_encode($value);
-                $test =  serialize($t);
+                $test = serialize($t);
 
                 $sql = "INSERT INTO arts (data) VALUES ('" . $test . "')";
                 if ($conn->query($sql) === TRUE) {
