@@ -23,7 +23,7 @@ if ($err) {
     echo "cURL Error #:" . $err;
 } else {
     $res = json_decode($response, true)['articles'];
-
+    echo '<pre>';print_r($res);
     // check if size of array is > 15 , then do the process else leave
     if (sizeof($res) > 15) {
 
