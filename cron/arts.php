@@ -13,7 +13,6 @@ $query = array(
 curl_setopt($curl, CURLOPT_URL, "https://api.nytimes.com/svc/topstories/v2/arts.json" . "?" . http_build_query($query)
 );
 
-
 $response = curl_exec($curl);
 $err = curl_error($curl);
 
@@ -23,7 +22,8 @@ if ($err) {
     echo "cURL Error #:" . $err;
 } else {
     $res = json_decode($response, true)['results'];
-
+    $last_inserted_id = 0;
+    $i = 0;
     // check if size of array is > 15 , then do the process else leave
     if (sizeof($res) > 15) {
 
@@ -32,45 +32,49 @@ if ($err) {
 
             if (!empty($value['title']) && !empty($value['abstract']) && !empty($value['url']) && !empty($value['multimedia'])) {
 
-                // Deleting the contents of database first
-//                $sql_truncate = "TRUNCATE `arts`";
-//
-//                if ($conn->query($sql_truncate) === TRUE) {
-//                    // Done successfully
-//                } else {
-//                    $subject = "Arts Table truncation error " . date("Y-m-d H:i:s");
-//                    $body = "Truncate SQL command got error while executing";
-//                    sendmail($subject, "belal@newspulses.com", "raheem@newspulses.com", "", $body);
-//                    exit();
-//                }
-                
                 //Getting last inserted ID of this table
                 $sql_last_inserted_id = "SELECT `id` FROM `arts` ORDER BY `id` desc LIMIT 1";
                 $result = $conn->query($sql_last_inserted_id);
                 if ($result->num_rows > 0) {
                     // Done successfully
-                    echo '<pre>';print_r($row = $result->fetch_assoc()['id']);
-                    exit;
+                    $last_inserted_id = $result->fetch_assoc()['id'];
                 } else {
                     $subject_insert = "Arts Table Fetching last ID error ->  " . date("Y-m-d H:i:s");
                     $body_insert = "Issue in getting last inserted id from table: <br>" . $sql_last_inserted_id;
                     sendmail($subject_insert, "belal@newspulses.com", "raheem@newspulses.com", "", $body_insert);
                     exit();
                 }
-                
-                    
+
+
                 $t = json_encode($value);
                 $test = serialize($t);
 
                 $sql = "INSERT INTO arts (data) VALUES ('" . $test . "')";
                 if ($conn->query($sql) === TRUE) {
                     // Done successfully
+                    $i++;
+                    echo "    ".$i;
                 } else {
                     $subject_insert = "Arts Table Insertion error " . date("Y-m-d H:i:s");
                     $body_insert = "Following is the detail for sql query: <br>" . $sql;
                     sendmail($subject_insert, "belal@newspulses.com", "raheem@newspulses.com", "", $body_insert);
                     exit();
                 }
+            }
+        }
+        echo "   Last id:".$last_inserted_id;
+
+        // Now deleting the previous data if no of insertion in > 15
+        if ($i >= 15) {
+            $sql_truncate = "Delete from arts where id <= " . $last_inserted_id;
+
+            if ($conn->query($sql_truncate) === TRUE) {
+                // Done successfully
+            } else {
+                $subject = "Arts Table truncation error " . date("Y-m-d H:i:s");
+                $body = "Truncate SQL command got error while executing  : <br>" . $sql_truncate;
+                sendmail($subject, "belal@newspulses.com", "raheem@newspulses.com", "", $body);
+                exit();
             }
         }
     } else {
