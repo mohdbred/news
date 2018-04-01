@@ -46,7 +46,7 @@ if ($err) {
 
             if (!empty($value['title']) && !empty($value['abstract']) && !empty($value['url'])) {
 
-                $t = stripslashes(json_encode($value));
+                $t = json_encode($value);
                 $test =  serialize($t);
 
                 $sql = "INSERT INTO arts (data) VALUES ('" . $test . "')";
