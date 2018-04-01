@@ -46,9 +46,12 @@ if ($err) {
                 
                 //Getting last inserted ID of this table
                 $sql_last_inserted_id = "SELECT `id` FROM `arts` ORDER BY `id` desc LIMIT 1";
-                if ($result = $conn->query($sql_last_inserted_id)) {
+                $result = $conn->query($sql_last_inserted_id);
+                if ($result->num_rows > 0) {
                     // Done successfully
-                    echo '<pre>';print_r($result);exit;
+                    echo '<pre>';print_r($row = $result->fetch_assoc());
+                    echo $result->id;
+                    exit;
                 } else {
                     $subject_insert = "Arts Table Fetching last ID error ->  " . date("Y-m-d H:i:s");
                     $body_insert = "Issue in getting last inserted id from table: <br>" . $sql_last_inserted_id;
