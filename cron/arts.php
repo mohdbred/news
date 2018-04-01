@@ -53,6 +53,7 @@ if ($err) {
                 $test =  serialize($t);
 
                 $sql = "INSERT INTO arts (data) VALUES ('" . $test . "')";
+                echo $sql;exit;
                 if ($conn->query($sql) === TRUE) {
                     // Done successfully
                 } else {
