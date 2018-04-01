@@ -3,10 +3,6 @@
 require('database.php');
 require('email.php');
 
-sendmail("Test Subject", "belal@newspulses.com", "raheem@newspulses.com", "", "Mail Body Test");
-
-
-exit;
 
 $curl = curl_init();
 
@@ -34,23 +30,49 @@ if ($err) {
     $res = json_decode($response, true)['articles'];
 
     $i = 1;
-    foreach ($res as $key => $value) {
 
-        if (!empty($value['title']) && !empty($value['description']) && !empty($value['url']) && !empty($value['urlToImage'])) {
-            //echo '<pre>';
-            //print_r(stripslashes(serialize($value)));
-            $t = stripslashes(serialize($value));
-            $test = str_replace("'", "\'", $t);
-            //print_r($test);
-            //exit;
-            $sql = "INSERT INTO arts (data) VALUES ('" . $test . "')";
-            if ($conn->query($sql) === TRUE) {
-                echo $i++;
-                echo "New record created successfully  ----   <br>";
-            } else {
-                echo "Error: " . $sql . "<br>" . $conn->error . "<br>";
+    // check if size of array is > 15 , then do the process else leave
+    if (sizeof($res) > 15) {
+
+        // Deleting the contents of database first
+        $sql_truncate = "TRUNCATE `technology`";
+
+        if ($conn->query($sql_truncate) === TRUE) {
+            // Done successfully
+        } else {
+            $subject = "Technology Table truncation error " . date("Y-m-d H:i:s");
+            $body = "Truncate SQL command got error while executing";
+            sendmail($subject, "belal@newspulses.com", "raheem@newspulses.com", "", $body);
+            exit();
+        }
+
+        // Now inseting each row values in table
+
+        foreach ($res as $key => $value) {
+
+            if (!empty($value['title']) && !empty($value['description']) && !empty($value['url']) && !empty($value['urlToImage'])) {
+
+                $t = stripslashes(serialize($value));
+                $test = str_replace("'", "\'", $t);
+
+
+                $sql = "INSERT INTO arts (data) VALUES ('" . $test . "')";
+                if ($conn->query($sql) === TRUE) {
+                    // Done successfully
+                } else {
+                    $subject_insert = "Technology Table Insertion error " . date("Y-m-d H:i:s");
+                    $body_insert = "Following is the detail for sql query: <br>" . $sql;
+                    sendmail($subject_insert, "belal@newspulses.com", "raheem@newspulses.com", "", $body_insert);
+                    exit();
+                }
             }
         }
+    } else {
+        // Catching error 
+        $subject_count = "Data from Techonlogy API is below 15 ->  " . date("Y-m-d H:i:s");
+        $body_count = "Techonlogy API is not giving enough data: " . sizeof($res);
+        sendmail($subject_count, "belal@newspulses.com", "raheem@newspulses.com", "", $body_count);
+        exit();
     }
 }
 ?>
