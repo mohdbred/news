@@ -65,7 +65,7 @@ if ($err) {
                     $i++;
                     echo "Insert done    ".$i.'     ';
                 } else {
-                    echo "Error in insert data";
+                    echo "Error in insert data     ".$sql.'      ';
                     $subject_insert = "top-headlines Table Insertion error " . date("Y-m-d H:i:s");
                     $body_insert = "Following is the detail for sql query: <br>" . $sql;
                     sendmail($subject_insert, "belal@newspulses.com", "raheem@newspulses.com", "", $body_insert);
