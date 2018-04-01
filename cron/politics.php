@@ -39,7 +39,7 @@ if ($err) {
     }
 
     // check if size of array is > 15 , then do the process else leave
-    if (sizeof($res) > 15) {
+    if (sizeof($res) > 5) {
 
         // Now inseting each row values in table);
         foreach ($res as $key => $value) {
