@@ -29,7 +29,7 @@ if ($err) {
     $i = 1;
 
     // check if size of array is > 15 , then do the process else leave
-    echo sizeof($res);exit;
+    echo sizeof($res);
     if (sizeof($res) > 15) {
 
         // Deleting the contents of database first
@@ -45,7 +45,7 @@ if ($err) {
         }
 
         // Now inseting each row values in table
-
+        echo '<pre>       ';print_r($res);
         foreach ($res as $key => $value) {
 
             if (!empty($value['title']) && !empty($value['description']) && !empty($value['url']) && !empty($value['urlToImage'])) {
@@ -54,10 +54,12 @@ if ($err) {
                 $test =  serialize($t);
 
                 $sql = "INSERT INTO arts (data) VALUES ('" . $test . "')";
-                
+                echo "          SQL:         ".$sql;
                 if ($conn->query($sql) === TRUE) {
                     // Done successfully
+                    echo "     insert done    ";
                 } else {
+                    echo "  insert error    ";
                     $subject_insert = "Arts Table Insertion error " . date("Y-m-d H:i:s");
                     $body_insert = "Following is the detail for sql query: <br>" . $sql;
                     sendmail($subject_insert, "belal@newspulses.com", "raheem@newspulses.com", "", $body_insert);
@@ -67,6 +69,7 @@ if ($err) {
         }
     } else {
         // Catching error 
+        echo "less than 15 limit error   ";
         $subject_count = "Data from Arts API is below 15 ->  " . date("Y-m-d H:i:s");
         $body_count = "Arts API is not giving enough data: " . sizeof($res);
         sendmail($subject_count, "belal@newspulses.com", "raheem@newspulses.com", "", $body_count);
