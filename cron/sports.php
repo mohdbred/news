@@ -7,7 +7,7 @@ require('email.php');
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-    CURLOPT_URL => "https://newsapi.org/v2/top-headlines?country=us&pageSize=100&apiKey=20f81b719fad40058a5428ade7215931",
+    CURLOPT_URL => "https://api.nytimes.com/svc/topstories/v2/sports.json?country=us&pageSize=100&apiKey=20f81b719fad40058a5428ade7215931",
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => "",
     CURLOPT_MAXREDIRS => 10,
@@ -35,12 +35,12 @@ if ($err) {
     if (sizeof($res) > 15) {
 
         // Deleting the contents of database first
-        $sql_truncate = "TRUNCATE `top-headlines`";
+        $sql_truncate = "TRUNCATE `sports`";
 
         if ($conn->query($sql_truncate) === TRUE) {
             // Done successfully
         } else {
-            $subject = "top-headlines Table truncation error " . date("Y-m-d H:i:s");
+            $subject = "Sports Table truncation error " . date("Y-m-d H:i:s");
             $body = "Truncate SQL command got error while executing";
             sendmail($subject, "belal@newspulses.com", "raheem@newspulses.com", "", $body);
             exit();
@@ -55,11 +55,11 @@ if ($err) {
                 $t = stripslashes(serialize($value));
                 $test = str_replace("'", "\'", $t);
 
-                $sql = "INSERT INTO top-headlines (data) VALUES ('" . $test . "')";
+                $sql = "INSERT INTO sports (data) VALUES ('" . $test . "')";
                 if ($conn->query($sql) === TRUE) {
                     // Done successfully
                 } else {
-                    $subject_insert = "top-headlines Table Insertion error " . date("Y-m-d H:i:s");
+                    $subject_insert = "Sports Table Insertion error " . date("Y-m-d H:i:s");
                     $body_insert = "Following is the detail for sql query: <br>" . $sql;
                     sendmail($subject_insert, "belal@newspulses.com", "raheem@newspulses.com", "", $body_insert);
                     exit();
@@ -68,8 +68,8 @@ if ($err) {
         }
     } else {
         // Catching error 
-        $subject_count = "Data from top-headlines API is below 15 ->  " . date("Y-m-d H:i:s");
-        $body_count = "top-headlines API is not giving enough data: " . sizeof($res);
+        $subject_count = "Data from sports API is below 15 ->  " . date("Y-m-d H:i:s");
+        $body_count = "Sports API is not giving enough data: " . sizeof($res);
         sendmail($subject_count, "belal@newspulses.com", "raheem@newspulses.com", "", $body_count);
         exit();
     }
