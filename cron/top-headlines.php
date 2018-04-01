@@ -41,7 +41,7 @@ if ($err) {
     } else {
         $subject_insert = "Top-headlines Table Fetching last ID error ->  " . date("Y-m-d H:i:s");
         $body_insert = "Issue in getting last inserted id from table: <br>" . $sql_last_inserted_id;
-        sendmail($subject_insert, "belal@newspulses.com", "raheem@newspulses.com", "", $body_insert);
+        //sendmail($subject_insert, "belal@newspulses.com", "raheem@newspulses.com", "", $body_insert);
         //exit();
     }
     
@@ -65,10 +65,10 @@ if ($err) {
                     $i++;
                     echo "Insert done    ".$i.'     ';
                 } else {
-                    echo "Error in insert data     ".$sql.'      ';
+                    echo "Error in insert data     <br>".$sql.'      ';
                     $subject_insert = "top-headlines Table Insertion error " . date("Y-m-d H:i:s");
                     $body_insert = "Following is the detail for sql query: <br>" . $sql;
-                    sendmail($subject_insert, "belal@newspulses.com", "raheem@newspulses.com", "", $body_insert);
+                    //sendmail($subject_insert, "belal@newspulses.com", "raheem@newspulses.com", "", $body_insert);
                     //exit();
                 }
             }
@@ -83,7 +83,7 @@ if ($err) {
             } else {
                 $subject = "Top-headlines Table truncation error " . date("Y-m-d H:i:s");
                 $body = "Truncate SQL command got error while executing  : <br>" . $sql_truncate;
-                sendmail($subject, "belal@newspulses.com", "raheem@newspulses.com", "", $body);
+                //sendmail($subject, "belal@newspulses.com", "raheem@newspulses.com", "", $body);
                 //exit();
             }
         }
@@ -91,7 +91,7 @@ if ($err) {
         // Catching error 
         $subject_count = "Data from top-headlines API is below 15 ->  " . date("Y-m-d H:i:s");
         $body_count = "Top-headlines API is not giving enough data: " . sizeof($res);
-        sendmail($subject_count, "belal@newspulses.com", "raheem@newspulses.com", "", $body_count);
+        //sendmail($subject_count, "belal@newspulses.com", "raheem@newspulses.com", "", $body_count);
         //exit();
     }
 }
