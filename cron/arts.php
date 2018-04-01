@@ -44,7 +44,19 @@ if ($err) {
 //                    exit();
 //                }
                 
-
+                //Getting last inserted ID of this table
+                $sql_last_inserted_id = "SELECT `id` FROM `arts` ORDER BY `id` desc LIMIT 1";
+                if ($result = $conn->query($sql_last_inserted_id)) {
+                    // Done successfully
+                    echo '<pre>';print_r($result);exit;
+                } else {
+                    $subject_insert = "Arts Table Fetching last ID error ->  " . date("Y-m-d H:i:s");
+                    $body_insert = "Issue in getting last inserted id from table: <br>" . $sql_last_inserted_id;
+                    sendmail($subject_insert, "belal@newspulses.com", "raheem@newspulses.com", "", $body_insert);
+                    exit();
+                }
+                
+                    
                 $t = json_encode($value);
                 $test = serialize($t);
 
