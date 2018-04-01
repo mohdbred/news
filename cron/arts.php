@@ -24,6 +24,20 @@ if ($err) {
     $res = json_decode($response, true)['results'];
     $last_inserted_id = 0;
     $i = 0;
+
+    //Getting last inserted ID of this table
+    $sql_last_inserted_id = "SELECT `id` FROM `arts` ORDER BY `id` desc LIMIT 1";
+    $result = $conn->query($sql_last_inserted_id);
+    if ($result->num_rows > 0) {
+        // Done successfully
+        $last_inserted_id = $result->fetch_assoc()['id'];
+    } else {
+        $subject_insert = "Arts Table Fetching last ID error ->  " . date("Y-m-d H:i:s");
+        $body_insert = "Issue in getting last inserted id from table: <br>" . $sql_last_inserted_id;
+        sendmail($subject_insert, "belal@newspulses.com", "raheem@newspulses.com", "", $body_insert);
+        //exit();
+    }
+
     // check if size of array is > 15 , then do the process else leave
     if (sizeof($res) > 15) {
 
@@ -32,20 +46,6 @@ if ($err) {
 
             if (!empty($value['title']) && !empty($value['abstract']) && !empty($value['url']) && !empty($value['multimedia'])) {
 
-                //Getting last inserted ID of this table
-                $sql_last_inserted_id = "SELECT `id` FROM `arts` ORDER BY `id` desc LIMIT 1";
-                $result = $conn->query($sql_last_inserted_id);
-                if ($result->num_rows > 0) {
-                    // Done successfully
-                    $last_inserted_id = $result->fetch_assoc()['id'];
-                } else {
-                    $subject_insert = "Arts Table Fetching last ID error ->  " . date("Y-m-d H:i:s");
-                    $body_insert = "Issue in getting last inserted id from table: <br>" . $sql_last_inserted_id;
-                    sendmail($subject_insert, "belal@newspulses.com", "raheem@newspulses.com", "", $body_insert);
-                    //exit();
-                }
-
-
                 $t = json_encode($value);
                 $test = serialize($t);
 
@@ -53,7 +53,7 @@ if ($err) {
                 if ($conn->query($sql) === TRUE) {
                     // Done successfully
                     $i++;
-                    echo "    ".$i;
+                    echo "    " . $i;
                 } else {
                     $subject_insert = "Arts Table Insertion error " . date("Y-m-d H:i:s");
                     $body_insert = "Following is the detail for sql query: <br>" . $sql;
@@ -62,7 +62,7 @@ if ($err) {
                 }
             }
         }
-        echo "   Last id:".$last_inserted_id;
+        echo "   Last id:" . $last_inserted_id;
 
         // Now deleting the previous data if no of insertion in > 15
         if ($i >= 15) {
@@ -70,7 +70,7 @@ if ($err) {
 
             if ($conn->query($sql_truncate) === TRUE) {
                 // Done successfully
-                
+
                 echo "    Delete done successfully";
             } else {
                 $subject = "Arts Table truncation error " . date("Y-m-d H:i:s");
