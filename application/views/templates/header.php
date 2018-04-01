@@ -81,10 +81,9 @@ $this->load->helper('url');
         <!-- Loader -->
         <div class="page-loader">
             <div class="loader">
-                <div class="flipper">
-                    <div class="front"></div>
-                    <div class="back"></div>
-                </div>
+              <!--   <div class="flipper"> -->
+                   <img src="<?php echo base_url(); ?>assets/img/preloader.gif" height="64" width="64" alt="">
+                <!-- </div> -->
             </div>
         </div>
         <!-- Loader END-->

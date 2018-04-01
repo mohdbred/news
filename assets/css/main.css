@@ -3252,7 +3252,12 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
     max-height: 100%; }
     /* line 75, D:/aartyomenko/Git/spectr/html/app/scss/_posts.scss */
     .post-tp-1 figure img, .post-tpv-1 figure img, .post-tpv-2 figure img, .post-tp-2 figure img, .post-tp-12 figure img, .post-tp-14 figure img {
-      width: 100%; }
+      width: 100%;
+    }
+    .post-tp-1 figure img, .post-tpv-1 figure img{
+       height: 480px;
+    }
+    
     /* line 78, D:/aartyomenko/Git/spectr/html/app/scss/_posts.scss */
     .post-tp-1 figure:before, .post-tpv-1 figure:before, .post-tpv-2 figure:before, .post-tp-2 figure:before, .post-tp-12 figure:before, .post-tp-14 figure:before {
       background: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.36));
