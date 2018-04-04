@@ -66,7 +66,7 @@
         </section>
 
 
-        <section class="section-padding banner-10 bg-fixed parallax-bg overlay light-9" data-stellar-background-ratio="0.5">
+        <section class="section-padding banner-7 bg-fixed parallax-bg overlay light-9" data-stellar-background-ratio="0.5">
             <div class="container">
 
               <div class="text-center mb-80">
@@ -76,25 +76,8 @@
 
               <div class="row">
                 <div class="col-md-3 col-sm-6">
-                  <div class="team-wrapper text-center">
-                      <div class="team-img">
-                          <a href="#"><img src="./../assets/img/team/team-12.jpg" class="img-responsive" alt="Image"></a>
-                      </div><!-- /.team-img -->
-
-                      <div class="team-title">
-                          <h3><a href="#">John Smith</a></h3>
-                          <span>Product Designer</span>
-                      </div><!-- /.team-title -->
-
-                      <ul class="team-social-links list-inline">
-                          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                          <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                          <li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
-                      </ul>
-
-                  </div><!-- /.team-wrapper -->
-                </div><!-- /.col-md-3 -->
+                 
+                </div>
 
                 <div class="col-md-3 col-sm-6">
                   <div class="team-wrapper text-center">
@@ -114,7 +97,7 @@
                           <li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
                       </ul>
                   </div><!-- /.team-wrapper -->
-                </div><!-- /.col-md-3 -->
+                </div>
 
                 <div class="col-md-3 col-sm-6">
                   <div class="team-wrapper text-center">
@@ -134,27 +117,11 @@
                           <li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
                       </ul>
                   </div><!-- /.team-wrapper -->
-                </div><!-- /.col-md-3 -->
+                </div>
 
                 <div class="col-md-3 col-sm-6">
-                  <div class="team-wrapper text-center">
-                      <div class="team-img">
-                          <a href="#"><img src="./../assets/img/team/team-15.jpg" class="img-responsive" alt="Image"></a>
-                      </div><!-- /.team-img -->
-
-                      <div class="team-title">
-                          <h3><a href="#">ketty pary</a></h3>
-                          <span>UI Designer</span>
-                      </div><!-- /.team-title -->
-
-                      <ul class="team-social-links list-inline">
-                          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                          <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                          <li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
-                      </ul>
-                  </div><!-- /.team-wrapper -->
-                </div><!-- /.col-md-3 -->
+                
+                </div>
               </div><!-- /.row -->
 
             </div><!-- /.container -->

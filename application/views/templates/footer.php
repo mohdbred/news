@@ -45,7 +45,7 @@ The time or date displayed reflects when an article was expanded or updated in N
                                             <ul class="ft-menu-list">
                                         <li><a href="<?php echo site_url(); ?>/news/about_us">About the site</a></li>
                                                 <li><a href="<?php echo site_url(); ?>/news/contact">Contacts</a></li>
-                                                <li><a href="<?php echo site_url(); ?>privacy">privacy policy</a></li>
+                                                <li><a href="<?php echo site_url(); ?>/news/privacy">privacy policy</a></li>
                                             </ul>
                                         </div>
                                     </div>

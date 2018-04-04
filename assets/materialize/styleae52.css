@@ -55,7 +55,7 @@ body{
     font-size: 14px;
     line-height: 29px;
     font-weight: 500;
-    color: #999;
+    color: #0d0d0d;
     background-color: #fff;
     overflow-x: hidden;
     -webkit-text-size-adjust: 100%;
@@ -76,9 +76,9 @@ body {
 
 /* Link style
 /* ------------------------------ */
-a {
+/*a {
     color: #ed145b;
-}
+}*/
 a,
 a > * {
     outline: none;
@@ -833,9 +833,9 @@ thead {
 .overlay.light-8:before {
     background-color: rgba(255,255,255,.8);
 }
-.overlay.light-9:before {
+/*.overlay.light-9:before {
     background-color: rgba(255,255,255,.9);
-}
+}*/
 .overlay.light-10:before {
     background-color: rgba(255,255,255,1);
 }
@@ -1087,46 +1087,46 @@ thead {
 }
 
 .banner-1 {
-    background-image: url("assets/img/banner/banner-1.jpg");  
+    background-image: url("../../assets/img/banner-1.jpg");  
 }
 .banner-2 {
-    background-image: url("assets/img/banner/banner-2.jpg");  
+    background-image: url("../../assets/img/banner-2.jpg");  
 }
 .banner-3 {
-    background-image: url("assets/img/banner/banner-3.jpg");  
+    background-image: url("../../assets/img/banner-3.jpg");  
 }
 .banner-4 {
-    background-image: url("assets/img/banner/banner-4.jpg");  
+    background-image: url("../../assets/img/banner-4.jpg");  
 }
 .banner-5 {
-    background-image: url("assets/img/banner/banner-5.jpg");
+    background-image: url("../../assets/img/banner-5.jpg");
 }
 .banner-6 {
-    background-image: url("assets/img/banner/banner-6.jpg");  
+    background-image: url("../../assets/img/banner-6.jpg");  
 }
 .banner-7 {
-    background-image: url("assets/img/banner/banner-7.jpg");  
+    background-image: url("../../assets/img/banner-7.jpg");  
 }
 .banner-8 {
-    background-image: url("assets/img/banner/banner-8.jpg");
+    background-image: url("../../assets/img/banner-8.jpg");
 }
 .banner-9 {
-    background-image: url("assets/img/banner/banner-9.jpg");  
+    background-image: url("../../assets/img/banner-9.jpg");  
 }
 .banner-10 {
     background-image: url("../../assets/img/banner-10.jpg");   
 }
 .banner-11 {
-    background-image: url("assets/img/banner/banner-11.jpg");  
+    background-image: url("../../assets/img/banner-11.jpg");  
 }
 .banner-12 {
-    background-image: url("assets/img/banner/banner-12.jpg");  
+    background-image: url("../../assets/img/banner-12.jpg");  
 }
 .banner-13 {
-    background-image: url("assets/img/banner/banner-13.jpg");  
+    background-image: url("../../assets/img/banner-13.jpg");  
 }
 .banner-14 {
-    background-image: url("assets/img/banner/banner-14.jpg"); 
+    background-image: url("../../assets/img/banner-14.jpg"); 
 }
 .banner-14.overlay::before  {
     background-color: rgba(246, 72, 63, 0.9);

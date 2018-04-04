@@ -1,5 +1,5 @@
 $("#counter")
-  .countdown("2018/04/04", function(event) {
+  .countdown("2018/04/09", function(event) {
   var $this = $(this).html(event.strftime(''
     + '<span>%d <em>days</em></span> '
     + '<span>%H <em>hours</em></span> '
