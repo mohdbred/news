@@ -174,7 +174,10 @@
                                                 <div role="form">
                                                     <div class="screen-reader-response">
                                                         <div class="alert alert-danger" id="_danger" style="display:none">
-                                                            <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+                                                            <strong>Opps!</strong> Please submit the form again.
+                                                        </div>
+                                                        <div class="alert alert-success" id="_done" style="display:none">
+                                                            <strong>Yippee!</strong> You will soon get your a response from Belal.
                                                         </div>
                                                     </div>
                                                     <form action="contact.php" method="post" enctype="multipart/form-data" id="formid">
@@ -302,13 +305,15 @@
             posting.done(function(data) {
 
             if (data == 0){
-                $('#_danger').css('display','block');
-                return false;
+            $('#_danger').css('display', 'block');
+            $('#_done').css('display', 'none');
+            return false;
             } else{
-
+            $('#_done').css('display', 'block');
+            $('#_danger').css('display', 'none');
+            return false;
             }
 
-            alert('success');
             });
             });
             </script>

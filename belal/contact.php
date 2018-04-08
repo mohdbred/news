@@ -35,4 +35,8 @@ if ($captcha->success == false) {
 } else if ($captcha->success == 1) {
     echo "0";
     exit;
+    
+    
+    // Now sending the mail
+    
 }
