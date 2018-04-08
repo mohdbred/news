@@ -36,7 +36,7 @@ if ($captcha->success == false) {
 
     $to = 'link.belal@gmail.com';
     $subject = 'Mohd Belal Portfolio';
-    $message = 'Following person contacted you from your website <br> <b>Name :</b>' . $sender_name . '<br><b>Email : </b>' . $sender_email . 'Subject : ' . $sender_subject . '<br><b>Message</b> : ' . $sender_message;
+    $message = 'Following person contacted you from your website <br> <b>Name :</b>' . $sender_name . '<br><b>Email : </b>' . $sender_email . '<br><b>Subject :</b> ' . $sender_subject . '<br><b>Message</b> : ' . $sender_message;
     $headers .= 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
