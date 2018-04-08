@@ -303,7 +303,7 @@
             var posting = $.post(url, { name: $('#your-name').val(), email: $('#your-email').val(), subject: $('#your-subject').val(), message: $('#your-message').val(), capcha: grecaptcha.getResponse() });
             /* Alerts the results */
             posting.done(function(data) {
-
+            console.log(data);
             if (data == 0){
             $('#_danger').css('display', 'block');
             $('#_done').css('display', 'none');

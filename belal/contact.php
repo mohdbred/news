@@ -33,7 +33,8 @@ if ($captcha->success == false) {
     echo "0";
     exit;
 } else if ($captcha->success == 1) {
-    
+    echo "1";
+    exit;
     
     // Now sending the mail
     
