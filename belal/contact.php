@@ -33,9 +33,18 @@ if ($captcha->success == false) {
     echo "0";
     exit;
 } else if ($captcha->success == 1) {
+
+    $to = 'link.belal@gmail.com';
+    $subject = 'Mohd Belal Portfolio';
+    $message = 'Following person contacted you from your website <br> <b>Name :</b>' . $sender_name . '<br><b>Email : </b>' . $sender_email . 'Subject : ' . $sender_subject . '<br><b>Message</b> : ' . $sender_message;
+    $headers .= 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+
+    $headers .= "From: no-reply@newspulses.com \r\n" .
+            "Reply-To: belal@newspulses.com \r\n" .
+            "X-Mailer: PHP/" . phpversion();
+
+    mail($to, $subject, $message, $headers);
     echo "1";
     exit;
-    
-    // Now sending the mail
-    
 }
