@@ -13,7 +13,7 @@ $capcha = stripslashes($_POST["capcha"]);
 $secret = '6Lf5s1EUAAAAAK1bTBO33JzzSBCducXvxIk-GEHB';
 //$url = 'https://www.google.com/recaptcha/api/siteverify';
 $data = array(
-    'secret' => '6Lf5s1EUAAAAAK1bTBO33JzzSBCducXvxIk-GEHB',
+    'secret' => '6Lf5s1EUAAAAAI92qIqrwz0fcxXaFtPcqNQBvnv4',
     'response' => $capcha
 );
 //$options = array(
