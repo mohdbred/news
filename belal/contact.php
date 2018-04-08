@@ -1,28 +1,19 @@
 <?php
 
 $sender_name = stripslashes($_POST["name"]);
-echo $sender_name;
 
 $sender_email = stripslashes($_POST["email"]);
 
-echo $sender_email;
-
 $sender_subject = stripslashes($_POST["subject"]);
-
-echo $sender_subject;
 
 $sender_message = stripslashes($_POST["message"]);
 
-echo $sender_message;
-
 $capcha = stripslashes($_POST["capcha"]);
+var_dump($capcha);
 
-echo $capcha;
+exit;
 
 
-
-
-//$response = $_POST["g-recaptcha-response"];
 $url = 'https://www.google.com/recaptcha/api/siteverify';
 $data = array(
     'secret' => '6Lf5s1EUAAAAAK1bTBO33JzzSBCducXvxIk-GEHB',
