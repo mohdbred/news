@@ -40,8 +40,8 @@ if ($captcha->success == false) {
     $headers .= 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
-    $headers .= "From: no-reply@newspulses.com \r\n" .
-            "Reply-To: belal@newspulses.com \r\n" .
+    $headers .= "From: belal@yasirportfolio.com \r\n" .
+            "Reply-To: belal@yasirportfolio.com \r\n" .
             "X-Mailer: PHP/" . phpversion();
 
     mail($to, $subject, $message, $headers);
