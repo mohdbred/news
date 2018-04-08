@@ -337,7 +337,7 @@
             /* get the action attribute from the <form action=""> element */
             var $form = $(this),
                     url = $form.attr('action');
-                    console.log($('#form-capcha'));
+                    console.log(var captcha_response = grecaptcha.getResponse());
 //                    
                     return false;
                     
