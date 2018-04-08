@@ -10,7 +10,7 @@ $sender_message = stripslashes($_POST["message"]);
 
 $capcha = stripslashes($_POST["capcha"]);
 
-
+$secret = '6Lf5s1EUAAAAAK1bTBO33JzzSBCducXvxIk-GEHB';
 //$url = 'https://www.google.com/recaptcha/api/siteverify';
 //$data = array(
 //    'secret' => '6Lf5s1EUAAAAAK1bTBO33JzzSBCducXvxIk-GEHB',
@@ -28,7 +28,7 @@ $capcha = stripslashes($_POST["capcha"]);
 
 
 
-$verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=6Lf5s1EUAAAAAK1bTBO33JzzSBCducXvxIk-GEHB&response='.$capcha);
+$verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$capcha);
         $responseData = json_decode($verifyResponse);
         
         print_r($responseData);exit;
