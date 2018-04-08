@@ -307,10 +307,16 @@
             if (data == 0){
             $('#_danger').css('display', 'block');
             $('#_done').css('display', 'none');
+            $('html,body').animate({
+            scrollTop: $("#form-capcha").offset().top - 400
+            }, 800);
             return false;
             } else{
             $('#_done').css('display', 'block');
             $('#_danger').css('display', 'none');
+            $('html,body').animate({
+            scrollTop: $("#form-capcha").offset().top - 400
+            }, 800);
             return false;
             }
 
