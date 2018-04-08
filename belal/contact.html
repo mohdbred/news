@@ -171,7 +171,11 @@
                                         <div class="vc_column-inner">
                                             <div class="wpb_wrapper">
                                                 <div role="form">
-                                                    <div class="screen-reader-response"></div>
+                                                    <div class="screen-reader-response">
+                                                        <div class="alert alert-danger" id="_danger" style="display:none">
+                                                            <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+                                                        </div>
+                                                    </div>
                                                     <form action="contact.php" method="post" enctype="multipart/form-data" id="formid">
                                                         <p>Your Name (required)<br><br />
                                                             <span class="wpcf7-form-control-wrap your-name">
@@ -290,14 +294,19 @@
             event.preventDefault();
             /* get the action attribute from the <form action=""> element */
             var $form = $(this),
-                 url = $form.attr('action');
-            console.log(grecaptcha.getResponse());
+                    url = $form.attr('action');
             /* Send the data using post with element id name and name2*/
             var posting = $.post(url, { name: $('#your-name').val(), email: $('#your-email').val(), subject: $('#your-subject').val(), message: $('#your-message').val(), capcha: grecaptcha.getResponse() });
             /* Alerts the results */
             posting.done(function(data) {
-            console.log(data);
-            return false;
+
+            if (data == 0){
+                $('#_danger').css('display','block');
+                return false;
+            } else{
+
+            }
+
             alert('success');
             });
             });

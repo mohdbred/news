@@ -30,7 +30,9 @@ $captcha = json_decode($res);
 
 
 if ($captcha->success == false) {
-    echo "<p>You are a bot! Go away!</p>";
+    echo "0";
+    exit;
 } else if ($captcha->success == 1) {
-    echo "<p>You are not not a bot!</p>";
+    echo "0";
+    exit;
 }
