@@ -22,11 +22,11 @@ echo $capcha;
 
 
 
-$response = $_POST["g-recaptcha-response"];
+//$response = $_POST["g-recaptcha-response"];
 $url = 'https://www.google.com/recaptcha/api/siteverify';
 $data = array(
     'secret' => '6Lf5s1EUAAAAAK1bTBO33JzzSBCducXvxIk-GEHB',
-    'response' => $_POST["g-recaptcha-response"]
+    'response' => $capcha
 );
 $options = array(
     'http' => array(
