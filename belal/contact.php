@@ -12,10 +12,10 @@ $capcha = stripslashes($_POST["capcha"]);
 
 $secret = '6Lf5s1EUAAAAAK1bTBO33JzzSBCducXvxIk-GEHB';
 //$url = 'https://www.google.com/recaptcha/api/siteverify';
-//$data = array(
-//    'secret' => '6Lf5s1EUAAAAAK1bTBO33JzzSBCducXvxIk-GEHB',
-//    'response' => $capcha
-//);
+$data = array(
+    'secret' => '6Lf5s1EUAAAAAK1bTBO33JzzSBCducXvxIk-GEHB',
+    'response' => $capcha
+);
 //$options = array(
 //    'http' => array(
 //        'method' => 'POST',
@@ -28,10 +28,22 @@ $secret = '6Lf5s1EUAAAAAK1bTBO33JzzSBCducXvxIk-GEHB';
 
 
 
-$verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$capcha);
-        $responseData = json_decode($verifyResponse);
+//$verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$capcha);
+//        $responseData = json_decode($verifyResponse);
         
-        print_r($responseData);exit;
+        
+        $verify = curl_init();
+    curl_setopt($verify, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
+    curl_setopt($verify, CURLOPT_POST, true);
+    curl_setopt($verify, CURLOPT_POSTFIELDS, http_build_query($data));
+    curl_setopt($verify, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($verify, CURLOPT_RETURNTRANSFER, true);
+    $res = curl_exec($verify);
+
+    $captcha = json_decode($res);
+
+        
+        print_r($captcha);exit;
 if ($captcha_success->success == false) {
     echo "<p>You are a bot! Go away!</p>";
 } else if ($captcha_success->success == true) {
