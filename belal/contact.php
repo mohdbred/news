@@ -9,9 +9,6 @@ $sender_subject = stripslashes($_POST["subject"]);
 $sender_message = stripslashes($_POST["message"]);
 
 $capcha = stripslashes($_POST["capcha"]);
-var_dump($capcha);
-
-exit;
 
 
 $url = 'https://www.google.com/recaptcha/api/siteverify';
