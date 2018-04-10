@@ -56,7 +56,7 @@ if ($err) {
             if (!empty($value['title']) && !empty($value['description']) && !empty($value['url']) && !empty($value['urlToImage'])) {
 
                 $t = stripslashes(serialize($value));
-                $test = str_replace("'", "\'", $t);
+                $test = base64_encode(str_replace("'", "\'", $t));
 
                 $sql = "INSERT INTO `top-headlines` (data) VALUES ('" . $test . "')";
                 if ($conn->query($sql) === TRUE) {

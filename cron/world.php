@@ -47,7 +47,7 @@ if ($err) {
             if (!empty($value['title']) && !empty($value['abstract']) && !empty($value['url']) && !empty($value['multimedia'])) {
 
                 $t = json_encode($value);
-                $test = serialize($t);
+                $test = base64_encode(serialize($t));
 
                 $sql = "INSERT INTO world (data) VALUES ('" . $test . "')";
                 if ($conn->query($sql) === TRUE) {
