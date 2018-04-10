@@ -33,7 +33,8 @@ class News extends CI_Controller {
         $results = $this->News_model->get_records();
         $i = 0;
         foreach ($results as $result) {
-            $books[$i] = unserialize($result['data']);
+           $books[$i] = base64_decode($result['data']); 
+           $books[$i] = unserialize($books[$i]);
             $i++;
         }
 
@@ -45,16 +46,16 @@ class News extends CI_Controller {
         $key = $_POST['key'];
         $this->load->model('News_model');
         $results = $this->News_model->get_catg($key);
-
-     
-
-        $i = 0;
+       $i = 0;
         foreach ($results as $result) {
-            $books[$i] = unserialize($result['data']);
+           $books[$i] = base64_decode($result['data']); 
+           $books[$i] = unserialize($books[$i]);
+             
             $i++;
         }
         echo json_encode($books);
     }
+
 
     public function technology() {
         if (!file_exists(APPPATH . '/views/technology.php')) {
