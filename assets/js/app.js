@@ -15,7 +15,7 @@
                 cache: false
 
             }).done(function (data) {
-                data = JSON.parse(data);
+               
                 var i = 3;
                 var j = 10;
                 var _topHeadline = '';
@@ -23,6 +23,7 @@
                 var _topStories2 = '';
                 var _trendingPost = '';
                 $.each(data, function (key, news) {
+                     data = JSON.parse(news);
                     var _slideTemplate = '';
 
                     if (key < i) {
