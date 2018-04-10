@@ -123,9 +123,7 @@ class site_offline_hook {
          <div class="columns">
 
            <h3><i class="fa fa-home"></i>Address.</h3>
-           <p>T3 Supreme Tower<br>
-            14th Floor,sector 99<br>
-             Noida,India
+           <p>New Delhi
           </p>
 
          </div> 
