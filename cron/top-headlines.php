@@ -57,6 +57,7 @@ if ($err) {
 
                 $t = stripslashes(serialize($value));
                 $test = base64_encode(str_replace("'", "\'", $t));
+                
 
                 $sql = "INSERT INTO `top-headlines` (data) VALUES ('" . $test . "')";
                 if ($conn->query($sql) === TRUE) {
