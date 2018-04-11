@@ -85,8 +85,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
          <div class="columns">
 
            <h3><i class="fa fa-phone"></i>Phone Numbers.</h3>
-           <p>Phone: (000) 7704850297<br>
-            Mobile: (000) 8892707832<br>
+           <p>Phone: (+91) 7704850297<br>
+            Mobile: (+91) 8892707832<br>
             Fax: (000) 777 0101
            </p>
 
