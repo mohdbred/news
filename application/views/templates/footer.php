@@ -15,7 +15,7 @@
 The time or date displayed reflects when an article was expanded or updated in NewsPulses.</p>
                                         </article>
                                     </div>
-                                    <div class="ft-social">
+                          <!--           <div class="ft-social">
                                         <ul class="ft-social-list pull-right">
                                             <li class="tw">
                                                 <a href="#"><i class="fa fa-twitter"></i></a>
@@ -33,7 +33,7 @@ The time or date displayed reflects when an article was expanded or updated in N
                                                 <a href="index._slideTemplatel"><i class="fa fa-dribbble"></i></a>
                                             </li>
                                         </ul>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
