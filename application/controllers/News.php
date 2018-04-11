@@ -33,9 +33,11 @@ class News extends CI_Controller {
         $results = $this->News_model->get_records();
         $i = 0;
         foreach ($results as $result) {
+
            $books[$i] = base64_decode($result['data']); 
-           $books[$i] = unserialize($books[$i]);
-            $i++;
+           $test = str_replace("\'", "'", $books[$i]);
+           $books[$i] = unserialize( $test);
+           $i++;
         }
 
         echo json_encode($books);

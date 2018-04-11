@@ -6,7 +6,7 @@ class News_model extends CI_Model {
     function get_records() {
 
         $this->db->select("data");
-        $this->db->from('general');
+        $this->db->from('top-headlines');
         $query = $this->db->get();
         if ($query->num_rows() > 0) {
             return $query->result_array();
