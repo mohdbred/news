@@ -81,7 +81,7 @@ The time or date displayed reflects when an article was expanded or updated in N
                 <a href="index._slideTemplatel#signin" class="js-popups">Registration</a>
                 <a href="index._slideTemplatel#login" class="active js-popups">Login</a>
             </div>
-            <div class="social">
+     <!--        <div class="social">
                 <div>Sign in with social account</div>
                 <ul class="pp-social-list">
                     <li class="tw">
@@ -93,7 +93,7 @@ The time or date displayed reflects when an article was expanded or updated in N
                     <li class="vk">
                         <a href="index._slideTemplatel"><i class="fa fa-vk"></i></a></li>
                 </ul>
-            </div>
+            </div> -->
             <div class="pp-title"><span>or</span></div>
             <div class="form">
                 <input type="text" placeholder="Username">
