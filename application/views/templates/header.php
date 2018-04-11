@@ -20,6 +20,20 @@ $this->load->helper('url');
         <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
 
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117222559-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-117222559-2');
+        </script>
+
+
+
         <!-- Mobile Metas -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -53,8 +67,8 @@ $this->load->helper('url');
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/main.css" />
 
         <!-- endbuild -->
-  
-       
+
+
         <!-- Vendor -->
         <script src="<?php echo base_url(); ?>assets/vendor/jquery/dist/jquery.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/jquery-ui.js"></script>
@@ -69,8 +83,8 @@ $this->load->helper('url');
         <script src="<?php echo base_url(); ?>assets/js/app.js"></script>
 
 
- <script src="<?php echo base_url(); ?>assets/maintenance/jquery.countdown.js"></script>
- <script src="<?php echo base_url(); ?>assets/maintenance/backstretch.js"></script>  
+        <script src="<?php echo base_url(); ?>assets/maintenance/jquery.countdown.js"></script>
+        <script src="<?php echo base_url(); ?>assets/maintenance/backstretch.js"></script>  
         <!-- endbuild -->
         <!-- build:js scripts/main.js -->
 
@@ -86,8 +100,8 @@ $this->load->helper('url');
         <!-- Loader -->
         <div class="page-loader">
             <div class="loader">
-              <!--   <div class="flipper"> -->
-                   <img src="<?php echo base_url(); ?>assets/img/preloader.gif" height="64" width="64" alt="">
+                <!--   <div class="flipper"> -->
+                <img src="<?php echo base_url(); ?>assets/img/preloader.gif" height="64" width="64" alt="">
                 <!-- </div> -->
             </div>
         </div>
@@ -128,7 +142,7 @@ $this->load->helper('url');
                         <div class="row">
                             <nav class="main-nav">
 
-                               <ul class="main-nav-list sf-menu">
+                                <ul class="main-nav-list sf-menu">
                                     <li class="active"><a href="<?php echo site_url(); ?>news">Top news</a></li>
                                     <li>
                                         <a href="<?php echo site_url(); ?>news/politics">Politics</i></a>
@@ -171,31 +185,31 @@ $this->load->helper('url');
                 </div>
             </div>
             <header class="header-tp-4">
-              <!--   <div class="top-bar">
-                    <div class="container">
-                        <div class="top-bar-inner">
-                            <div class="row">
-                                <nav class="tb-nav">
-                                    <ul class="tb-nav-list">
-                                        <li><a href="<?php base_url(); ?>about_us">ABOUT</a></li>
-                                        <li><a href="<?php base_url(); ?>blog">Blogs</a></li>
-                                        <li><a href="<?php base_url(); ?>contact">CONTACTS</a></li>
-                                    </ul>
-                                </nav>
-                                <div class="tb-date" id="demo">
-
-                                </div>
-                                <div class="tb-saved-art">
-                                    <i class="li_cloud"></i> Cloudy
-                                </div>
-                   
-                                <div class="tb-sing-login">
-                                    <a href="index._slideTemplatel#signin" class="js-popups">Sign in</a> / <a href="index._slideTemplatel#login" class="js-popups">Join</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+                <!--   <div class="top-bar">
+                      <div class="container">
+                          <div class="top-bar-inner">
+                              <div class="row">
+                                  <nav class="tb-nav">
+                                      <ul class="tb-nav-list">
+                                          <li><a href="<?php base_url(); ?>about_us">ABOUT</a></li>
+                                          <li><a href="<?php base_url(); ?>blog">Blogs</a></li>
+                                          <li><a href="<?php base_url(); ?>contact">CONTACTS</a></li>
+                                      </ul>
+                                  </nav>
+                                  <div class="tb-date" id="demo">
+  
+                                  </div>
+                                  <div class="tb-saved-art">
+                                      <i class="li_cloud"></i> Cloudy
+                                  </div>
+                     
+                                  <div class="tb-sing-login">
+                                      <a href="index._slideTemplatel#signin" class="js-popups">Sign in</a> / <a href="index._slideTemplatel#login" class="js-popups">Join</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div> -->
                 <div class="main-header">
 
                     <div class="mh-bottom">
@@ -204,7 +218,7 @@ $this->load->helper('url');
                                 <div class="row">
                                     <nav class="main-nav">
 
-                                       <ul class="main-nav-list sf-menu">
+                                        <ul class="main-nav-list sf-menu">
                                             <li class="active"><a href="<?php echo site_url(); ?>news">Top news</a></li>
                                             <li>
                                                 <a href="<?php echo site_url(); ?>news/politics">Politics</a>
@@ -227,14 +241,14 @@ $this->load->helper('url');
                                             <li><a href="<?php echo site_url(); ?>news/contact">contacts</a></li>
                                         </ul>
                                     </nav>
-                            
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </header>
-                 <!-- Header END -->
+            <!-- Header END -->
             <div class="inner-wrapper">
 
                 <div class="main">
