@@ -189,7 +189,7 @@
                             _category += '<div class="one-third">';
                             _category += '<article class="post post-tp-6">';
                             _category += '<figure >';
-                            _category += ' <a href="#"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
+                            _category += ' <a href="'+news.url+'" target="_blank"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
                             _category += '</figure>';
                             _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +(news.abstract).substring(0, 120)+'..' + '</h3>';
                             _category += '<div class="date-tp-2">'+new Date(news.created_date).toString().split('GMT')[0]+'</div></article>';
@@ -198,7 +198,7 @@
                          {
                             _category += '<article class="post post-tp-6">';
                             _category += '<figure >';
-                            _category += ' <a href="#"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
+                            _category += ' <a href="'+news.url+'" target="_blank"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
                             _category += '</figure>';
                             _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +(news.abstract).substring(0, 120)+'..' + '</h3>';
                             _category += '<div class="date-tp-2">'+new Date(news.created_date).toString().split('GMT')[0]+'</div></article> </div>';
@@ -209,7 +209,7 @@
                              _category2 += '<div class="one-third sm-half"><article class="post post-tp-2"><figure>';
                             _category2 += '<a href="' + news.url + '" target="_blank"><img src="' + news.multimedia[2].url + '" height="254" width="380" alt="Spectr News Theme" class="" /></a>';
                             _category2 += '</figure><div class="ptp-1-overlay"><div class="ptp-1-data">';
-                            _category2 += '  <h2 class="title-29"><a  href="#">' +news.abstract+ '</a></h2>';
+                            _category2 += '  <h2 class="title-29"><a  href="'+news.url+'">' +news.abstract+ '</a></h2>';
                             _category2 += '<div class="meta-tp-1"><div class="ptp-1-date"><a href="#">'+new Date(news.created_date).toString().split('GMT')[0]+'</a></div>';
                              _category2 += ' <div class="ptp-1-views"><a href="#"><i class="li_eye"></i><span>187</span></a></div>';
                              _category2 += ' <div class="ptp-1-comments"><a href="#"><i class="li_bubble"></i><span>5</span></a></div>';
@@ -221,7 +221,7 @@
 
                             _category += '<article class="post post-tp-6">';
                             _category += '<figure class="js-category-news">';
-                            _category += ' <a href="#"><img src="' + news.urlToImage + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
+                            _category += ' <a href="'+news.url+'" target="_blank"><img src="' + news.urlToImage + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
                             _category += '</figure>';
                             _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' + news.description + '</h3>';
                             _category += '<div class="date-tp-2">'+new Date(news.created_date).toString().split('GMT')[0]+'</div></article>';
@@ -269,7 +269,7 @@
                             _category += '<div class="one-third">';
                             _category += '<article class="post post-tp-6">';
                             _category += '<figure >';
-                            _category += ' <a href="#"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="" /></a>';
+                            _category += ' <a href="'+news.url+'" target="_blank"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="" /></a>';
                             _category += '</figure>';
                             _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +(news.abstract).substring(0, 120)+'..' + '</h3>';
                             _category += '<div class="date-tp-2">'+new Date(news.publishedAt).toString().split('GMT')[0]+'</div></article>';
@@ -278,7 +278,7 @@
                          {
                             _category += '<article class="post post-tp-6">';
                             _category += '<figure >';
-                            _category += ' <a href="#"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="" /></a>';
+                            _category += ' <a href="'+news.url+'" target="_blank"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="" /></a>';
                             _category += '</figure>';
                             _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +(news.abstract).substring(0, 120)+'..' + '</h3>';
                             _category += '<div class="date-tp-2">'+new Date(news.publishedAt).toString().split('GMT')[0]+'</div></article> </div>';

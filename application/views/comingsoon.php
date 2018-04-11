@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
       
 
-           <ul class="social">
+      <!--      <ul class="social">
               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
               <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -48,7 +48,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <li><a href="#"><i class="fa fa-instagram"></i></a></li>
               <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
               <li><a href="#"><i class="fa fa-skype"></i></a></li>
-            </ul>
+            </ul> -->
 
          </div> 
           <!-- Begin MailChimp Signup Form -->
@@ -76,9 +76,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
          <div class="columns">
 
            <h3><i class="fa fa-home"></i>Address.</h3>
-           <p>T3 Supreme Tower<br>
-            14th Floor,sector 99<br>
-             Noida,India
+           <p>Noida<br>
+            India
           </p>
 
          </div> 
@@ -86,8 +85,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
          <div class="columns">
 
            <h3><i class="fa fa-phone"></i>Phone Numbers.</h3>
-           <p>Phone: (000) 777 1515<br>
-            Mobile: (000) 777 0100<br>
+           <p>Phone: (000) 7704850297<br>
+            Mobile: (000) 8892707832<br>
             Fax: (000) 777 0101
            </p>
 
@@ -96,8 +95,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
          <div class="columns end">
 
            <h3><i class="fa fa-envelope"></i>Emails.</h3>
-           <p>mohammad@newspulses.com <br>
-            belal@newspulses.com<br>
+           <p>belal@newspulses.com<br>
+            mohammad@newspulses.com<br>
             info@newspulses.com
            </p>
 
