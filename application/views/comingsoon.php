@@ -76,7 +76,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
          <div class="columns">
 
            <h3><i class="fa fa-home"></i>Address.</h3>
-           <p>Noida<br>
+           <p>Delhi<br>
             India
           </p>
 

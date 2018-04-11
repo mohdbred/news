@@ -134,14 +134,14 @@ $this->load->helper('url');
                                         <a href="<?php echo site_url(); ?>news/politics">Politics</i></a>
 
                                     </li>
-                                    <li><a href="<?php echo site_url(); ?>news/education">Educations</a></li>
+                                    <li><a href="<?php base_url(); ?>news/education">Educations</a></li>
                                     <li class="mf">
                                         <a href="<?php echo site_url(); ?>news/bussiness">Business</a>
 
                                     </li>
                                     <li><a href="<?php echo site_url(); ?>news/technology">Technology</a></li>
                                     <li>
-                                        <a href="<?php echo site_url(); ?>news/entertainment">Entertainment</i></a>
+                                        <a href="<?php base_url(); ?>news/entertainment">Entertainment</i></a>
 
                                     </li>
                                     <li>
@@ -210,21 +210,21 @@ $this->load->helper('url');
                                                 <a href="<?php echo site_url(); ?>news/politics">Politics</a>
 
                                             </li>
-                                            <li><a href="<?php base_url(); ?>news/education">Educations</a></li>
+                                            <li><a href="<?php echo site_url(); ?>news/education">Educations</a></li>
                                             <li class="mf">
-                                                <a href="<?php base_url(); ?>news/bussiness">Business</a>
+                                                <a href="<?php echo site_url(); ?>news/bussiness">Business</a>
 
                                             </li>
                                             <li><a href="<?php echo site_url(); ?>news/technology">Technology</a></li>
                                             <li>
-                                                <a href="<?php base_url(); ?>news/entertainment">Entertainment</a>
+                                                <a href="<?php echo base_url(); ?>news/entertainment">Entertainment</a>
 
                                             </li>
                                             <li>
-                                                <a href="<?php base_url(); ?>news/sports">Sports</a>
+                                                <a href="<?php echo site_url(); ?>news/sports">Sports</a>
 
                                             </li>
-                                            <li><a href="<?php base_url(); ?>news/contact">contacts</a></li>
+                                            <li><a href="<?php echo site_url(); ?>news/contact">contacts</a></li>
                                         </ul>
                                     </nav>
                             
