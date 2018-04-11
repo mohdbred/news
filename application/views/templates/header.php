@@ -227,21 +227,7 @@ $this->load->helper('url');
                                             <li><a href="<?php base_url(); ?>contact">contacts</a></li>
                                         </ul>
                                     </nav>
-                                    <div class="hd-search">
-                                        <a href="index._slideTemplatel#search-block" class="st-btn-1 fa-flip-horizontal js-hd-search">
-                                            <i class="li_search"></i>
-                                        </a>
-                                        <div class="hd-search-block js-hd-search-block">
-                                            <div class="search">
-                                                <div class="search-input">
-                                                    <input type="search" placeholder="Type keywords">
-                                                </div>
-                                                <div class="search-btn">
-                                                    <button>Search</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            
                                 </div>
                             </div>
                         </div>
