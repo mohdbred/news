@@ -142,8 +142,9 @@ class News extends CI_Controller {
         }
         $data['title'] = ucfirst('about us');
         $this->load->view('templates/header', $data);
-        $this->load->view('pages/about_us.php', $data);
-        $this->load->view('templates/footer', $data);
+        // $this->load->view('pages/about_us.php', $data);
+        // $this->load->view('templates/footer', $data);
+         $this->load->view('comingsoon.php', $data);
     }
 
     public function contact() {
@@ -153,8 +154,9 @@ class News extends CI_Controller {
         }
         $data['title'] = ucfirst('contact');
         $this->load->view('templates/header', $data);
-        $this->load->view('pages/contact.php', $data);
-        $this->load->view('templates/footer', $data);
+        // $this->load->view('pages/contact.php', $data);
+        // $this->load->view('templates/footer', $data);
+         $this->load->view('comingsoon.php', $data);
     }
     public function privacy() {
         if (!file_exists(APPPATH . '/views/pages/privacy.php')) {
