@@ -188,7 +188,7 @@
                     }
 
                     if (searchQuery.key === 'politics' || searchQuery.key === 'world') {
-                        if ((key < 6)) {
+                        if ((key < 11)) {
                          
                         if(key%2==0)
                          {
@@ -265,7 +265,7 @@
                         _date = null;
                     }
                      
-                     if(key >12){
+                     if(key <12){
                                       if(key%2==0)
                          {
                             _category += '<div class="one-third">';
