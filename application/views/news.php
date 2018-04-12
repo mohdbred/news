@@ -264,9 +264,9 @@
                     if(_date === 'Invalid Date'){
                         _date = null;
                     }
-       
-
-                       if(key%2==0)
+                     
+                     if(key >12){
+                                      if(key%2==0)
                          {
                             _category += '<div class="one-third">';
                             _category += '<article class="post post-tp-6">';
@@ -285,6 +285,9 @@
                             _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +(news.abstract).substring(0, 120)+'..' + '</h3>';
                             _category += '<div class="date-tp-2">'+_date+'</div></article> </div>';
                          }
+                     }
+
+         
 
                 
           
