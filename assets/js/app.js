@@ -90,6 +90,7 @@
                 var _topStories2 = '';
                 var _trendingPost = '';
                 $.each(data, function (key, news) {
+                    news = JSON.parse(news);
                     var _slideTemplate = '';
          
          
