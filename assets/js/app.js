@@ -92,9 +92,9 @@
                 $.each(data, function (key, news) {
                     news = JSON.parse(news);
                     var _slideTemplate = '';
-                    var _date = new Date(news.publishedAt).toString().split('GMT')[0];
+                    var _date = new Date(news.created_date).toString().split('GMT')[0];
                     if(_date === 'Invalid Date'){
-                        _date = null;
+                        _date = '';
                     }
          
 
