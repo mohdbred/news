@@ -188,7 +188,7 @@
                     }
                     var _content = (news.abstract).substring(0, 120);
                     if (searchQuery.key === 'politics' || searchQuery.key === 'world') {
-                        if ((key < 9)) {
+                        if ((key < 6)) {
                          
                         if(key%2==0)
                          {
@@ -248,7 +248,7 @@
 
 
     /*Click Events*/
-    $($scope).on('click', '#js-catg-business,#js-catg-sport,#js-catg-technology,#js-catg-entertainment,#js-catg-politics', function (evt) {
+    $($scope).on('click', '#js-catg-world,#js-catg-business,#js-catg-sport,#js-catg-technology,#js-catg-entertainment,#js-catg-politics', function (evt) {
         evt.preventDefault();
         var searchQuery = {key: this.getAttribute('value')};
       //  var url = 'news/category';
@@ -265,7 +265,7 @@
                         _date = null;
                     }
                      var _content = (news.abstract).substring(0, 120);
-                     if(key <9){
+                     if(key <6){
                         if(key%2==0)
                          {
                             _category += '<div class="one-third">';
