@@ -129,7 +129,7 @@
                                                 <h2 class="title-4"><strong>Current</strong> Posts</h2>
                                                 <div class="filters">
                                                     <ul class="filters-list-1 xs-hide">
-                                                        <li><a href="#" class="active" >world</a></li>
+                                                        <li><a href="#" id="js-catg-world" value="world" class="active" >world</a></li>
                                                         <li><a href="#" id="js-catg-business" value="business">Business</a></li>
                                                         <li><a href="#" id="js-catg-sport" value="sports">Sports</a></li>
                                                         <li><a href="#" id="js-catg-technology" value="technology">Technology</a></li>
@@ -188,7 +188,7 @@
                     }
                     var _content = (news.abstract).substring(0, 120);
                     if (searchQuery.key === 'politics' || searchQuery.key === 'world') {
-                        if ((key < 11)) {
+                        if ((key < 9)) {
                          
                         if(key%2==0)
                          {
@@ -265,7 +265,7 @@
                         _date = null;
                     }
                      var _content = (news.abstract).substring(0, 120);
-                     if(key <12){
+                     if(key <9){
                         if(key%2==0)
                          {
                             _category += '<div class="one-third">';
