@@ -92,15 +92,18 @@
                 $.each(data, function (key, news) {
                     news = JSON.parse(news);
                     var _slideTemplate = '';
-         
+                    var _date = new Date(news.publishedAt).toString().split('GMT')[0];
+                    if(_date === 'Invalid Date'){
+                        _date = null;
+                    }
          
 
                         _trendingPost += '<div class="col-one-quarter"><article class="post post-tp-4"><figure>';
-                        _trendingPost += ' <a href="'+news.url+'" target="_blank"><img src="' + news.urlToImage + '" height="186" width="260" alt="Spectr News Theme" class="adaptive" /></a>';
+                        _trendingPost += ' <a href="'+news.url+'" target="_blank"><img src="' + news.multimedia[2].url + '" height="186" width="260" alt="Spectr News Theme" class="adaptive" /></a>';
                         _trendingPost += '<div class="ptp-4-overlay"><div class="ptp-4-data"><a href="'+news.url+'"><i class="li_eye"></i>187'
                         _trendingPost += '</a> <a href="'+news.url+'"><i class="li_bubble"></i>187</a></div></div></figure>';
-                        _trendingPost += '<h3 class="title-3"><a href="'+news.url+'" target="_blank">'+news.description+'</a></h3>';
-                        _trendingPost += '<div class="meta-tp-2"><div class="date"><span>'+new Date(news.publishedAt).toString().split('GMT')[0]+'</span></div>';
+                        _trendingPost += '<h3 class="title-3"><a href="'+news.url+'" target="_blank">'+(news.abstract).substring(0, 120)+'</a></h3>';
+                        _trendingPost += '<div class="meta-tp-2"><div class="date"><span>'+_date+'</span></div>';
                         _trendingPost += '<div class="category">';
                         _trendingPost += '</div> </div> ';
                         _trendingPost += ' </article></div>';
