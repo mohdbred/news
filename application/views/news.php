@@ -186,7 +186,7 @@
                     if(_date === 'Invalid Date'){
                         _date = null;
                     }
-
+                    var _content = (news.abstract).substring(0, 120);
                     if (searchQuery.key === 'politics' || searchQuery.key === 'world') {
                         if ((key < 11)) {
                          
@@ -197,7 +197,7 @@
                             _category += '<figure >';
                             _category += ' <a href="'+news.url+'" target="_blank"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
                             _category += '</figure>';
-                            _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +(news.abstract).substring(0, 120)+'..' + '</h3>';
+                            _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +_content+'..' + '</h3>';
                             _category += '<div class="date-tp-2">'+_date+'</div></article>';
                         }
                           else
@@ -206,7 +206,7 @@
                             _category += '<figure >';
                             _category += ' <a href="'+news.url+'" target="_blank"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
                             _category += '</figure>';
-                            _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +(news.abstract).substring(0, 120)+'..' + '</h3>';
+                            _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +_content+'..' + '</h3>';
                             _category += '<div class="date-tp-2">'+_date+'</div></article> </div>';
                          }
 
@@ -264,16 +264,16 @@
                     if(_date === 'Invalid Date'){
                         _date = null;
                     }
-                     
+                     var _content = (news.abstract).substring(0, 120);
                      if(key <12){
-                                      if(key%2==0)
+                        if(key%2==0)
                          {
                             _category += '<div class="one-third">';
                             _category += '<article class="post post-tp-6">';
                             _category += '<figure >';
                             _category += ' <a href="'+news.url+'" target="_blank"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="" /></a>';
                             _category += '</figure>';
-                            _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +(news.abstract).substring(0, 120)+'..' + '</h3>';
+                            _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +_content+'..' + '</h3>';
                             _category += '<div class="date-tp-2">'+_date+'</div></article>';
                         }
                           else
@@ -282,7 +282,7 @@
                             _category += '<figure >';
                             _category += ' <a href="'+news.url+'" target="_blank"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="" /></a>';
                             _category += '</figure>';
-                            _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +(news.abstract).substring(0, 120)+'..' + '</h3>';
+                            _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +_content+'..' + '</h3>';
                             _category += '<div class="date-tp-2">'+_date+'</div></article> </div>';
                          }
                      }
