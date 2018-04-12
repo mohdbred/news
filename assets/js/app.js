@@ -43,7 +43,7 @@
                         $('#js-top-headlines'+key).html(_topHeadline);
                     }
 
-                    if ((key > 10) && (key < 14)) {
+                    if ((key > 8) && (key < 12)) {
 
                         _topStories1 += '<article class="post post-tp-3">';
                         _topStories1 += '<figure class="css-side-post">';
@@ -53,7 +53,7 @@
                         _topStories1 += '<div class="date-tp-2">'+new Date(news.publishedAt).toString().split('GMT')[0]+'</div></article>';
 
                     }
-                    if ((key > 14) && (key < 18)) {
+                    if ((key > 11) && (key < 16)) {
 
                         _topStories2 += '<article class="post post-tp-3">';
                         _topStories2 += '<figure class="css-side-post">';
@@ -64,27 +64,55 @@
 
                     }
 
-
-
-                    if ((key > 15) && (key < 20)) {
-
-                        _trendingPost += '<div class="col-one-quarter"><article class="post post-tp-4"><figure>';
-                        _trendingPost += ' <a href="'+news.url+'" target="_blank"><img src="' + news.urlToImage + '" height="186" width="260" alt="Spectr News Theme" class="adaptive" /></a>';
-                        _trendingPost += '<div class="ptp-4-overlay"><div class="ptp-4-data"><a href="'+news.url+'"><i class="li_eye"></i>187'
-                        _trendingPost += '</a> <a href="'+news.url+'"><i class="li_bubble"></i>187</a></div></div></figure>';
-                        _trendingPost += '<h3 class="title-3"><a href="'+news.url+'" target="_blank">'+news.description+'</a></h3>';
-                        _trendingPost += '<div class="meta-tp-2"><div class="date"><span>'+new Date(news.publishedAt).toString().split('GMT')[0]+'</span></div>';
-                        _trendingPost += '<div class="category">';
-                        _trendingPost += '</div> </div> ';
-                        _trendingPost += ' </article></div>';
-
-                    }
-
                 });
 
                 
                 $('#js-top-stories-sidebar1').html(_topStories1);
                 $('#js-top-stories-sidebar2').html(_topStories2);
+
+                //Top headlines
+            })
+      
+        },
+
+        _trendingPost : function(){
+            $.ajax({
+                type: 'GET',
+                url: baseUrl + 'news/trending',
+                cache: false
+
+            }).done(function (data) {
+                data = JSON.parse(data);
+                var i = 3;
+                var j = 10;
+                var _topHeadline = '';
+                var _topStories1 = '';
+                var _topStories2 = '';
+                var _trendingPost = '';
+                $.each(data, function (key, news) {
+                    news = JSON.parse(news);
+                    var _slideTemplate = '';
+                    var _date = new Date(news.created_date).toString().split('GMT')[0];
+                    if(_date === 'Invalid Date'){
+                        _date = '';
+                    }
+         
+
+                        _trendingPost += '<div class="col-one-quarter"><article class="post post-tp-4"><figure>';
+                        _trendingPost += ' <a href="'+news.url+'" target="_blank"><img src="' + news.multimedia[2].url + '" height="186" width="260" alt="Spectr News Theme" class="adaptive" /></a>';
+                        _trendingPost += '<div class="ptp-4-overlay"><div class="ptp-4-data"><a href="'+news.url+'"><i class="li_eye"></i>187'
+                        _trendingPost += '</a> <a href="'+news.url+'"><i class="li_bubble"></i>187</a></div></div></figure>';
+                        _trendingPost += '<h3 class="title-3"><a href="'+news.url+'" target="_blank">'+(news.abstract).substring(0, 120)+'</a></h3>';
+                        _trendingPost += '<div class="meta-tp-2"><div class="date"><span>'+_date+'</span></div>';
+                        _trendingPost += '<div class="category">';
+                        _trendingPost += '</div> </div> ';
+                        _trendingPost += ' </article></div>';
+
+              
+
+
+                });
+
                 $('#js-trending-post').html(_trendingPost);
 
                 //Top headlines

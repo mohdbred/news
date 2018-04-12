@@ -126,10 +126,10 @@
                                     <div class="design-pst">
                                         <div class="pst-block">
                                             <div class="pst-block-head">
-                                                <h2 class="title-4"><strong>Design</strong> Posts</h2>
+                                                <h2 class="title-4"><strong>Current</strong> Posts</h2>
                                                 <div class="filters">
                                                     <ul class="filters-list-1 xs-hide">
-                                                        <li><a href="#" class="active" >world</a></li>
+                                                        <li><a href="#" id="js-catg-world" value="world" class="active" >world</a></li>
                                                         <li><a href="#" id="js-catg-business" value="business">Business</a></li>
                                                         <li><a href="#" id="js-catg-sport" value="sports">Sports</a></li>
                                                         <li><a href="#" id="js-catg-technology" value="technology">Technology</a></li>
@@ -170,6 +170,7 @@
         var $scope = $("#js-home-scope");
         var url = 'news/category';
         app._getTopHeadLines();
+        app._trendingPost();
         var searchQuery = {key: 'world'};
 
      
@@ -181,6 +182,11 @@
                 var _category2 = '';
                 $.each(data, function (key, news) {
                     news = JSON.parse(news);
+                    var _date = new Date(news.created_date).toString().split('GMT')[0];
+                    if(_date === 'Invalid Date'){
+                        _date = null;
+                    }
+                    var _content = (news.abstract).substring(0, 120);
                     if (searchQuery.key === 'politics' || searchQuery.key === 'world') {
                         if ((key < 6)) {
                          
@@ -191,8 +197,8 @@
                             _category += '<figure >';
                             _category += ' <a href="'+news.url+'" target="_blank"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
                             _category += '</figure>';
-                            _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +(news.abstract).substring(0, 120)+'..' + '</h3>';
-                            _category += '<div class="date-tp-2">'+new Date(news.created_date).toString().split('GMT')[0]+'</div></article>';
+                            _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +_content+'..' + '</h3>';
+                            _category += '<div class="date-tp-2">'+_date+'</div></article>';
                         }
                           else
                          {
@@ -200,8 +206,8 @@
                             _category += '<figure >';
                             _category += ' <a href="'+news.url+'" target="_blank"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
                             _category += '</figure>';
-                            _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +(news.abstract).substring(0, 120)+'..' + '</h3>';
-                            _category += '<div class="date-tp-2">'+new Date(news.created_date).toString().split('GMT')[0]+'</div></article> </div>';
+                            _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +_content+'..' + '</h3>';
+                            _category += '<div class="date-tp-2">'+_date+'</div></article> </div>';
                          }
 
                         }
@@ -210,7 +216,7 @@
                             _category2 += '<a href="' + news.url + '" target="_blank"><img src="' + news.multimedia[2].url + '" height="254" width="380" alt="Spectr News Theme" class="" /></a>';
                             _category2 += '</figure><div class="ptp-1-overlay"><div class="ptp-1-data">';
                             _category2 += '  <h2 class="title-29"><a  href="'+news.url+'">' +news.abstract+ '</a></h2>';
-                            _category2 += '<div class="meta-tp-1"><div class="ptp-1-date"><a href="#">'+new Date(news.created_date).toString().split('GMT')[0]+'</a></div>';
+                            _category2 += '<div class="meta-tp-1"><div class="ptp-1-date"><a href="#">'+_date+'</a></div>';
                              _category2 += ' <div class="ptp-1-views"><a href="#"><i class="li_eye"></i><span>187</span></a></div>';
                              _category2 += ' <div class="ptp-1-comments"><a href="#"><i class="li_bubble"></i><span>5</span></a></div>';
                              _category2 +='</div></div></div></article></div>';
@@ -224,7 +230,7 @@
                             _category += ' <a href="'+news.url+'" target="_blank"><img src="' + news.urlToImage + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
                             _category += '</figure>';
                             _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' + news.description + '</h3>';
-                            _category += '<div class="date-tp-2">'+new Date(news.created_date).toString().split('GMT')[0]+'</div></article>';
+                            _category += '<div class="date-tp-2">'+_date+'</div></article>';
 
                         }
 
@@ -242,7 +248,7 @@
 
 
     /*Click Events*/
-    $($scope).on('click', '#js-catg-business,#js-catg-sport,#js-catg-technology,#js-catg-entertainment,#js-catg-politics', function (evt) {
+    $($scope).on('click', '#js-catg-world,#js-catg-business,#js-catg-sport,#js-catg-technology,#js-catg-entertainment,#js-catg-politics', function (evt) {
         evt.preventDefault();
         var searchQuery = {key: this.getAttribute('value')};
       //  var url = 'news/category';
@@ -254,25 +260,21 @@
                 $.each(data, function (key, news) {
                  //  news.replace(",\\")
                     news = JSON.parse(news);
-
-                  //  if (searchQuery.key === 'politics' || searchQuery.key === 'world' ||searchQuery.key === 'sports') {
-                        if ((key < 6)) {
-                            // _category += '<article class="post post-tp-6">';
-                            // _category += '<figure class="js-category-news">';
-                            // _category += ' <a href="#"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="adaptive" /></a>';
-                            // _category += '</figure>';
-                            // _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +news.abstract+ '</h3>';
-                            // _category += '<div class="date-tp-2">'+Date(news.publishedAt).split('GMT')[0]+'</div></article>';
-
-                       if(key%2==0)
+                    var _date = new Date(news.created_date).toString().split('GMT')[0];
+                    if(_date === 'Invalid Date'){
+                        _date = null;
+                    }
+                     var _content = (news.abstract).substring(0, 120);
+                     if(key <6){
+                        if(key%2==0)
                          {
                             _category += '<div class="one-third">';
                             _category += '<article class="post post-tp-6">';
                             _category += '<figure >';
                             _category += ' <a href="'+news.url+'" target="_blank"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="" /></a>';
                             _category += '</figure>';
-                            _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +(news.abstract).substring(0, 120)+'..' + '</h3>';
-                            _category += '<div class="date-tp-2">'+new Date(news.publishedAt).toString().split('GMT')[0]+'</div></article>';
+                            _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +_content+'..' + '</h3>';
+                            _category += '<div class="date-tp-2">'+_date+'</div></article>';
                         }
                           else
                          {
@@ -280,11 +282,14 @@
                             _category += '<figure >';
                             _category += ' <a href="'+news.url+'" target="_blank"><img src="' + news.multimedia[2].url + '" height="85" width="115" alt="Spectr News Theme" class="" /></a>';
                             _category += '</figure>';
-                            _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +(news.abstract).substring(0, 120)+'..' + '</h3>';
-                            _category += '<div class="date-tp-2">'+new Date(news.publishedAt).toString().split('GMT')[0]+'</div></article> </div>';
+                            _category += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +_content+'..' + '</h3>';
+                            _category += '<div class="date-tp-2">'+_date+'</div></article> </div>';
                          }
+                     }
 
-                        }
+         
+
+                
           
 
                 });

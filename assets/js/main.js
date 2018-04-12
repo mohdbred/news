@@ -220,8 +220,8 @@
 
         mainSlider.slick({
             speed: 600,
-            // autoplay: true,
-           // loop: true,
+            autoplay: true,
+            loop: true,
             appendArrows: $('.ms-navs'),
             prevArrow: '<div class="prev"><i class="ms-prev"></div>',
             nextArrow: '<div class="next"><i class="ms-next"></div>',
