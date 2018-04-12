@@ -126,7 +126,7 @@
                                     <div class="design-pst">
                                         <div class="pst-block">
                                             <div class="pst-block-head">
-                                                <h2 class="title-4"><strong>Design</strong> Posts</h2>
+                                                <h2 class="title-4"><strong>Current</strong> Posts</h2>
                                                 <div class="filters">
                                                     <ul class="filters-list-1 xs-hide">
                                                         <li><a href="#" class="active" >world</a></li>

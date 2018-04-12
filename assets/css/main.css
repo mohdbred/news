@@ -226,10 +226,11 @@ The `sprites` mixin generates identical output to the CSS template
 
 /* line 12, D:/aartyomenko/Git/spectr/html/app/scss/_grid.scss */
 .one-third {
-  float: left;
-  display: block;
-  margin-right: 0%;
-  width: 33.33333%; }
+    float: left;
+    display: block;
+    margin-right: 1%;
+    margin-top: 1%;
+    width: 32.33333%; }
   /* line 89, D:/aartyomenko/Git/spectr/html/app/vendor/neat/app/assets/stylesheets/grid/_span-columns.scss */
   .one-third:last-child {
     margin-right: 0; }
