@@ -43,7 +43,7 @@
                         $('#js-top-headlines'+key).html(_topHeadline);
                     }
 
-                    if ((key > 10) && (key < 14)) {
+                    if ((key > 8) && (key < 12)) {
 
                         _topStories1 += '<article class="post post-tp-3">';
                         _topStories1 += '<figure class="css-side-post">';
@@ -53,7 +53,7 @@
                         _topStories1 += '<div class="date-tp-2">'+new Date(news.publishedAt).toString().split('GMT')[0]+'</div></article>';
 
                     }
-                    if ((key > 14) && (key < 18)) {
+                    if ((key > 11) && (key < 16)) {
 
                         _topStories2 += '<article class="post post-tp-3">';
                         _topStories2 += '<figure class="css-side-post">';
@@ -64,9 +64,35 @@
 
                     }
 
+                });
 
+                
+                $('#js-top-stories-sidebar1').html(_topStories1);
+                $('#js-top-stories-sidebar2').html(_topStories2);
 
-                    if ((key > 15) && (key < 20)) {
+                //Top headlines
+            })
+      
+        },
+
+        _trendingPost : function(){
+            $.ajax({
+                type: 'GET',
+                url: baseUrl + 'news/trending',
+                cache: false
+
+            }).done(function (data) {
+                data = JSON.parse(data);
+                var i = 3;
+                var j = 10;
+                var _topHeadline = '';
+                var _topStories1 = '';
+                var _topStories2 = '';
+                var _trendingPost = '';
+                $.each(data, function (key, news) {
+                    var _slideTemplate = '';
+         
+         
 
                         _trendingPost += '<div class="col-one-quarter"><article class="post post-tp-4"><figure>';
                         _trendingPost += ' <a href="'+news.url+'" target="_blank"><img src="' + news.urlToImage + '" height="186" width="260" alt="Spectr News Theme" class="adaptive" /></a>';
@@ -78,13 +104,11 @@
                         _trendingPost += '</div> </div> ';
                         _trendingPost += ' </article></div>';
 
-                    }
+              
+
 
                 });
 
-                
-                $('#js-top-stories-sidebar1').html(_topStories1);
-                $('#js-top-stories-sidebar2').html(_topStories2);
                 $('#js-trending-post').html(_trendingPost);
 
                 //Top headlines

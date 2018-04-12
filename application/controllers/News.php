@@ -58,6 +58,21 @@ class News extends CI_Controller {
         echo json_encode($books);
     }
 
+    public function trending() {
+
+        $key = $_POST['key'];
+        $this->load->model('News_model');
+        $results = $this->News_model->get_trending();
+       $i = 0;
+        foreach ($results as $result) {
+           $books[$i] = base64_decode($result['data']); 
+           $books[$i] = unserialize($books[$i]);
+             
+            $i++;
+        }
+        echo json_encode($books);
+    }
+
 
     public function technology() {
         if (!file_exists(APPPATH . '/views/technology.php')) {
