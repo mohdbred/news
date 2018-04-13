@@ -12355,3 +12355,10 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
 .js-category-news{
     width: 30%;
 }
+
+.post-tp-4 figure img {
+     height: 35%; 
+}
+.post-tp-6 figure img {
+     height: 35%; 
+}
