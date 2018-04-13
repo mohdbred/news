@@ -37,31 +37,13 @@ $this->load->helper('url');
         <!-- Mobile Metas -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- Web Fonts  -->
-        <!--   <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic%7CInconsolata:400,700%7CMontserrat:400,700' rel='stylesheet' type='text/css' /> -->
-
-        <!-- build:css css/icons.css -->
 
         <!-- Icon Fonts  -->
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/font-awesome.css" />
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/linecons.css" />
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/fontello.css" />
-
-        <!-- endbuild -->
-        <!-- build:css css/vendor.css -->
-
-        <!-- Vendor CSS -->
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/jquery-ui.css" />
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/jquery-ui.structure.css" />
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/animate.css/animate.css" />
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/owl-carousel/owl-carousel/owl.carousel.css" />
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/owl-carousel/owl-carousel/owl.transitions.css" />
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/slick-carousel/slick/slick.css" />
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/Swiper/dist/css/swiper.css" />
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/magnific-popup/dist/magnific-popup.css" />
-
-        <!-- endbuild -->
-        <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/jquery-ui.css" />
+   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/owl-carousel/owl-carousel/owl.carousel.css" />
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/slick-carousel/slick/slick.css" />
+  
 
         <!-- Theme CSS -->
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/main.css" />
