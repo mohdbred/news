@@ -12,13 +12,14 @@ $this->load->helper('url');
 
         <title>NewsPulses</title>
 
-        <meta name="keywords" content="html5 Template" />
-        <meta name="description" content="Responsive html5 Template" />
+        <meta name="keywords" content="News" />
+        <meta name="description" content="NewsPulses" />
 
 
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png" />
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="msapplication-TileColor" content="News" />
+        <meta name="msapplication-TileImage" content="News" />
+        <meta name="theme-color" content="News" />
+
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117222559-2"></script>

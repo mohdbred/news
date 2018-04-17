@@ -17,43 +17,29 @@
                         </div>
                         <!-- Main posts END -->
                   
-                        <!-- Video data was here-->
                         <div class="section">
                             <div class="row">
                                 <div class="content">
 
-                                    <div class="latest-nws">
+                                    <div class="design-pst">
                                         <div class="pst-block">
                                             <div class="pst-block-head">
-                                                <h2 class="title-4"><strong>Latest </strong> News</h2>
-                                             
-                                            </div>
+                                                <h2 class="title-4"><strong>Current</strong> Posts</h2>
+                                          </div>
                                             <div class="pst-block-main">
-                                                <div class="col-row" id="js-main-content">
-                                        
-                                                </div>
-                                                <!-- Page nav -->
-                                                <div class="page-nav" id="js-pagination">
-                                                    <a href="#" class="pn-item">
-                                                        <i class="page-nav-prev-ic"></i>
-                                                    </a>
-                                                    <a href="#" class="pn-item mb-pt-hide current" value="9">1</a>
-                                                    <a href="#" class="pn-item mb-pt-hide" value="9">2</a>
-                                                    <a href="#" class="pn-item mb-pt-hide" value="14">3</a>
-                                                     <a href="#" class="pn-item mb-pt-hide" value="19">4</a>
-                                                      <a href="#" class="pn-item mb-pt-hide" value="24">5</a>
-                                                    <a href="#" class="pn-item">
-                                                    <i class="page-nav-next-ic"></i>
-                                                    </a>
-                                                    <span class="page-count">Page 1 of 3</span>
-                                                </div>
-                                                <!-- Page nav END -->
+                                            <div class="col-row">
+                                                <div class="col-half" id="js-category-news">
+                                                 <!--Ajax Call-->
+   
+                                                 </div>
+
                                             </div>
+                                            </div>
+                                          
                                         </div>
                                     </div>
-
                                 </div>
-                             
+                        
                             </div>
                         </div>
                     </div>
@@ -78,9 +64,14 @@
                 var _content = '';
                 $.each(data, function (key, news) {
                     news = JSON.parse(news);
+                     var _date = new Date(news.created_date).toString().split('GMT')[0];
+                      if(_date === 'Invalid Date'){
+                        _date = null;
+                    }
+                     var _contentt = (news.abstract);
                         if ((key < 3)) {
                             _category += '<div class="one-third sm-half"><article class="post post-tp-2"><figure>';
-                            _category += '<a href="index._slideTemplatel"><img src="' + news.multimedia[2].url + '" height="258" width="380" alt="Spectr News Theme" class="" /></a>';
+                            _category += '<a href="index._slideTemplatel"><img src="' + news.multimedia[2].url + '" height="258" width="380" alt="NewsPulses Image" class="" /></a>';
                             _category += '</figure><div class="ptp-1-overlay"><div class="ptp-1-data">';
                             _category += '<a href="index._slideTemplatel" class="category-tp-1">BUSINESS</a>';
                             _category += '  <h2 class="title-29"><a  href="' + news.url + '" target="_blank">' +news.abstract+ '</a></h2>';
@@ -90,57 +81,23 @@
                              _category +='</div></div></div></article></div>';
 
                         }
-                       if(key > 4 ){
-                          if(key < i){
-                            _content += '<article class="post post-tp-6" value="'+key+'">';
-                            _content += '<figure class="js-category-news">';
-                            _content += ' <a href="index._slideTemplatel"><img src="' + news.multimedia[2].url  + '" height="85" width="115" alt="Spectr News Theme" class="" /></a>';
+                    if(key >3){
+                            _content += '<div class="one-third xs-half mb-ls-full">';
+                            _content += '<article class="post-tp-6">';
+                            _content += '<figure >';
+                            _content += ' <a href="'+news.url+'" target="_blank"><img src="' + news.multimedia[2].url + '" height="50px" width="60px" alt="NewsPulses Image" class="adaptive" /></a>';
                             _content += '</figure>';
-                            _content += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +news.abstract+  '</h3>';
-                            _content += '<div class="date-tp-2">october 2, 2015</div></article>';
-                          }else{
-                            _content += '<article class="post post-tp-6" style="display:none" value="'+key+'">';
-                            _content += '<figure class="js-category-news">';
-                            _content += ' <a href="index._slideTemplatel"><img src="' + news.multimedia[2].url  + '" height="85" width="115" alt="Spectr News Theme" class="" /></a>';
-                            _content += '</figure>';
-                            _content += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +news.abstract+  '</h3>';
-                            _content += '<div class="date-tp-2">october 2, 2015</div></article>';
-                          }
-               
-                      
-                       } 
+                            _content += '<h3 class="title-6"><a href="' + news.url + '" target="_blank"</a>' +_contentt+'..' + '</h3>';
+                            _content += '<div class="date-tp-2">'+_date+'</div></article></div>';
+                     }
                     
 
                 });
                 $('#js-top-section').html(_category);
-                $('#js-main-content').html(_content);
+                $('#js-category-news').html(_content);
 
         });
        
-      $('#js-pagination').on('click','.pn-item',function(evt){
-
-            evt.preventDefault();
-            var num1 = parseInt($(this).attr("value"));
-            var htm = $('#js-main-content').find('article');
-
-            $(htm).each(function(index,data){
-             var num2 =  $(data).attr('value')
-             if(num2 < num1){
-                 $(data ,'article').hide();
-
-             }
-             if((num2 > num1) && (num2 < (num1 + 5))){
-                $(data ,'article').show();
-             }
-
-            });
-              
-        
-            // var htm = $('#js-main-content').find('article')[0];
-            // $(htm ,'article').hide();
-
-
-      });
 
     })(window, jQuery);
 </script>

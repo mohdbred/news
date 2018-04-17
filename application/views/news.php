@@ -165,16 +165,12 @@
 
     (function (window, $, undefined) {
 
-
-    
         var $scope = $("#js-home-scope");
         var url = 'news/category';
         app._getTopHeadLines();
         app._trendingPost();
         var searchQuery = {key: 'world'};
-
-     
-       app._getCategory(searchQuery,url).done(function (data) {
+        app._getCategory(searchQuery,url).done(function (data) {
              
                 var i = 3;
                 var j = 10;
@@ -233,8 +229,6 @@
                             _category += '<div class="date-tp-2">'+_date+'</div></article>';
 
                         }
-
-          
                     }
 
                 });
@@ -242,9 +236,7 @@
                 $('#js-category-news').html(_category);
                 $('#js-category2-data').html(_category2);
 
-                //Top headlines
-
-            });
+             });
 
 
     /*Click Events*/
@@ -288,20 +280,11 @@
                      }
 
          
-
-                
-          
-
                 });
                 $('#js-category-news').html(_category);
 
-                //Top headlines
-
-            });
+             });
     });
 
-
-// Trending line slider
-
-    })(window, jQuery);
+   })(window, jQuery);
 </script>

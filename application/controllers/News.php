@@ -81,10 +81,10 @@ class News extends CI_Controller {
         }
         $data['title'] = ucfirst('technology');
          $this->load->view('templates/header', $data);
-        // $this->load->view('technology.php', $data);
-        // $this->load->view('templates/footer', $data);
+        $this->load->view('technology.php', $data);
+        $this->load->view('templates/footer', $data);
 
-        $this->load->view('comingsoon.php', $data);
+       // $this->load->view('comingsoon.php', $data);
     }
 
     public function politics() {
@@ -94,10 +94,10 @@ class News extends CI_Controller {
         }
         $data['title'] = ucfirst('politics');
          $this->load->view('templates/header', $data);
-        // $this->load->view('politics.php', $data);
-        // $this->load->view('templates/footer', $data);
+        $this->load->view('politics.php', $data);
+        $this->load->view('templates/footer', $data);
 
-        $this->load->view('comingsoon.php', $data);
+       // $this->load->view('comingsoon.php', $data);
     }
 
     public function education() {
@@ -107,10 +107,10 @@ class News extends CI_Controller {
         }
         $data['title'] = ucfirst('education');
          $this->load->view('templates/header', $data);
-        // $this->load->view('education.php', $data);
-        // $this->load->view('templates/footer', $data);
+        $this->load->view('education.php', $data);
+        $this->load->view('templates/footer', $data);
 
-        $this->load->view('comingsoon.php', $data);
+       // $this->load->view('comingsoon.php', $data);
     }
 
     public function bussiness() {
@@ -120,10 +120,10 @@ class News extends CI_Controller {
         }
         $data['title'] = ucfirst('bussiness');
          $this->load->view('templates/header', $data);
-        // $this->load->view('bussiness.php', $data);
-        // $this->load->view('templates/footer', $data);
+        $this->load->view('bussiness.php', $data);
+        $this->load->view('templates/footer', $data);
 
-        $this->load->view('comingsoon.php', $data);
+      //  $this->load->view('comingsoon.php', $data);
     }
 
     public function entertainment() {
@@ -133,10 +133,10 @@ class News extends CI_Controller {
         }
         $data['title'] = ucfirst('entertainment');
          $this->load->view('templates/header', $data);
-        // $this->load->view('entertainment.php', $data);
-        // $this->load->view('templates/footer', $data);
+        $this->load->view('entertainment.php', $data);
+        $this->load->view('templates/footer', $data);
 
-        $this->load->view('comingsoon.php', $data);
+       // $this->load->view('comingsoon.php', $data);
     }
 
     public function sports() {
@@ -146,10 +146,10 @@ class News extends CI_Controller {
         }
         $data['title'] = ucfirst('sports');
          $this->load->view('templates/header', $data);
-        // $this->load->view('sports.php', $data);
-        // $this->load->view('templates/footer', $data);
+        $this->load->view('sports.php', $data);
+        $this->load->view('templates/footer', $data);
 
-        $this->load->view('comingsoon.php', $data);
+       // $this->load->view('comingsoon.php', $data);
     }
 
     public function about_us() {
