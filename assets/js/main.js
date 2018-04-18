@@ -38,22 +38,22 @@
 })();
 
 // Left sticky bar
-(function() {
-    $(window).load(function() {
-        var inner = $('.inner-wrapper');
-        var leftStBar = $('.js-lsb');
+// (function() {
+//     $(window).load(function() {
+//         var inner = $('.inner-wrapper');
+//         var leftStBar = $('.js-lsb');
 
-        var waypoints = inner.waypoint({
-            handler: function(dir) {
-                if (dir === 'down') {
-                    leftStBar.addClass('sticky');
-                } else if (dir === 'up') {
-                    leftStBar.removeClass('sticky');
-                }
-            }
-        });
-    });
-})();
+//         var waypoints = inner.waypoint({
+//             handler: function(dir) {
+//                 if (dir === 'down') {
+//                     leftStBar.addClass('sticky');
+//                 } else if (dir === 'up') {
+//                     leftStBar.removeClass('sticky');
+//                 }
+//             }
+//         });
+//     });
+// })();
 
 // Sticky header
 // (function(){
@@ -68,6 +68,25 @@
 //         }
 //     });
 // })();
+
+(function() {
+    $(window).load(function() {
+        var stHeader = $('.js-sticky-header');
+    var content = $('.main-content');
+
+        var waypoints = content.waypoint({
+            handler: function(direction) {
+                if(direction==="down") {
+            stHeader.addClass('visible');
+        } else if(direction==="up") {
+            stHeader.removeClass('visible');
+        }
+            }
+        });
+    });
+})();
+
+
 
 // Aside menu
 (function(){

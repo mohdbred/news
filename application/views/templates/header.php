@@ -132,14 +132,14 @@ $this->load->helper('url');
                     </div>
                 </div>
             </header>
-           <!--  <div class="sticky-header js-sticky-header">
+            <div class="sticky-header js-sticky-header">
                 <div class="container">
                     <div class="main-nav-wrap">
                         <div class="row">
                             <nav class="main-nav">
 
                                 <ul class="main-nav-list sf-menu">
-                                    <li class="top-headers-catg active"><a href="<?php echo site_url(); ?>news">Top news</a></li>
+                                    <li class="top-headers-catg"><a href="<?php echo site_url(); ?>news">Top news</a></li>
                                     <li class="top-headers-catg">
                                         <a href="<?php echo site_url(); ?>news/politics">Politics</i></a>
 
@@ -179,7 +179,7 @@ $this->load->helper('url');
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
             <header class="header-tp-4">
                 <!--   <div class="top-bar">
                       <div class="container">
@@ -206,7 +206,7 @@ $this->load->helper('url');
                           </div>
                       </div>
                   </div> -->
-                <div class="main-header sticky-header js-sticky-header visible">
+                <div class="main-header">
 
                     <div class="mh-bottom">
                         <div class="container">
