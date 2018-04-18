@@ -40,9 +40,9 @@ $this->load->helper('url');
 
 
         <!-- Icon Fonts  -->
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/font-awesome.css" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/jquery-ui.css" />
-   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/owl-carousel/owl-carousel/owl.carousel.css" />
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/owl-carousel/owl-carousel/owl.carousel.css" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/slick-carousel/slick/slick.css" />
   
 
@@ -76,7 +76,24 @@ $this->load->helper('url');
 
         <!-- endbuild -->
 
+    <script type="text/javascript">
+        $(document).ready(function(){
+          var url_string = window.location.href
+          var url = new URL(url_string);
+          var subcatg = (url.pathname).split('/');
+          subcatg = subcatg[subcatg.length - 1].trim();
+          var _topCatg =  $('.top-headers-catg');
 
+          $.each(_topCatg , function(index,val){
+            var catg = $(val).text().toLowerCase().trim();
+            if(subcatg === 'news' && catg ==='top news'){
+             $(val).addClass('active');
+            }else if( catg === subcatg ){
+            $(val).addClass('active');
+           }
+          });
+        });
+    </script>
     </head>
 
     <body id="js-home-scope">
@@ -93,10 +110,6 @@ $this->load->helper('url');
             <!-- Header -->
             <header class="header-mb">
                 <div class="container">
-
-                    <!--   <div class="hdm-logo">
-                          <h1><a href="spectr-_slideTemplatel_weblionmedia_default._slideTemplatel"><img src="https://s3.amazonaws.com/weblionmedia-spectr/img/logo-mb.svg" height="40" width="140" alt="Spectr" class="adaptive" /></a></h1>
-                      </div> -->
                     <div class="hdm-search-user">
                         <div class="hd-search">
                             <a href="index._slideTemplatel#search-block" class="st-btn-1 fa-flip-horizontal js-hd-search">
@@ -119,33 +132,33 @@ $this->load->helper('url');
                     </div>
                 </div>
             </header>
-            <div class="sticky-header js-sticky-header">
+           <!--  <div class="sticky-header js-sticky-header">
                 <div class="container">
                     <div class="main-nav-wrap">
                         <div class="row">
                             <nav class="main-nav">
 
                                 <ul class="main-nav-list sf-menu">
-                                    <li class="active"><a href="<?php echo site_url(); ?>news">Top news</a></li>
-                                    <li>
+                                    <li class="top-headers-catg active"><a href="<?php echo site_url(); ?>news">Top news</a></li>
+                                    <li class="top-headers-catg">
                                         <a href="<?php echo site_url(); ?>news/politics">Politics</i></a>
 
                                     </li>
-                                    <li><a href="<?php base_url(); ?>news/education">Educations</a></li>
-                                    <li class="mf">
+                                    <li class="top-headers-catg"><a href="<?php base_url(); ?>news/education">Education</a></li>
+                                    <li class="top-headers-catg">
                                         <a href="<?php echo site_url(); ?>news/bussiness">Business</a>
 
                                     </li>
-                                    <li><a href="<?php echo site_url(); ?>news/technology">Technology</a></li>
-                                    <li>
+                                    <li class="top-headers-catg"><a href="<?php echo site_url(); ?>news/technology">Technology</a></li>
+                                    <li class="top-headers-catg">
                                         <a href="<?php base_url(); ?>news/entertainment">Entertainment</i></a>
 
                                     </li>
-                                    <li>
+                                    <li class="top-headers-catg">
                                         <a href="<?php echo site_url(); ?>news/sports">Sports</a>
 
                                     </li>
-                                    <li><a href="<?php echo site_url(); ?>news/contact">contacts</a></li>
+                                    <li class="top-headers-catg"><a href="<?php echo site_url(); ?>news/contact">contacts</a></li>
                                 </ul>
                             </nav>
                             <div class="hd-search">
@@ -166,7 +179,7 @@ $this->load->helper('url');
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <header class="header-tp-4">
                 <!--   <div class="top-bar">
                       <div class="container">
@@ -193,7 +206,7 @@ $this->load->helper('url');
                           </div>
                       </div>
                   </div> -->
-                <div class="main-header">
+                <div class="main-header sticky-header js-sticky-header visible">
 
                     <div class="mh-bottom">
                         <div class="container">
@@ -202,26 +215,26 @@ $this->load->helper('url');
                                     <nav class="main-nav">
 
                                         <ul class="main-nav-list sf-menu">
-                                            <li class="active"><a href="<?php echo site_url(); ?>news">Top news</a></li>
-                                            <li>
+                                            <li class="top-headers-catg"><a href="<?php echo site_url(); ?>news">Top news</a></li>
+                                            <li class="top-headers-catg">
                                                 <a href="<?php echo site_url(); ?>news/politics">Politics</a>
 
                                             </li>
-                                            <li><a href="<?php echo site_url(); ?>news/education">Educations</a></li>
+                                            <li class="top-headers-catg"><a href="<?php echo site_url(); ?>news/education">Education</a></li>
                                             <li class="mf">
                                                 <a href="<?php echo site_url(); ?>news/bussiness">Business</a>
 
                                             </li>
-                                            <li><a href="<?php echo site_url(); ?>news/technology">Technology</a></li>
-                                            <li>
+                                            <li class="top-headers-catg"><a href="<?php echo site_url(); ?>news/technology">Technology</a></li>
+                                            <li class="top-headers-catg">
                                                 <a href="<?php echo base_url(); ?>news/entertainment">Entertainment</a>
 
                                             </li>
-                                            <li>
+                                            <li class="top-headers-catg">
                                                 <a href="<?php echo site_url(); ?>news/sports">Sports</a>
 
                                             </li>
-                                            <li><a href="<?php echo site_url(); ?>news/contact">contacts</a></li>
+                                            <li class="top-headers-catg"><a href="<?php echo site_url(); ?>news/contact">contact</a></li>
                                         </ul>
                                     </nav>
 

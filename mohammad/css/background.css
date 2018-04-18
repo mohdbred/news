@@ -1,0 +1,101 @@
+/******************************************
+    Template Name: Portfolio
+    Created By: Mohammad
+******************************************/
+/*button style*/
+.btn {
+    font-size: 14px;
+   /* background-color: #472b0a;*/
+}
+
+.btn:hover,
+.btn:focus,
+.btn-large,
+.btn-floating,
+.btn-large:hover {
+    background-color: #d29348;
+}
+@media screen and (max-width: 768px) {
+    .menuzord-responsive .logo-brand {
+        margin: 10px 0 0;
+        color: #202020;
+    }
+}
+
+.grid-news-hover .post-wrapper:hover .blog-content {
+    border-color: #d29348;
+}
+.border-right {
+    border-right: 1px solid #383837;
+}
+
+.subscribe-wrapper .input-field {
+    width: 70%;
+    float: left;
+    margin-top: 18px;
+}
+
+@media screen and (max-width: 600px) {
+    .subscribe-wrapper .input-field {
+        width: 100%;
+        float: none;
+    }
+}
+
+/*
+background banner images
+------------------------------------------------------------*/
+.coffee-banner-1 {
+    background-image: url("../img/coffee/coffee-banner-1.jpg");  
+}
+
+.coffee-banner-2 {
+    background-image: url("../img/coffee/coffee-banner-2.jpg");
+}
+
+.coffee-banner-3 {
+    background-image: url("../img/coffee/coffee-banner-3.jpg");  
+}
+
+.coffee-banner-4 {
+    background-image: url("../img/coffee/coffee-banner-2.jpg");  
+}
+
+
+/* ================= Pre Defined Overlay ==================== */
+
+.overlay,
+.overlay .container {
+  position: relative;
+}
+.overlay:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2); /*fallback overlay*/
+}
+/* ================= Banner Background ==================== */
+
+@media screen and (max-width: 767px) {
+    .banner-wrapper {
+        margin-top: 45px;
+    }
+}
+
+@media (min-width: 992px) {
+    .bg-fixed {
+        background-attachment: fixed;
+    }
+}
+/* ========== Newsletter Subscription ============== */
+.subscription-success {
+    color: #fff;
+    line-height: 24px;
+    margin-top: 20px;
+}
+
+
+
