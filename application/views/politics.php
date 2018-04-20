@@ -73,7 +73,6 @@
                             _category += '<div class="one-third sm-half"><article class="post post-tp-2"><figure>';
                             _category += '<a href="index._slideTemplatel"><img src="' + news.multimedia[2].url + '" height="258" width="380" alt="NewsPulses Image" class="" /></a>';
                             _category += '</figure><div class="ptp-1-overlay"><div class="ptp-1-data">';
-                            _category += '<a href="index._slideTemplatel" class="category-tp-1">BUSINESS</a>';
                             _category += '  <h2 class="title-29"><a  href="' + news.url + '" target="_blank">' +news.abstract+ '</a></h2>';
                             _category += '<div class="meta-tp-1"><div class="ptp-1-date"><a href="index._slideTemplatel">october 2, 2015</a></div>';
                              _category += ' <div class="ptp-1-views"><a href="index._slideTemplatel"><i class="li_eye"></i><span>187</span></a></div>';
