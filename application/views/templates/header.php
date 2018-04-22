@@ -144,9 +144,9 @@ $this->load->helper('url');
                                         <a href="<?php echo site_url(); ?>news/politics">Politics</i></a>
 
                                     </li>
-                                    <li class="top-headers-catg"><a href="<?php base_url(); ?>news/education">Education</a></li>
+                                    <li class="top-headers-catg"><a href="<?php base_url(); ?>news/art">Arts</a></li>
                                     <li class="top-headers-catg">
-                                        <a href="<?php echo site_url(); ?>news/bussiness">Business</a>
+                                        <a href="<?php echo site_url(); ?>news/business">Business</a>
 
                                     </li>
                                     <li class="top-headers-catg"><a href="<?php echo site_url(); ?>news/technology">Technology</a></li>
@@ -220,9 +220,9 @@ $this->load->helper('url');
                                                 <a href="<?php echo site_url(); ?>news/politics">Politics</a>
 
                                             </li>
-                                            <li class="top-headers-catg"><a href="<?php echo site_url(); ?>news/education">Education</a></li>
+                                            <li class="top-headers-catg"><a href="<?php echo site_url(); ?>news/art">Arts</a></li>
                                             <li class="mf">
-                                                <a href="<?php echo site_url(); ?>news/bussiness">Business</a>
+                                                <a href="<?php echo site_url(); ?>news/business">Business</a>
 
                                             </li>
                                             <li class="top-headers-catg"><a href="<?php echo site_url(); ?>news/technology">Technology</a></li>

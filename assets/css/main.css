@@ -10652,7 +10652,7 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
     margin-bottom: 28px; }
     /* line 82, D:/aartyomenko/Git/spectr/html/app/scss/_main_posts.scss */
     .main-posts-1 .mp-section:first-child {
-      background: #fff;
+     /* background: #fff;*/
       height: 471px; }
       /* line 85, D:/aartyomenko/Git/spectr/html/app/scss/_main_posts.scss */
       .main-posts-1 .mp-section:first-child > div {
