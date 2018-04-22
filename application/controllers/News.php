@@ -127,7 +127,7 @@ class News extends CI_Controller {
     }
 
     public function bussiness() {
-        if (!file_exists(APPPATH . '/views/bussiness.php')) {
+        if (!file_exists(APPPATH . '/views/business.php')) {
             //Whoops, we don't have a page for that!
             show_404();
         }
