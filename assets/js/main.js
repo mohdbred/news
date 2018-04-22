@@ -238,7 +238,7 @@
         });
 
         mainSlider.slick({
-            speed: 600,
+            speed: 1000,
             autoplay: true,
             loop: true,
             appendArrows: $('.ms-navs'),
