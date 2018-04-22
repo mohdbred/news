@@ -133,7 +133,7 @@ class News extends CI_Controller {
         }
         $data['title'] = ucfirst('business');
          $this->load->view('templates/header', $data);
-        $this->load->view('bussiness.php', $data);
+        $this->load->view('business.php', $data);
         $this->load->view('templates/footer', $data);
 
       //  $this->load->view('comingsoon.php', $data);
