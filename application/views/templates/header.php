@@ -19,18 +19,47 @@ $this->load->helper('url');
         <meta name="msapplication-TileColor" content="News" />
         <meta name="msapplication-TileImage" content="News" />
         <meta name="theme-color" content="News" />
+        
+        <style>.async-hide { opacity: 0 !important} </style>
+        <script>(function (a, s, y, n, c, h, i, d, e) {
+                s.className += ' ' + y;
+                h.start = 1 * new Date;
+                h.end = i = function () {
+                    s.className = s.className.replace(RegExp(' ?' + y), '')
+                };
+                (a[n] = a[n] || []).hide = h;
+                setTimeout(function () {
+                    i();
+                    h.end = null
+                }, c);
+                h.timeout = c;
+            })(window, document.documentElement, 'async-hide', 'dataLayer', 4000,
+                    {'GTM-WBLMKFM': true});</script>
 
-
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117222559-2"></script>
         <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-117222559-2', 'auto');
+            ga('require', 'GTM-WBLMKFM');
+            ga('send', 'pageview');
+        </script>
 
-            gtag('config', 'UA-117222559-2');
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-6689136907606599",
+                enable_page_level_ads: true
+            });
         </script>
 
 
@@ -40,11 +69,11 @@ $this->load->helper('url');
 
 
         <!-- Icon Fonts  -->
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/font-awesome.css" />
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/jquery-ui.css" />
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/owl-carousel/owl-carousel/owl.carousel.css" />
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/slick-carousel/slick/slick.css" />
-  
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/font-awesome.css" />
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/jquery-ui.css" />
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/owl-carousel/owl-carousel/owl.carousel.css" />
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/vendor/slick-carousel/slick/slick.css" />
+
 
         <!-- Theme CSS -->
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/main.css" />
@@ -76,24 +105,24 @@ $this->load->helper('url');
 
         <!-- endbuild -->
 
-    <script type="text/javascript">
-        $(document).ready(function(){
-          var url_string = window.location.href
-          var url = new URL(url_string);
-          var subcatg = (url.pathname).split('/');
-          subcatg = subcatg[subcatg.length - 1].trim();
-          var _topCatg =  $('.top-headers-catg');
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var url_string = window.location.href
+                var url = new URL(url_string);
+                var subcatg = (url.pathname).split('/');
+                subcatg = subcatg[subcatg.length - 1].trim();
+                var _topCatg = $('.top-headers-catg');
 
-          $.each(_topCatg , function(index,val){
-            var catg = $(val).text().toLowerCase().trim();
-            if(subcatg === 'news' && catg ==='top news'){
-             $(val).addClass('active');
-            }else if( catg === subcatg ){
-            $(val).addClass('active');
-           }
-          });
-        });
-    </script>
+                $.each(_topCatg, function (index, val) {
+                    var catg = $(val).text().toLowerCase().trim();
+                    if (subcatg === 'news' && catg === 'top news') {
+                        $(val).addClass('active');
+                    } else if (catg === subcatg) {
+                        $(val).addClass('active');
+                    }
+                });
+            });
+        </script>
     </head>
 
     <body id="js-home-scope">
