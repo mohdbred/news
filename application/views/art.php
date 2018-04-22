@@ -53,7 +53,7 @@
 
         // var navScope = $(".navbar-collapse");
         // app._getTopHeadLines();
-        var queryCatg = {key: 'politics'};
+        var queryCatg = {key: 'arts'};
         var url = 'category';
         app._getCategory(queryCatg,url).done(function(data){
                 $('#js-top-section').html('');
@@ -68,7 +68,7 @@
                       if(_date === 'Invalid Date'){
                         _date = null;
                     }
-                     var _contentt = (news.abstract);
+                     var _contentt = (news.abstract).substring(0, 120);
                         if ((key < 3)) {
                             _category += '<div class="one-third sm-half"><article class="post post-tp-2"><figure>';
                             _category += '<a href="index._slideTemplatel"><img src="' + news.multimedia[2].url + '" height="258" width="380" alt="NewsPulses Image" class="" /></a>';

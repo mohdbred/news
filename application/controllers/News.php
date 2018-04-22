@@ -113,14 +113,27 @@ class News extends CI_Controller {
        // $this->load->view('comingsoon.php', $data);
     }
 
-    public function bussiness() {
-        if (!file_exists(APPPATH . '/views/bussiness.php')) {
+   public function art() {
+        if (!file_exists(APPPATH . '/views/art.php')) {
             //Whoops, we don't have a page for that!
             show_404();
         }
-        $data['title'] = ucfirst('bussiness');
+        $data['title'] = ucfirst('education');
          $this->load->view('templates/header', $data);
-        $this->load->view('bussiness.php', $data);
+        $this->load->view('education.php', $data);
+        $this->load->view('templates/footer', $data);
+
+       // $this->load->view('comingsoon.php', $data);
+    }
+
+    public function business() {
+        if (!file_exists(APPPATH . '/views/business.php')) {
+            //Whoops, we don't have a page for that!
+            show_404();
+        }
+        $data['title'] = ucfirst('business');
+         $this->load->view('templates/header', $data);
+        $this->load->view('business.php', $data);
         $this->load->view('templates/footer', $data);
 
       //  $this->load->view('comingsoon.php', $data);
