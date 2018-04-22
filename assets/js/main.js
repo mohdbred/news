@@ -265,6 +265,8 @@
         mainSlider.slick({
             fade: true,
             speed: 1500,
+            infinite: true,
+            cssEase: 'linear',
             appendArrows: $('.ms-navs'),
             prevArrow: '<div class="prev"><i class="ms-prev"></div>',
             nextArrow: '<div class="next"><i class="ms-next"></div>',
