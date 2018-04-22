@@ -77,7 +77,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="one-third sm-hide">
+                                <div class="one-third sm-hide" style="margin-top: -25px;">
                                     <div class="trend-pst-slider">
                                         <div class="trpst-block">
                                             <div class="trpst-block-head">

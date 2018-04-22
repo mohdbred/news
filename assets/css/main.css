@@ -10619,11 +10619,11 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
 
 /* line 55, D:/aartyomenko/Git/spectr/html/app/scss/_main_posts.scss */
 .main-posts-1 {
-     max-width: 1170px;
+    max-width: 1180px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0px 0px 0px 15px;
-    margin-bottom: 17px; }
+    padding: 0px 0px 0px 20px;
+    margin-bottom: 17px;  }
   /* line 20, D:/aartyomenko/Git/spectr/html/app/vendor/bourbon/app/assets/stylesheets/addons/_clearfix.scss */
   .main-posts-1::after {
     clear: both;
