@@ -106,7 +106,7 @@
         <div class="section">
             <div class="trend-pst">
                 <div class="pst-block">
-                    <div class="pst-block-head">
+                    <!--<div class="pst-block-head">-->
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                         <script>
                             (adsbygoogle = window.adsbygoogle || []).push({
@@ -114,7 +114,7 @@
                                 enable_page_level_ads: true
                             });
                         </script>
-                    </div>
+                    <!--//</div>-->
                 </div>
             </div>
         </div>
