@@ -113,7 +113,7 @@ class News extends CI_Controller {
        // $this->load->view('comingsoon.php', $data);
     }
 
-   public function art() {
+   public function arts() {
         if (!file_exists(APPPATH . '/views/art.php')) {
             //Whoops, we don't have a page for that!
             show_404();
