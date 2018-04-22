@@ -126,7 +126,7 @@ class News extends CI_Controller {
        // $this->load->view('comingsoon.php', $data);
     }
 
-    public function bussiness() {
+    public function business() {
         if (!file_exists(APPPATH . '/views/business.php')) {
             //Whoops, we don't have a page for that!
             show_404();
