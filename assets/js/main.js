@@ -238,7 +238,7 @@
         });
 
         mainSlider.slick({
-            speed: 600,
+            speed: 1500,
             autoplay: true,
             loop: true,
             appendArrows: $('.ms-navs'),
@@ -264,7 +264,7 @@
 
         mainSlider.slick({
             fade: true,
-            speed: 1000,
+            speed: 1500,
             appendArrows: $('.ms-navs'),
             prevArrow: '<div class="prev"><i class="ms-prev"></div>',
             nextArrow: '<div class="next"><i class="ms-next"></div>',
